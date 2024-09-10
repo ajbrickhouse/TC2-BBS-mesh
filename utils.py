@@ -1,16 +1,6 @@
 import logging
 import time
 
-user_states = {}
-
-
-def update_user_state(user_id, state):
-    user_states[user_id] = state
-
-
-def get_user_state(user_id):
-    return user_states.get(user_id, None)
-
 
 def send_message(message, destination, interface):
     max_payload_size = 200
@@ -27,7 +17,6 @@ def send_message(message, destination, interface):
         except Exception as e:
             logging.info(f"REPLY SEND ERROR {e.message}")
 
-        
         time.sleep(2)
 
 def get_node_info(interface, short_name):
@@ -56,41 +45,33 @@ def get_node_short_name(node_id, interface):
         return node_info['user']['shortName']
     return None
 
-
-def send_bulletin_to_bbs_nodes(board, sender_short_name, subject, content, unique_id, bbs_nodes, interface):
-    message = f"BULLETIN|{board}|{sender_short_name}|{subject}|{content}|{unique_id}"
-    for node_id in bbs_nodes:
-        send_message(message, node_id, interface)
-
-
-def send_mail_to_bbs_nodes(sender_id, sender_short_name, recipient_id, subject, content, unique_id, bbs_nodes,
-                           interface):
-    message = f"MAIL|{sender_id}|{sender_short_name}|{recipient_id}|{subject}|{content}|{unique_id}"
-    logging.info(f"SERVER SYNC: Syncing new mail message {subject} sent from {sender_short_name} to other BBS systems.")
-    for node_id in bbs_nodes:
-        send_message(message, node_id, interface)
-
-
-def send_delete_bulletin_to_bbs_nodes(bulletin_id, bbs_nodes, interface):
-    message = f"DELETE_BULLETIN|{bulletin_id}"
-    for node_id in bbs_nodes:
-        send_message(message, node_id, interface)
-
-
-def send_delete_mail_to_bbs_nodes(unique_id, bbs_nodes, interface):
-    message = f"DELETE_MAIL|{unique_id}"
-    logging.info(f"SERVER SYNC: Sending delete mail sync message with unique_id: {unique_id}")
-    for node_id in bbs_nodes:
-        send_message(message, node_id, interface)
-
-
-def send_channel_to_bbs_nodes(name, url, bbs_nodes, interface):
-    message = f"CHANNEL|{name}|{url}"
-    for node_id in bbs_nodes:
-        send_message(message, node_id, interface)
-
-
 def log_text_to_file(data, file_path='log.txt'):
-    with open(file_path, 'a') as log_file:
-        log_file.write('\n\n' + '-'*100 + '\n\n')  # Add separator line
+    with open(file_path, 'w') as log_file:
         log_file.write(f"{str(data)}")  # Convert the data to a string and write it to the file
+
+# def log_text_to_file(data, file_path='log.txt'):
+#     with open(file_path, 'a') as log_file:
+#         log_file.write('\n\n' + '-'*100 + '\n\n')  # Add separator line
+#         log_file.write(f"{str(data)}")  # Convert the data to a string and write it to the file
+
+def display_banner():
+    banner = """
+ ********** ********  ******** ********** ******   ******** ****     **   ******  **      **      ******    ****** 
+/////**/// /**/////  **////// /////**/// /*////** /**///// /**/**   /**  **////**/**     /**     **////**  **////**
+    /**    /**      /**           /**    /*   /** /**      /**//**  /** **    // /**     /**    **    //  **    // 
+    /**    /******* /*********    /**    /******  /******* /** //** /**/**       /**********   /**       /**       
+    /**    /**////  ////////**    /**    /*//// **/**////  /**  //**/**/**       /**//////**   /**       /**       
+    /**    /**             /**    /**    /*    /**/**      /**   //****//**    **/**     /** **//**    **//**    **
+    /**    /******** ********     /**    /******* /********/**    //*** //****** /**     /**/** //******  //****** 
+    //     //////// ////////      //     ///////  //////// //      ///   //////  //      // //   //////    //////  
+ ****     **** ********  ******** **      **       **         *******     ********    ********  ******** *******   
+/**/**   **/**/**/////  **////// /**     /**      /**        **/////**   **//////**  **//////**/**///// /**////**  
+/**//** ** /**/**      /**       /**     /**      /**       **     //** **      //  **      // /**      /**   /**  
+/** //***  /**/******* /*********/**********      /**      /**      /**/**         /**         /******* /*******   
+/**  //*   /**/**////  ////////**/**//////**      /**      /**      /**/**    *****/**    *****/**////  /**///**   
+/**   /    /**/**             /**/**     /**      /**      //**     ** //**  ////**//**  ////**/**      /**  //**  
+/**        /**/******** ******** /**     /**      /******** //*******   //********  //******** /********/**   //** 
+//         // //////// ////////  //      //       ////////   ///////     ////////    ////////  //////// //     //  
+Meshtastic Version
+"""
+    print(banner)

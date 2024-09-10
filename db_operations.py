@@ -1,18 +1,12 @@
 import logging
+import time
 import sqlite3
 import threading
 import uuid
 from datetime import datetime
+import json
 
 from meshtastic import BROADCAST_NUM
-
-from utils import (
-    send_bulletin_to_bbs_nodes,
-    send_delete_bulletin_to_bbs_nodes,
-    send_delete_mail_to_bbs_nodes,
-    send_mail_to_bbs_nodes, send_message, send_channel_to_bbs_nodes
-)
-
 
 thread_local = threading.local()
 
@@ -24,30 +18,6 @@ def get_db_connection():
 def initialize_database():
     conn = get_db_connection()
     c = conn.cursor()
-    c.execute('''CREATE TABLE IF NOT EXISTS bulletins (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    board TEXT NOT NULL,
-                    sender_short_name TEXT NOT NULL,
-                    date TEXT NOT NULL,
-                    subject TEXT NOT NULL,
-                    content TEXT NOT NULL,
-                    unique_id TEXT NOT NULL
-                )''')
-    c.execute('''CREATE TABLE IF NOT EXISTS mail (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    sender TEXT NOT NULL,
-                    sender_short_name TEXT NOT NULL,
-                    recipient TEXT NOT NULL,
-                    date TEXT NOT NULL,
-                    subject TEXT NOT NULL,
-                    content TEXT NOT NULL,
-                    unique_id TEXT NOT NULL
-                );''')
-    c.execute('''CREATE TABLE IF NOT EXISTS channels (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    name TEXT NOT NULL,
-                    url TEXT NOT NULL
-                );''')
     c.execute('''CREATE TABLE IF NOT EXISTS TelemetryData (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 sender_node_id TEXT NOT NULL,
@@ -71,151 +41,12 @@ def initialize_database():
                 sender_long_name TEXT,
                 role TEXT
             );''')
-    c.execute('''CREATE TABLE IF NOT EXISTS waypoints (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                expiration DATETIME,
-                sender_node_id TEXT NOT NULL,
-                sender_short_name TEXT,
-                name TEXT,
-                description TEXT,
-                latitude REAL NOT NULL,
-                longitude REAL NOT NULL,
-                altitude REAL,
-                locked INTEGER DEFAULT 0,
-                message_string TEXT
-            );''')
-    c.execute('''CREATE TABLE IF NOT EXISTS nameLookup (
-                node_id TEXT PRIMARY KEY NOT NULL UNIQUE,
-                short_name TEXT,
-                name TEXT
-            );''')
-    # c.execute('''ALTER TABLE TelemetryData ADD COLUMN sender_long_name TEXT;
-    #             ''')
-    # c.execute('''ALTER TABLE TelemetryData ADD COLUMN role TEXT;
-    #             ''')
 
     conn.commit()
 
     print("Database schema initialized.")
 
 
-def add_channel(name, url, bbs_nodes=None, interface=None):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("INSERT INTO channels (name, url) VALUES (?, ?)", (name, url))
-    conn.commit()
-
-    if bbs_nodes and interface:
-        send_channel_to_bbs_nodes(name, url, bbs_nodes, interface)
-
-
-def get_channels():
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("SELECT id, name, url FROM channels")
-    return c.fetchall()
-
-def remove_channel(id):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("DELETE FROM channels WHERE id = ?", (id,))
-    conn.commit()
-
-def add_bulletin(board, sender_short_name, subject, content, bbs_nodes, interface, unique_id=None):
-    conn = get_db_connection()
-    c = conn.cursor()
-    date = datetime.now().strftime('%Y-%m-%d %H:%M')
-    if not unique_id:
-        unique_id = str(uuid.uuid4())
-    c.execute(
-        "INSERT INTO bulletins (board, sender_short_name, date, subject, content, unique_id) VALUES (?, ?, ?, ?, ?, ?)",
-        (board, sender_short_name, date, subject, content, unique_id))
-    conn.commit()
-    if bbs_nodes and interface:
-        send_bulletin_to_bbs_nodes(board, sender_short_name, subject, content, unique_id, bbs_nodes, interface)
-
-    # New logic to send group chat notification for urgent bulletins
-    if board.lower() == "urgent":
-        notification_message = f"💥NEW URGENT BULLETIN💥\nFrom: {sender_short_name}\nTitle: {subject}"
-        send_message(notification_message, BROADCAST_NUM, interface)
-
-    return unique_id
-
-def get_bulletins(board):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("SELECT id, subject, sender_short_name, date, unique_id FROM bulletins WHERE board = ?", (board,))
-    return c.fetchall()
-
-def get_bulletin_content(bulletin_id):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("SELECT sender_short_name, date, subject, content, unique_id FROM bulletins WHERE id = ?", (bulletin_id,))
-    return c.fetchone()
-
-
-def delete_bulletin(bulletin_id, bbs_nodes, interface):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("DELETE FROM bulletins WHERE id = ?", (bulletin_id,))
-    conn.commit()
-    send_delete_bulletin_to_bbs_nodes(bulletin_id, bbs_nodes, interface)
-
-def add_mail(sender_id, sender_short_name, recipient_id, subject, content, bbs_nodes, interface, unique_id=None):
-    conn = get_db_connection()
-    c = conn.cursor()
-    date = datetime.now().strftime('%Y-%m-%d %H:%M')
-    if not unique_id:
-        unique_id = str(uuid.uuid4())
-    c.execute("INSERT INTO mail (sender, sender_short_name, recipient, date, subject, content, unique_id) VALUES (?, ?, ?, ?, ?, ?, ?)",
-              (sender_id, sender_short_name, recipient_id, date, subject, content, unique_id))
-    conn.commit()
-    if bbs_nodes and interface:
-        send_mail_to_bbs_nodes(sender_id, sender_short_name, recipient_id, subject, content, unique_id, bbs_nodes, interface)
-    return unique_id
-
-def get_mail(recipient_id):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("SELECT id, sender_short_name, subject, date, unique_id FROM mail WHERE recipient = ?", (recipient_id,))
-    return c.fetchall()
-
-def get_mail_content(mail_id, recipient_id):
-    # TODO: ensure only recipient can read mail
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("SELECT sender_short_name, date, subject, content, unique_id FROM mail WHERE id = ? and recipient = ?", (mail_id, recipient_id,))
-    return c.fetchone()
-
-def delete_mail(unique_id, recipient_id, bbs_nodes, interface):
-    conn = get_db_connection()
-    c = conn.cursor()
-    try:
-        c.execute("SELECT recipient FROM mail WHERE unique_id = ?", (unique_id,))
-        result = c.fetchone()
-        if result is None:
-            logging.error(f"No mail found with unique_id: {unique_id}")
-            return  # Early exit if no matching mail found
-        recipient_id = result[0]
-        logging.info(f"Attempting to delete mail with unique_id: {unique_id} by {recipient_id}")
-        c.execute("DELETE FROM mail WHERE unique_id = ? and recipient = ?", (unique_id, recipient_id,))
-        conn.commit()
-        send_delete_mail_to_bbs_nodes(unique_id, bbs_nodes, interface)
-        logging.info(f"Mail with unique_id: {unique_id} deleted and sync message sent.")
-    except Exception as e:
-        logging.error(f"Error deleting mail with unique_id {unique_id}: {e}")
-        raise
-
-
-def get_sender_id_by_mail_id(mail_id):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("SELECT sender FROM mail WHERE id = ?", (mail_id,))
-    result = c.fetchone()
-    if result:
-        return result[0]
-    return None
 
 def insert_telemetry_data(sender_node_id, sender_short_name=None, to_node_id=None, temperature=None, humidity=None,
                           pressure=None, battery_level=None, voltage=None, uptime_seconds=None,
@@ -241,47 +72,30 @@ def insert_telemetry_data(sender_node_id, sender_short_name=None, to_node_id=Non
         # Close the connection only if it's not shared across threads
         pass  # Remove conn.close() to avoid prematurely closing in a multi-threaded environment
 
-def add_waypoint(sender_node_id, name, description, atitude, longitude, locked, expiration=None, message_string=None):
-    if expiration is None:
-        expiration = (datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M')
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("INSERT INTO waypoints (sender_node_id, name, description, latitude, longitude, locked, expiration, message_string) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-              (sender_node_id, name, description, icon, latitude, longitude, locked, expiration))
-    conn.commit()
-
-def add_or_update_name_lookup(node_id, short_name, name=None):
-    conn = get_db_connection()
-    try:
-        with conn:
-            conn.execute('''
-                INSERT INTO TelemetryData (
-                    node_id, short_name, name
-                ) VALUES (?, ?, ?)
-            ''', (
-                node_id, short_name, name
-            ))
-    except sqlite3.Error as e:
-        logging.error(f"Error updating name: {e}")
-    finally:
-        # Close the connection only if it's not shared across threads
-        pass  # Remove conn.close() to avoid prematurely closing in a multi-threaded environment
-
-def get_name_by_node_id(node_id):
-    conn = get_db_connection()
-    c = conn.cursor()
-    
-    # Query to fetch the short_name and name based on node_id
-    c.execute('''
-        SELECT short_name, name FROM nameLookup WHERE node_id = ?
-    ''', (node_id,))
-    
-    result = c.fetchone()
-    
-    # conn.close()
-
-    if result:
-        short_name, name = result
-        return short_name, name
-    else:
-        return None, None  # Return None if no matching entry is found
+def process_and_insert_telemetry_data(interface):
+    # Iterate over each entry in the data
+    data_string = interface.showInfo().split('Nodes in mesh: ')[1]
+    data = json.loads(data_string)
+    for node_id, node_data in data.items():
+        # Extract relevant fields
+        user_data = node_data.get('user', {})
+        position_data = node_data.get('position', {})
+        device_metrics = node_data.get('deviceMetrics', {})
+        
+        # Use the provided insert_telemetry_data function to insert each record
+        insert_telemetry_data(
+            sender_node_id=user_data.get('id'),
+            sender_short_name=user_data.get('shortName'),
+            sender_long_name=user_data.get('longName'),
+            mac_address=user_data.get('macaddr'),
+            hardware_model=user_data.get('hwModel'),
+            latitude=position_data.get('latitude'),
+            longitude=position_data.get('longitude'),
+            altitude=position_data.get('altitude'),
+            sats_in_view=position_data.get('sats_in_view'),  # This key may or may not exist
+            battery_level=device_metrics.get('batteryLevel'),
+            voltage=device_metrics.get('voltage'),
+            uptime_seconds=device_metrics.get('uptimeSeconds'),
+            snr=node_data.get('snr'),
+            role=user_data.get('role')  # This key may or may not exist
+        )
