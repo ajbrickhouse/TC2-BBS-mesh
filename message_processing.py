@@ -181,6 +181,7 @@ def on_receive(packet, interface):
         decoded_packet = packet.get('decoded', {})
         if decoded_packet:
             portnum = decoded_packet.get('portnum')
+            logging.info(f"-------------- {portnum}")
             sender_node_id = packet.get('fromId')
             to_node_id = packet.get('toId')
             sender_short_name = get_node_short_name(sender_node_id, interface)

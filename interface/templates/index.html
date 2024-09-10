@@ -10,6 +10,11 @@
             height: 100vh;
             width: 100%;
         }
+    
+        .custom-div-icon {
+            background-color: transparent;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -19,35 +24,66 @@
     <script>
         // Initialize the map
         var map = L.map('map').setView([0, 0], 2); // Start at a global view
-
+    
         // Set up the OSM tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-
+    
         var markers = {};  // Dictionary to store markers by sender_node_id
         var initialLoad = true;  // Flag to indicate if it's the first load
-
+    
+        // Define a list of colors to cycle through for the markers
+        var markerColors = ['red', 'green', 'blue', 'orange', 'purple', 'darkred', 'cadetblue'];
+        function getMarkerColor(index) {
+            return markerColors[index % markerColors.length]; // Cycle through colors
+        }
+    
         // Function to fetch and update telemetry data
         function fetchTelemetryData() {
             fetch('/get-telemetry-data') // Backend endpoint for fetching data
                 .then(response => response.json())
                 .then(data => {
                     var bounds = [];
-
+    
                     // Loop through the telemetry data
-                    data.forEach(item => {
+                    data.forEach((item, index) => {
                         // Only process points with valid latitude and longitude
                         if (item.latitude && item.longitude) {
                             bounds.push([item.latitude, item.longitude]);
-
+    
                             // If a marker for this sender_node_id already exists, update its position
                             if (markers[item.sender_node_id]) {
-                                markers[item.sender_node_id].setLatLng([item.latitude, item.longitude]);
+                                markers[item.sender_node_id].baseMarker.setLatLng([item.latitude, item.longitude]);
+                                markers[item.sender_node_id].labelMarker.setLatLng([item.latitude, item.longitude]);
                             } else {
-                                // Create a new marker for the sender_node_id
-                                var marker = L.marker([item.latitude, item.longitude]).addTo(map);
-                                marker.bindPopup(`
+                                // Add a regular marker for the sender_node_id
+                                var baseMarker = L.marker([item.latitude, item.longitude]).addTo(map);
+    
+                                // Create a custom divIcon to show the short name above the marker with improved styling
+                                var customLabel = L.divIcon({
+                                    html: `<div style="
+                                        background-color: white;
+                                        border: 1px solid ${getMarkerColor(index)};
+                                        border-radius: 5px;
+                                        padding: 2px 5px;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: ${getMarkerColor(index)};
+                                        opacity: 0.5;
+                                        text-align: center;
+                                        white-space: nowrap;
+                                    ">${item.sender_short_name}</div>`,
+                                    className: 'custom-div-icon',
+                                    iconSize: [100, 30],  // Adjust the icon size dynamically
+                                    iconAnchor: [50, 0]  // Offset so it appears above the marker
+                                });
+    
+                                // Add the custom label on top of the base marker
+                                var labelMarker = L.marker([item.latitude, item.longitude], { icon: customLabel }).addTo(map);
+    
+                                // Bind popup to the base marker (with telemetry details)
+                                baseMarker.bindPopup(`
                                     <strong>Node ID:</strong> ${item.sender_node_id}<br>
                                     <strong>Short Name:</strong> ${item.sender_short_name}<br>
                                     <strong>Timestamp:</strong> ${item.timestamp}<br>
@@ -56,14 +92,18 @@
                                     <strong>Pressure:</strong> ${item.pressure} hPa<br>
                                     <strong>Battery Level:</strong> ${item.battery_level} %<br>
                                     <strong>Voltage:</strong> ${item.voltage} V<br>
+                                    <strong>Uptime:</strong> ${item.uptime_seconds} s<br>
                                     <strong>Altitude:</strong> ${item.altitude} m<br>
-                                    <strong>Sats in View:</strong> ${item.sats_in_view}
+                                    <strong>Sats in View:</strong> ${item.sats_in_view} <br>
+                                    <strong>SNR:</strong> ${item.snr} dB <br>
                                 `);
-                                markers[item.sender_node_id] = marker;  // Add to markers dictionary
+    
+                                // Store both markers (base marker and label marker) in the dictionary
+                                markers[item.sender_node_id] = { baseMarker, labelMarker };
                             }
                         }
                     });
-
+    
                     // Adjust the map to fit all points only on the first load
                     if (initialLoad && bounds.length > 0) {
                         map.fitBounds(bounds);
@@ -72,10 +112,10 @@
                 })
                 .catch(error => console.error('Error fetching telemetry data:', error));
         }
-
+    
         // Fetch telemetry data every 10 seconds (10000 milliseconds)
         setInterval(fetchTelemetryData, 10000);
-
+    
         // Initial fetch when the page loads
         fetchTelemetryData();
     </script>

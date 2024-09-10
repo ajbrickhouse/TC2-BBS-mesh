@@ -14,20 +14,27 @@ def get_telemetry_data():
     conn = sqlite3.connect('../bulletins.db')  # Replace with your actual database path
     cursor = conn.cursor()
 
-    # Query to get the most recent record per sender_node_id
+    # Query to get the most recent non-null values for each field per sender_node_id
     query = '''
-        SELECT sender_node_id, sender_short_name, timestamp, temperature, humidity,
-               pressure, battery_level, voltage, latitude, longitude, altitude, sats_in_view
-        FROM TelemetryData
-        WHERE id IN (
-            SELECT MAX(id) FROM TelemetryData
-            GROUP BY sender_node_id
-        )
-        AND latitude IS NOT NULL
-        AND longitude IS NOT NULL
-        AND latitude != 0
-        AND longitude != 0;
+        SELECT
+            td.sender_node_id,
+            MAX(td.sender_short_name) AS sender_short_name,
+            MAX(td.timestamp) AS timestamp,
+            (SELECT temperature FROM TelemetryData WHERE temperature IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS temperature,
+            (SELECT humidity FROM TelemetryData WHERE humidity IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS humidity,
+            (SELECT pressure FROM TelemetryData WHERE pressure IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS pressure,
+            (SELECT battery_level FROM TelemetryData WHERE battery_level IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS battery_level,
+            (SELECT voltage FROM TelemetryData WHERE voltage IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS voltage,
+            (SELECT uptime_seconds FROM TelemetryData WHERE uptime_seconds IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS uptime_seconds,
+            (SELECT latitude FROM TelemetryData WHERE latitude IS NOT NULL AND latitude != 0 AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS latitude,
+            (SELECT longitude FROM TelemetryData WHERE longitude IS NOT NULL AND longitude != 0 AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS longitude,
+            (SELECT altitude FROM TelemetryData WHERE altitude IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS altitude,
+            (SELECT sats_in_view FROM TelemetryData WHERE sats_in_view IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS sats_in_view,
+            (SELECT snr FROM TelemetryData WHERE snr IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS snr
+        FROM TelemetryData td
+        GROUP BY td.sender_node_id;
     '''
+    
     cursor.execute(query)
     data = cursor.fetchall()
 
@@ -35,20 +42,40 @@ def get_telemetry_data():
     for row in data:
         telemetry_data.append({
             "sender_node_id": row[0],
-            "sender_short_name": row[1],
+            "sender_short_name": row[1],  # Check if this value exists in your DB
             "timestamp": row[2],
             "temperature": row[3],
             "humidity": row[4],
             "pressure": row[5],
             "battery_level": row[6],
             "voltage": row[7],
-            "latitude": row[8],
-            "longitude": row[9],
-            "altitude": row[10],
-            "sats_in_view": row[11]
+            "uptime_seconds": row[8],
+            "latitude": row[9],
+            "longitude": row[10],
+            "altitude": row[11],
+            "sats_in_view": row[12],
+            "snr": row[13]
         })
 
+    # telemetry_data = []
+    # for row in data:
+    #     telemetry_data.append({
+    #         "sender_node_id": row[0],
+    #         "sender_short_name": row[1],  # Check if this value exists in your DB
+    #         "timestamp": row[2],
+    #         "latitude": row[3],
+    #         "longitude": row[4],
+    #         "temperature": row[5],
+    #         "humidity": row[6],
+    #         "pressure": row[7],
+    #         "battery_level": row[8],
+    #         "voltage": row[9],
+    #         "altitude": row[10],
+    #         "sats_in_view": row[11]
+    #     })
+
     conn.close()
+    print(f"Telemetry data retrieved: {telemetry_data}")
     return jsonify(telemetry_data)
 
 if __name__ == '__main__':
