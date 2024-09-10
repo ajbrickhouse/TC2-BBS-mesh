@@ -1,0 +1,93 @@
+
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x8dW\x02\x1a\x15\x8ft\x9b\xba\x18\xba\x07%\xd9\x85\xe0fX\xcf\x01x\x05\x80\x01\xa8\xf7\x96\x0f\x98\x01\x06\xb8\x01 ', 'position': {'latitudeI': 436361101, 'longitudeI': -1164217201, 'altitude': 954, 'time': 1725990361, 'PDOP': 207, 'groundSpeed': 5, 'groundTrack': 31833000, 'satsInView': 6, 'precisionBits': 32, 'raw': latitude_i: 436361101
+longitude_i: -1164217201
+altitude: 954
+time: 1725990361
+PDOP: 207
+ground_speed: 5
+ground_track: 31833000
+sats_in_view: 6
+precision_bits: 32
+, 'latitude': 43.6361101, 'longitude': -116.4217201}}, 'id': 1167201248, 'rxTime': 1725990370, 'rxSnr': 6.25, 'rxRssi': -57, 'hopStart': 3, 'raw': from: 2475420652
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\215W\002\032\025\217t\233\272\030\272\007%\331\205\340fX\317\001x\005\200\001\250\367\226\017\230\001\006\270\001 "
+}
+id: 1167201248
+rx_time: 1725990370
+rx_snr: 6.25
+rx_rssi: -57
+hop_start: 3
+, 'fromId': '!938bebec', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
+longitude_i: -1162444800
+altitude: 835
+precision_bits: 16
+, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3259009680, 'rxTime': 1725990449, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
+}
+id: 3259009680
+rx_time: 1725990449
+hop_limit: 3
+priority: BACKGROUND
+hop_start: 3
+, 'fromId': '!e2e18960', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2053916580, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\x9c\xba\x18\xcf\x05%\x91\x86\xe0f=3\x83\xe0fX\xf8\x06\xb0\x01\x01\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1164181504, 'altitude': 719, 'time': 1725990545, 'timestamp': 1725989683, 'PDOP': 888, 'seqNumber': 1, 'precisionBits': 13, 'raw': latitude_i: 436469760
+longitude_i: -1164181504
+altitude: 719
+time: 1725990545
+timestamp: 1725989683
+PDOP: 888
+seq_number: 1
+precision_bits: 13
+, 'latitude': 43.646976, 'longitude': -116.4181504}}, 'id': 4148905810, 'rxTime': 1725990556, 'rxSnr': 7.0, 'hopLimit': 5, 'rxRssi': -57, 'hopStart': 7, 'raw': from: 2053916580
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\004\032\025\000\000\234\272\030\317\005%\221\206\340f=3\203\340fX\370\006\260\001\001\270\001\r"
+}
+id: 4148905810
+rx_time: 1725990556
+rx_snr: 7
+hop_limit: 5
+rx_rssi: -57
+hop_start: 7
+, 'fromId': '!7a6c47a4', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc2\x06%\xa8\x86\xe0fX\xb4\x04x\x04\x80\x01\x88\xd4\xbe\x10\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 834, 'time': 1725990568, 'PDOP': 564, 'groundSpeed': 4, 'groundTrack': 34581000, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
+longitude_i: -1162510336
+altitude: 834
+time: 1725990568
+PDOP: 564
+ground_speed: 4
+ground_track: 34581000
+sats_in_view: 5
+precision_bits: 16
+, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1935300114, 'rxTime': 1725990568, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -57, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\200\373\031\025\000\200\265\272\030\302\006%\250\206\340fX\264\004x\004\200\001\210\324\276\020\230\001\005\270\001\020"
+}
+id: 1935300114
+rx_time: 1725990568
+rx_snr: 6.25
+hop_limit: 3
+rx_rssi: -57
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}

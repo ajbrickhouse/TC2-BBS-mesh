@@ -10,9 +10,9 @@ from command_handlers import (
     handle_check_bulletin_command, handle_read_bulletin_command, handle_read_channel_command,
     handle_post_channel_command, handle_list_channels_command, handle_quick_help_command
 )
-from db_operations import add_bulletin, add_mail, delete_bulletin, delete_mail, get_db_connection, add_channel, insert_telemetry_data
+from db_operations import add_bulletin, add_mail, delete_bulletin, delete_mail, get_db_connection, add_channel, insert_telemetry_data, add_waypoint
 from js8call_integration import handle_js8call_command, handle_js8call_steps, handle_group_message_selection
-from utils import get_user_state, get_node_short_name, get_node_id_from_num, send_message
+from utils import get_user_state, get_node_short_name, get_node_id_from_num, send_message, log_text_to_file
 
 main_menu_handlers = {
     "q": handle_quick_help_command,
@@ -175,7 +175,6 @@ def process_message(sender_id, message, interface, is_sync_message=False):
 
 
 def on_receive(packet, interface):
-    # logging.info(f"Received packet \n\n{packet}\n\n --------------------------------------------------")
     try:
         # Use .get() to avoid KeyError if 'decoded' does not exist
         decoded_packet = packet.get('decoded', {})
@@ -188,75 +187,107 @@ def on_receive(packet, interface):
 
             # Handle TEXT_MESSAGE_APP
             if portnum == 'TEXT_MESSAGE_APP':
-                message_bytes = decoded_packet.get('payload')
-                if message_bytes:
-                    message_string = message_bytes.decode('utf-8')
-                sender_id = packet.get('fromId')
-                to_id = packet.get('toId')
-                channel = packet.get('channel', 0)
+                try:
+                    log_text_to_file(packet, './logs/TEXT_MESSAGE_APP.txt')
+                    message_bytes = decoded_packet.get('payload')
+                    if message_bytes:
+                        message_string = message_bytes.decode('utf-8')
+                    sender_id = packet.get('fromId')
+                    to_id = packet.get('toId')
+                    channel = packet.get('channel', 0)
 
-                receiver_short_name = get_node_short_name(to_id, interface) if to_id and to_id[0] == '!' else f"Channel {channel}"
-
-                logging.info(f"Received message from '{sender_short_name}' to '{receiver_short_name}': {message_string}")
+                    receiver_short_name = get_node_short_name(to_id, interface) if to_id and to_id[0] == '!' else f"Channel {channel}"
+                    logging.info(f"Received message from '{sender_short_name}' to '{receiver_short_name}': {message_string}")
+                except Exception as e:
+                    logging.error(f"Error processing TEXT_MESSAGE_APP: {e}")
 
             # Handle TELEMETRY_APP
             elif portnum == 'TELEMETRY_APP':
-                telemetry_data = decoded_packet.get('telemetry', {})
-                temp = telemetry_data.get('environmentMetrics', {}).get('temperature')
-                humidity = telemetry_data.get('environmentMetrics', {}).get('relativeHumidity')
-                pressure = telemetry_data.get('environmentMetrics', {}).get('barometricPressure')
-                battery = telemetry_data.get('deviceMetrics', {}).get('batteryLevel')
-                voltage = telemetry_data.get('deviceMetrics', {}).get('voltage')
-                uptime = telemetry_data.get('deviceMetrics', {}).get('uptimeSeconds')
+                try:
+                    # log_text_to_file(packet, './logs/TELEMETRY_APP.txt')
+                    telemetry_data = decoded_packet.get('telemetry', {})
+                    temp = telemetry_data.get('environmentMetrics', {}).get('temperature')
+                    humidity = telemetry_data.get('environmentMetrics', {}).get('relativeHumidity')
+                    pressure = telemetry_data.get('environmentMetrics', {}).get('barometricPressure')
+                    battery = telemetry_data.get('deviceMetrics', {}).get('batteryLevel')
+                    voltage = telemetry_data.get('deviceMetrics', {}).get('voltage')
+                    uptime = telemetry_data.get('deviceMetrics', {}).get('uptimeSeconds')
 
-                logging.info(f"Telemetry from '{sender_short_name}' - Temp: {temp}°C, Humidity: {humidity}%, Pressure: {pressure} hPa, "
-                             f"Battery: {battery}%, Voltage: {voltage}V, Uptime: {uptime}s")
-
-                # Insert telemetry data into the database
-                insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
-                                      temperature=temp, humidity=humidity, pressure=pressure,
-                                      battery_level=battery, voltage=voltage, uptime_seconds=uptime)
+                    insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
+                                          temperature=temp, humidity=humidity, pressure=pressure,
+                                          battery_level=battery, voltage=voltage, uptime_seconds=uptime)
+                except Exception as e:
+                    logging.error(f"Error processing TELEMETRY_APP: {e}")
 
             # Handle POSITION_APP
             elif portnum == 'POSITION_APP':
-                position_data = decoded_packet.get('position', {})
-                latitude = position_data.get('latitude')
-                longitude = position_data.get('longitude')
-                altitude = position_data.get('altitude')
-                sats_in_view = position_data.get('satsInView')
+                try:
+                    log_text_to_file(packet, './logs/POSITION_APP.txt')
+                    position_data = decoded_packet.get('position', {})
+                    latitude = position_data.get('latitude')
+                    longitude = position_data.get('longitude')
+                    altitude = position_data.get('altitude')
+                    sats_in_view = position_data.get('satsInView')
 
-                logging.info(f"Position from '{sender_short_name}' - Lat: {latitude}, Lon: {longitude}, Alt: {altitude}m, Sats in View: {sats_in_view}")
+                    logging.info(f"Position from '{sender_short_name}' - Lat: {latitude}, Lon: {longitude}, Alt: {altitude}m, Sats in View: {sats_in_view}")
 
-                # Insert position data into the database
-                insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
-                                      latitude=latitude, longitude=longitude, altitude=altitude, sats_in_view=sats_in_view)
-
+                    insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
+                                          latitude=latitude, longitude=longitude, altitude=altitude, sats_in_view=sats_in_view)
+                except Exception as e:
+                    logging.error(f"Error processing POSITION_APP: {e}")
 
             # Handle NEIGHBORINFO_APP
             elif portnum == 'NEIGHBORINFO_APP':
-                neighbor_info = decoded_packet.get('neighborinfo', {})
-                node_id = neighbor_info.get('nodeId')
-                neighbors = neighbor_info.get('neighbors', [])
-                logging.info(f"Neighbor info from '{sender_short_name}' (Node {node_id}): {[n.get('nodeId') for n in neighbors]}")
+                try:
+                    log_text_to_file(packet, './logs/NEIGHBORINFO_APP.txt')
+                    neighbor_info = decoded_packet.get('neighborinfo', {})
+                    node_id = neighbor_info.get('nodeId')
+                    neighbors = neighbor_info.get('neighbors', [])
 
-                for neighbor in neighbors:
-                    neighbor_id = neighbor.get('nodeId')
-                    snr = neighbor.get('snr')
-                    logging.info(f"Neighbor {neighbor_id} of '{sender_short_name}' with SNR: {snr}")
+                    for neighbor in neighbors:
+                        neighbor_id = neighbor.get('nodeId')
+                        snr = neighbor.get('snr')
+                        insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
+                                              neighbor_node_id=neighbor_id, snr=snr)
+                except Exception as e:
+                    logging.error(f"Error processing NEIGHBORINFO_APP: {e}")
 
-                    # Insert neighbor info into the database
-                    insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
-                                          neighbor_node_id=neighbor_id, snr=snr)
+            # Handle WAYPOINT_APP
+            elif portnum == 'WAYPOINT_APP':
+                try:
+                    log_text_to_file(packet, './logs/WAYPOINT_APP.txt')
+                    message_bytes = decoded_packet.get('payload')
+                    if message_bytes:
+                        message_string = message_bytes.decode('utf-8')
+                    waypoint = decoded_packet.get('waypoint', {})
+                    name = waypoint.get('name')
+                    description = waypoint.get('description')
+                    latitude = waypoint.get('latitudeI')
+                    longitude = waypoint.get('longitudeI')
+                    expire = waypoint.get('expire')
 
-            else:
-                logging.warning(f"Unhandled portnum '{portnum}' from '{sender_short_name}'")
-                
+                    add_waypoint(sender_node_id, name, description, latitude, longitude, False, expire, message_string)
+                except Exception as e:
+                    logging.error(f"Error processing WAYPOINT_APP: {e}")
+
+            # Handle ROUTING_APP
+            elif portnum == 'ROUTING_APP':
+                try:
+                    log_text_to_file(packet, './logs/ROUTING_APP.txt')
+                    logging.info(f"Received ROUTING_APP packet from '{sender_short_name}'")
+                except Exception as e:
+                    logging.error(f"Error processing ROUTING_APP: {e}")
+
+            # Handle NODEINFO_APP
+            elif portnum == 'NODEINFO_APP':
+                try:
+                    log_text_to_file(packet, './logs/NODEINFO_APP.txt')
+                    logging.info(f"Received NODEINFO_APP packet from '{sender_short_name}'")
+                except Exception as e:
+                    logging.error(f"Error processing NODEINFO_APP: {e}")
+                    
     except Exception as e:
-        logging.error(f"Error processing packet: {e}")
-
-
-    except KeyError as e:
-        logging.error(f"Error processing packet from '{sender_short_name}': {e}")
+        logging.error(f"General error processing packet: {e}")
 
 
 def get_recipient_id_by_mail(unique_id):

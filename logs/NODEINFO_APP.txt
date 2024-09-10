@@ -1,0 +1,22 @@
+
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2053916580, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!7a6c47a4\x12\x0fThe Ivan Device\x1a\x04\xf0\x9f\xa5\xb7"\x064\x98zlG\xa4(\x04', 'user': {'id': '!7a6c47a4', 'longName': 'The Ivan Device', 'shortName': '🥷', 'macaddr': 'NJh6bEek', 'hwModel': 'TBEAM', 'raw': id: "!7a6c47a4"
+long_name: "The Ivan Device"
+short_name: "🥷"
+macaddr: "4\230zlG\244"
+hw_model: TBEAM
+}}, 'id': 1819900755, 'rxTime': 1725990572, 'rxSnr': 5.75, 'hopLimit': 4, 'rxRssi': -58, 'hopStart': 7, 'raw': from: 2053916580
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!7a6c47a4\022\017The Ivan Device\032\004\360\237\245\267"\0064\230zlG\244(\004"
+}
+id: 1819900755
+rx_time: 1725990572
+rx_snr: 5.75
+hop_limit: 4
+rx_rssi: -58
+hop_start: 7
+, 'fromId': '!7a6c47a4', 'toId': '^all'}

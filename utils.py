@@ -83,3 +83,9 @@ def send_channel_to_bbs_nodes(name, url, bbs_nodes, interface):
     message = f"CHANNEL|{name}|{url}"
     for node_id in bbs_nodes:
         send_message(message, node_id, interface)
+
+
+def log_text_to_file(data, file_path='log.txt'):
+    with open(file_path, 'a') as log_file:
+        log_file.write('\n\n' + '-'*100 + '\n\n')  # Add separator line
+        log_file.write(f"{str(data)}")  # Convert the data to a string and write it to the file

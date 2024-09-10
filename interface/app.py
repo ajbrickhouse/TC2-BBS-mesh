@@ -57,25 +57,10 @@ def get_telemetry_data():
             "snr": row[13]
         })
 
-    # telemetry_data = []
-    # for row in data:
-    #     telemetry_data.append({
-    #         "sender_node_id": row[0],
-    #         "sender_short_name": row[1],  # Check if this value exists in your DB
-    #         "timestamp": row[2],
-    #         "latitude": row[3],
-    #         "longitude": row[4],
-    #         "temperature": row[5],
-    #         "humidity": row[6],
-    #         "pressure": row[7],
-    #         "battery_level": row[8],
-    #         "voltage": row[9],
-    #         "altitude": row[10],
-    #         "sats_in_view": row[11]
-    #     })
+    # print(telemetry_data)
 
     conn.close()
-    print(f"Telemetry data retrieved: {telemetry_data}")
+    # print(f"Telemetry data retrieved: {telemetry_data}")
     return jsonify(telemetry_data)
 
 if __name__ == '__main__':

@@ -67,7 +67,20 @@ def initialize_database():
                 neighbor_node_id TEXT,
                 snr REAL
             );''')
-
+    c.execute('''CREATE TABLE IF NOT EXISTS waypoints (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                expiration DATETIME,
+                sender_node_id TEXT NOT NULL,
+                sender_short_name TEXT,
+                name TEXT,
+                description TEXT,
+                latitude REAL NOT NULL,
+                longitude REAL NOT NULL,
+                altitude REAL,
+                locked INTEGER DEFAULT 0,
+                message_string TEXT
+            );''')
     conn.commit()
 
     print("Database schema initialized.")
@@ -213,3 +226,12 @@ def insert_telemetry_data(sender_node_id, sender_short_name=None, to_node_id=Non
     finally:
         # Close the connection only if it's not shared across threads
         pass  # Remove conn.close() to avoid prematurely closing in a multi-threaded environment
+
+def add_waypoint(sender_node_id, name, description, atitude, longitude, locked, expiration=None, message_string=None):
+    if expiration is None:
+        expiration = (datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M')
+    conn = get_db_connection()
+    c = conn.cursor()
+    c.execute("INSERT INTO waypoints (sender_node_id, name, description, latitude, longitude, locked, expiration, message_string) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+              (sender_node_id, name, description, icon, latitude, longitude, locked, expiration))
+    conn.commit()
