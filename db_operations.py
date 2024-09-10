@@ -18,7 +18,7 @@ thread_local = threading.local()
 
 def get_db_connection():
     if not hasattr(thread_local, 'connection'):
-        thread_local.connection = sqlite3.connect('bulletins.db')
+        thread_local.connection = sqlite3.connect('bulletins.db', check_same_thread=False)
     return thread_local.connection
 
 def initialize_database():
@@ -48,8 +48,30 @@ def initialize_database():
                     name TEXT NOT NULL,
                     url TEXT NOT NULL
                 );''')
+    c.execute('''CREATE TABLE IF NOT EXISTS TelemetryData (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                sender_node_id TEXT NOT NULL,
+                to_node_id TEXT,
+                sender_short_name TEXT,
+                timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                temperature REAL,
+                humidity REAL,
+                pressure REAL,
+                battery_level REAL,
+                voltage REAL,
+                uptime_seconds REAL,
+                latitude REAL,
+                longitude REAL,
+                altitude REAL,
+                sats_in_view INTEGER,
+                neighbor_node_id TEXT,
+                snr REAL
+            );''')
+
     conn.commit()
+
     print("Database schema initialized.")
+
 
 def add_channel(name, url, bbs_nodes=None, interface=None):
     conn = get_db_connection()
@@ -92,7 +114,6 @@ def add_bulletin(board, sender_short_name, subject, content, bbs_nodes, interfac
         send_message(notification_message, BROADCAST_NUM, interface)
 
     return unique_id
-
 
 def get_bulletins(board):
     conn = get_db_connection()
@@ -168,3 +189,27 @@ def get_sender_id_by_mail_id(mail_id):
     if result:
         return result[0]
     return None
+
+def insert_telemetry_data(sender_node_id, sender_short_name=None, to_node_id=None, temperature=None, humidity=None,
+                          pressure=None, battery_level=None, voltage=None, uptime_seconds=None,
+                          latitude=None, longitude=None, altitude=None, sats_in_view=None,
+                          neighbor_node_id=None, snr=None):
+    conn = get_db_connection()
+    try:
+        with conn:
+            conn.execute('''
+                INSERT INTO TelemetryData (
+                    sender_node_id, sender_short_name, to_node_id, temperature, humidity, pressure, 
+                    battery_level, voltage, uptime_seconds, latitude, longitude, altitude, 
+                    sats_in_view, neighbor_node_id, snr
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                sender_node_id, sender_short_name, to_node_id, temperature, humidity, pressure, 
+                battery_level, voltage, uptime_seconds, latitude, longitude, altitude, 
+                sats_in_view, neighbor_node_id, snr
+            ))
+    except sqlite3.Error as e:
+        logging.error(f"Error inserting telemetry data: {e}")
+    finally:
+        # Close the connection only if it's not shared across threads
+        pass  # Remove conn.close() to avoid prematurely closing in a multi-threaded environment

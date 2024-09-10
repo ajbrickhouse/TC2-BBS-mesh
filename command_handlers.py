@@ -73,14 +73,14 @@ def get_node_name(node_id, interface):
 
 
 def handle_mail_command(sender_id, interface):
-    response = "✉️Mail Menu✉️\nWhat would you like to do with mail?\n[R]ead  [S]end E[X]IT"
+    response = "✉️Mail Menu✉️\nWhat would you like to do with mail?\n[R]ead  \n[S]end \nE[X]IT"
     send_message(response, sender_id, interface)
     update_user_state(sender_id, {'command': 'MAIL', 'step': 1})
 
 
 
 def handle_bulletin_command(sender_id, interface):
-    response = "📰Bulletin Menu📰\nWhich board would you like to enter?\n[G]eneral  [I]nfo  [N]ews  [U]rgent"
+    response = "📰Bulletin Menu📰\nWhich board would you like to enter?\n[G]eneral  \n[I]nfo  \n[N]ews  \n[U]rgent"
     send_message(response, sender_id, interface)
     update_user_state(sender_id, {'command': 'BULLETIN_MENU', 'step': 1})
 
@@ -91,7 +91,7 @@ def handle_exit_command(sender_id, interface):
 
 
 def handle_stats_command(sender_id, interface):
-    response = "📊Stats Menu📊\nWhat stats would you like to view?\n[N]odes  [H]ardware  [R]oles  E[X]IT"
+    response = "📊Stats Menu📊\nWhat stats would you like to view?\n[N]odes  \n[H]ardware  \n[R]oles  \nE[X]IT"
     send_message(response, sender_id, interface)
     update_user_state(sender_id, {'command': 'STATS', 'step': 1})
 
@@ -166,7 +166,7 @@ def handle_bb_steps(sender_id, message, step, state, interface, bbs_nodes):
             handle_help_command(sender_id, interface, 'bbs')
             return
         board_name = boards[int(message)]
-        response = f"What would you like to do in the {board_name} board?\n[R]ead  [P]ost"
+        response = f"What would you like to do in the {board_name} board? \n[R]ead  \n[P]ost"
         send_message(response, sender_id, interface)
         update_user_state(sender_id, {'command': 'BULLETIN_ACTION', 'step': 2, 'board': board_name})
 
@@ -199,7 +199,7 @@ def handle_bb_steps(sender_id, message, step, state, interface, bbs_nodes):
         sender_short_name, date, subject, content, unique_id = get_bulletin_content(bulletin_id)
         send_message(f"From: {sender_short_name}\nDate: {date}\nSubject: {subject}\n- - - - - - -\n{content}", sender_id, interface)
         board_name = state['board']
-        handle_bb_steps(sender_id, 'e', 1, state, interface, bbs_nodes)
+        handle_bb_steps(sender_id=sender_id, message='e', step=1, state=state, interface=interface, bbs_nodes=bbs_nodes)
 
     elif step == 4:
         subject = message
@@ -220,7 +220,7 @@ def handle_bb_steps(sender_id, message, step, state, interface, bbs_nodes):
             sender_short_name = node_info['user'].get('shortName', f"Node {sender_id}")
             unique_id = add_bulletin(board, sender_short_name, subject, content, bbs_nodes, interface)
             send_message(f"Your bulletin '{subject}' has been posted to {board}.\n(╯°□°)╯📄📌[{board}]", sender_id, interface)
-            handle_bb_steps(sender_id, 'e', 1, state, interface, bbs_nodes)
+            handle_bb_steps(sender_id=sender_id, message='e', step=1, state=state, interface=interface, bbs_nodes=bbs_nodes)
         else:
             state['content'] += message + "\n"
             update_user_state(sender_id, state)
@@ -255,7 +255,7 @@ def handle_mail_steps(sender_id, message, step, state, interface, bbs_nodes):
             sender_node_id = get_node_id_from_num(sender_id, interface)
             sender, date, subject, content, unique_id = get_mail_content(mail_id, sender_node_id)
             send_message(f"Date: {date}\nFrom: {sender}\nSubject: {subject}\n{content}", sender_id, interface)
-            send_message("What would you like to do with this message?\n[K]eep  [D]elete  [R]eply", sender_id, interface)
+            send_message("What would you like to do with this message?\n[K]eep  \n[D]elete  \n[R]eply", sender_id, interface)
             update_user_state(sender_id, {'command': 'MAIL', 'step': 4, 'mail_id': mail_id, 'unique_id': unique_id, 'sender': sender, 'subject': subject, 'content': content})
         except ValueError:
             send_message("Invalid input. Please enter a valid message number.", sender_id, interface)
@@ -371,7 +371,7 @@ def handle_channel_directory_steps(sender_id, message, step, state, interface):
             channels = get_channels()
             if channels:
                 response = "Select a channel number to view:\n" + "\n".join(
-                    [f"[{i}] {channel[0]}" for i, channel in enumerate(channels)])
+                    [f"[{i}] {channel[1]}" for i, channel in enumerate(channels)])
                 send_message(response, sender_id, interface)
                 update_user_state(sender_id, {'command': 'CHANNEL_DIRECTORY', 'step': 2})
             else:
@@ -384,7 +384,7 @@ def handle_channel_directory_steps(sender_id, message, step, state, interface):
             channels = get_channels()
             if channels:
                 response = "Select a channel number to remove:\n" + "\n".join(
-                    [f"[{i}] {channel[0]}" for i, channel in enumerate(channels)])
+                    [f"[{i}] {channel[1]}" for i, channel in enumerate(channels)])
                 send_message(response, sender_id, interface)
                 update_user_state(sender_id, {'command': 'CHANNEL_DIRECTORY', 'step': 5})
             else:
@@ -395,7 +395,7 @@ def handle_channel_directory_steps(sender_id, message, step, state, interface):
         channel_index = int(message)
         channels = get_channels()
         if 0 <= channel_index < len(channels):
-            channel_name, channel_url = channels[channel_index]
+            channel_id, channel_name, channel_url = channels[channel_index]
             send_message(f"Channel Name: {channel_name}\nChannel URL:\n{channel_url}", sender_id, interface)
         handle_channel_directory_command(sender_id, interface)
 
@@ -415,8 +415,8 @@ def handle_channel_directory_steps(sender_id, message, step, state, interface):
         channel_index = int(message)
         channels = get_channels()
         if 0 <= channel_index < len(channels):
-            channel_name, _ = channels[channel_index]
-            remove_channel(channel_index)
+            channel_id, channel_name, channel_url = channels[channel_index]
+            remove_channel(channel_id)
             send_message(f"Channel '{channel_name}' has been removed from the directory.", sender_id, interface)
         handle_channel_directory_command(sender_id, interface)
 
@@ -489,7 +489,7 @@ def handle_read_mail_command(sender_id, message, state, interface):
         sender, date, subject, content, unique_id = get_mail_content(mail_id, sender_node_id)
         response = f"Date: {date}\nFrom: {sender}\nSubject: {subject}\n\n{content}"
         send_message(response, sender_id, interface)
-        send_message("What would you like to do with this message?\n[K]eep  [D]elete  [R]eply", sender_id, interface)
+        send_message("What would you like to do with this message?\n[K]eep  \n[D]elete  \n[R]eply", sender_id, interface)
         update_user_state(sender_id, {'command': 'CHECK_MAIL', 'step': 2, 'mail_id': mail_id, 'unique_id': unique_id, 'sender': sender, 'subject': subject, 'content': content})
 
     except ValueError:

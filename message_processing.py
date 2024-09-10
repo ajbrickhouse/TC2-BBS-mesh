@@ -10,7 +10,7 @@ from command_handlers import (
     handle_check_bulletin_command, handle_read_bulletin_command, handle_read_channel_command,
     handle_post_channel_command, handle_list_channels_command, handle_quick_help_command
 )
-from db_operations import add_bulletin, add_mail, delete_bulletin, delete_mail, get_db_connection, add_channel
+from db_operations import add_bulletin, add_mail, delete_bulletin, delete_mail, get_db_connection, add_channel, insert_telemetry_data
 from js8call_integration import handle_js8call_command, handle_js8call_steps, handle_group_message_selection
 from utils import get_user_state, get_node_short_name, get_node_id_from_num, send_message
 
@@ -175,34 +175,88 @@ def process_message(sender_id, message, interface, is_sync_message=False):
 
 
 def on_receive(packet, interface):
+    # logging.info(f"Received packet \n\n{packet}\n\n --------------------------------------------------")
     try:
-        if 'decoded' in packet and packet['decoded']['portnum'] == 'TEXT_MESSAGE_APP':
-            message_bytes = packet['decoded']['payload']
-            message_string = message_bytes.decode('utf-8')
-            sender_id = packet['from']
-            to_id = packet.get('to')
-            sender_node_id = packet['fromId']
-
+        # Use .get() to avoid KeyError if 'decoded' does not exist
+        decoded_packet = packet.get('decoded', {})
+        if decoded_packet:
+            portnum = decoded_packet.get('portnum')
+            sender_node_id = packet.get('fromId')
+            to_node_id = packet.get('toId')
             sender_short_name = get_node_short_name(sender_node_id, interface)
-            receiver_short_name = get_node_short_name(get_node_id_from_num(to_id, interface),
-                                                      interface) if to_id else "Group Chat"
-            logging.info(f"Received message from user '{sender_short_name}' to {receiver_short_name}: {message_string}")
 
-            bbs_nodes = interface.bbs_nodes
-            is_sync_message = any(message_string.startswith(prefix) for prefix in
-                                  ["BULLETIN|", "MAIL|", "DELETE_BULLETIN|", "DELETE_MAIL|"])
+            # Handle TEXT_MESSAGE_APP
+            if portnum == 'TEXT_MESSAGE_APP':
+                message_bytes = decoded_packet.get('payload')
+                if message_bytes:
+                    message_string = message_bytes.decode('utf-8')
+                sender_id = packet.get('fromId')
+                to_id = packet.get('toId')
+                channel = packet.get('channel', 0)
 
-            if sender_node_id in bbs_nodes:
-                if is_sync_message:
-                    process_message(sender_id, message_string, interface, is_sync_message=True)
-                else:
-                    logging.info("Ignoring non-sync message from known BBS node")
-            elif to_id is not None and to_id != 0 and to_id != 255 and to_id == interface.myInfo.my_node_num:
-                process_message(sender_id, message_string, interface, is_sync_message=False)
+                receiver_short_name = get_node_short_name(to_id, interface) if to_id and to_id[0] == '!' else f"Channel {channel}"
+
+                logging.info(f"Received message from '{sender_short_name}' to '{receiver_short_name}': {message_string}")
+
+            # Handle TELEMETRY_APP
+            elif portnum == 'TELEMETRY_APP':
+                telemetry_data = decoded_packet.get('telemetry', {})
+                temp = telemetry_data.get('environmentMetrics', {}).get('temperature')
+                humidity = telemetry_data.get('environmentMetrics', {}).get('relativeHumidity')
+                pressure = telemetry_data.get('environmentMetrics', {}).get('barometricPressure')
+                battery = telemetry_data.get('deviceMetrics', {}).get('batteryLevel')
+                voltage = telemetry_data.get('deviceMetrics', {}).get('voltage')
+                uptime = telemetry_data.get('deviceMetrics', {}).get('uptimeSeconds')
+
+                logging.info(f"Telemetry from '{sender_short_name}' - Temp: {temp}°C, Humidity: {humidity}%, Pressure: {pressure} hPa, "
+                             f"Battery: {battery}%, Voltage: {voltage}V, Uptime: {uptime}s")
+
+                # Insert telemetry data into the database
+                insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
+                                      temperature=temp, humidity=humidity, pressure=pressure,
+                                      battery_level=battery, voltage=voltage, uptime_seconds=uptime)
+
+            # Handle POSITION_APP
+            elif portnum == 'POSITION_APP':
+                position_data = decoded_packet.get('position', {})
+                latitude = position_data.get('latitude')
+                longitude = position_data.get('longitude')
+                altitude = position_data.get('altitude')
+                sats_in_view = position_data.get('satsInView')
+
+                logging.info(f"Position from '{sender_short_name}' - Lat: {latitude}, Lon: {longitude}, Alt: {altitude}m, Sats in View: {sats_in_view}")
+
+                # Insert position data into the database
+                insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
+                                      latitude=latitude, longitude=longitude, altitude=altitude, sats_in_view=sats_in_view)
+
+
+            # Handle NEIGHBORINFO_APP
+            elif portnum == 'NEIGHBORINFO_APP':
+                neighbor_info = decoded_packet.get('neighborinfo', {})
+                node_id = neighbor_info.get('nodeId')
+                neighbors = neighbor_info.get('neighbors', [])
+                logging.info(f"Neighbor info from '{sender_short_name}' (Node {node_id}): {[n.get('nodeId') for n in neighbors]}")
+
+                for neighbor in neighbors:
+                    neighbor_id = neighbor.get('nodeId')
+                    snr = neighbor.get('snr')
+                    logging.info(f"Neighbor {neighbor_id} of '{sender_short_name}' with SNR: {snr}")
+
+                    # Insert neighbor info into the database
+                    insert_telemetry_data(sender_node_id=sender_node_id, sender_short_name=sender_short_name, to_node_id=to_node_id,
+                                          neighbor_node_id=neighbor_id, snr=snr)
+
             else:
-                logging.info("Ignoring message sent to group chat or from unknown node")
-    except KeyError as e:
+                logging.warning(f"Unhandled portnum '{portnum}' from '{sender_short_name}'")
+                
+    except Exception as e:
         logging.error(f"Error processing packet: {e}")
+
+
+    except KeyError as e:
+        logging.error(f"Error processing packet from '{sender_short_name}': {e}")
+
 
 def get_recipient_id_by_mail(unique_id):
     # Fix for Mail Delete sync issue

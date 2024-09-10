@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemetry Data Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([0, 0], 2); // Start at a global view
+
+        // Set up the OSM tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var markers = {};  // Dictionary to store markers by sender_node_id
+        var initialLoad = true;  // Flag to indicate if it's the first load
+
+        // Function to fetch and update telemetry data
+        function fetchTelemetryData() {
+            fetch('/get-telemetry-data') // Backend endpoint for fetching data
+                .then(response => response.json())
+                .then(data => {
+                    var bounds = [];
+
+                    // Loop through the telemetry data
+                    data.forEach(item => {
+                        // Only process points with valid latitude and longitude
+                        if (item.latitude && item.longitude) {
+                            bounds.push([item.latitude, item.longitude]);
+
+                            // If a marker for this sender_node_id already exists, update its position
+                            if (markers[item.sender_node_id]) {
+                                markers[item.sender_node_id].setLatLng([item.latitude, item.longitude]);
+                            } else {
+                                // Create a new marker for the sender_node_id
+                                var marker = L.marker([item.latitude, item.longitude]).addTo(map);
+                                marker.bindPopup(`
+                                    <strong>Node ID:</strong> ${item.sender_node_id}<br>
+                                    <strong>Short Name:</strong> ${item.sender_short_name}<br>
+                                    <strong>Timestamp:</strong> ${item.timestamp}<br>
+                                    <strong>Temperature:</strong> ${item.temperature} °C<br>
+                                    <strong>Humidity:</strong> ${item.humidity} %<br>
+                                    <strong>Pressure:</strong> ${item.pressure} hPa<br>
+                                    <strong>Battery Level:</strong> ${item.battery_level} %<br>
+                                    <strong>Voltage:</strong> ${item.voltage} V<br>
+                                    <strong>Altitude:</strong> ${item.altitude} m<br>
+                                    <strong>Sats in View:</strong> ${item.sats_in_view}
+                                `);
+                                markers[item.sender_node_id] = marker;  // Add to markers dictionary
+                            }
+                        }
+                    });
+
+                    // Adjust the map to fit all points only on the first load
+                    if (initialLoad && bounds.length > 0) {
+                        map.fitBounds(bounds);
+                        initialLoad = false;  // Set to false to prevent future zooming
+                    }
+                })
+                .catch(error => console.error('Error fetching telemetry data:', error));
+        }
+
+        // Fetch telemetry data every 10 seconds (10000 milliseconds)
+        setInterval(fetchTelemetryData, 10000);
+
+        // Initial fetch when the page loads
+        fetchTelemetryData();
+    </script>
+</body>
+</html>
