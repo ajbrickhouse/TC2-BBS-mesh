@@ -20,3 +20,237 @@ hop_limit: 4
 rx_rssi: -58
 hop_start: 7
 , 'fromId': '!7a6c47a4', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 862527612, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!3369207c\x12\x0fMeshtastic 207c\x1a\x04207c"\x06d\xe83i |(+', 'wantResponse': True, 'user': {'id': '!3369207c', 'longName': 'Meshtastic 207c', 'shortName': '207c', 'macaddr': 'ZOgzaSB8', 'hwModel': 'HELTEC_V3', 'raw': id: "!3369207c"
+long_name: "Meshtastic 207c"
+short_name: "207c"
+macaddr: "d\3503i |"
+hw_model: HELTEC_V3
+}}, 'id': 1675202233, 'rxTime': 1725990989, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -54, 'hopStart': 3, 'raw': from: 862527612
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!3369207c\022\017Meshtastic 207c\032\004207c"\006d\3503i |(+"
+  want_response: true
+}
+id: 1675202233
+rx_time: 1725990989
+rx_snr: 6.25
+hop_limit: 1
+rx_rssi: -54
+hop_start: 3
+, 'fromId': '!3369207c', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2083482556, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!7c2f6bbc\x12\x1fSouth Treasure Valley relay @IK\x1a\x04\xf0\x9f\x93\xa1"\x06\xf4\xea|/k\xbc(\t8\x02', 'user': {'id': '!7c2f6bbc', 'longName': 'South Treasure Valley relay @IK', 'shortName': '📡', 'macaddr': '9Op8L2u8', 'hwModel': 'RAK4631', 'role': 'ROUTER', 'raw': id: "!7c2f6bbc"
+long_name: "South Treasure Valley relay @IK"
+short_name: "📡"
+macaddr: "\364\352|/k\274"
+hw_model: RAK4631
+role: ROUTER
+}}, 'id': 443969055, 'rxTime': 1725993013, 'rxSnr': 7.0, 'hopLimit': 5, 'rxRssi': -40, 'hopStart': 7, 'raw': from: 2083482556
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!7c2f6bbc\022\037South Treasure Valley relay @IK\032\004\360\237\223\241"\006\364\352|/k\274(\t8\002"
+}
+id: 443969055
+rx_time: 1725993013
+rx_snr: 7
+hop_limit: 5
+rx_rssi: -40
+hop_start: 7
+, 'fromId': '!7c2f6bbc', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!13227898\x12\x0fStar City Radio\x1a\x04STAR"\x06\xf8\x92\x13"x\x98(\t', 'user': {'id': '!13227898', 'longName': 'Star City Radio', 'shortName': 'STAR', 'macaddr': '+JITIniY', 'hwModel': 'RAK4631', 'raw': id: "!13227898"
+long_name: "Star City Radio"
+short_name: "STAR"
+macaddr: "\370\222\023"x\230"
+hw_model: RAK4631
+}}, 'id': 1711868379, 'rxTime': 1725993056, 'rxSnr': 6.0, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 321026200
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!13227898\022\017Star City Radio\032\004STAR"\006\370\222\023"x\230(\t"
+}
+id: 1711868379
+rx_time: 1725993056
+rx_snr: 6
+rx_rssi: -41
+hop_start: 3
+, 'fromId': '!13227898', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2223545284, 'to': 862527612, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!84889bc4\x12\x10Base 1 Long 5689\x1a\x03B1L"\x06x!\x84\x88\x9b\xc4(\x04', 'requestId': 393974333, 'user': {'id': '!84889bc4', 'longName': 'Base 1 Long 5689', 'shortName': 'B1L', 'macaddr': 'eCGEiJvE', 'hwModel': 'TBEAM', 'raw': id: "!84889bc4"
+long_name: "Base 1 Long 5689"
+short_name: "B1L"
+macaddr: "x!\204\210\233\304"
+hw_model: TBEAM
+}}, 'id': 897025011, 'rxTime': 1725993330, 'rxSnr': 7.25, 'rxRssi': -39, 'hopStart': 3, 'raw': from: 2223545284
+to: 862527612
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!84889bc4\022\020Base 1 Long 5689\032\003B1L"\006x!\204\210\233\304(\004"
+  request_id: 393974333
+}
+id: 897025011
+rx_time: 1725993330
+rx_snr: 7.25
+rx_rssi: -39
+hop_start: 3
+, 'fromId': '!84889bc4', 'toId': '!3369207c'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2803275045, 'to': 3734987192, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!99a34093\x12\nRavenhurst\x1a\x04Rvnh"\x06\xee\r\x99\xa3@\x93(\t8\x03', 'wantResponse': True, 'user': {'id': '!99a34093', 'longName': 'Ravenhurst', 'shortName': 'Rvnh', 'macaddr': '7g2Zo0CT', 'hwModel': 'RAK4631', 'role': 'ROUTER_CLIENT', 'raw': id: "!99a34093"
+long_name: "Ravenhurst"
+short_name: "Rvnh"
+macaddr: "\356\r\231\243@\223"
+hw_model: RAK4631
+role: ROUTER_CLIENT
+}}, 'id': 1329812581, 'rxTime': 1725993793, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 5, 'raw': from: 2803275045
+to: 3734987192
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!99a34093\022\nRavenhurst\032\004Rvnh"\006\356\r\231\243@\223(\t8\003"
+  want_response: true
+}
+id: 1329812581
+rx_time: 1725993793
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -41
+hop_start: 5
+, 'fromId': '!99a34093', 'toId': None}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2475420652, 'to': 3734987192, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!938bebec\x12\tKG7KVI-01\x1a\x04KVI1"\x06D\x17\x93\x8b\xeb\xec(\x04', 'wantResponse': True, 'user': {'id': '!938bebec', 'longName': 'KG7KVI-01', 'shortName': 'KVI1', 'macaddr': 'RBeTi+vs', 'hwModel': 'TBEAM', 'raw': id: "!938bebec"
+long_name: "KG7KVI-01"
+short_name: "KVI1"
+macaddr: "D\027\223\213\353\354"
+hw_model: TBEAM
+}}, 'id': 4161333281, 'rxTime': 1725993811, 'rxSnr': 5.75, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 2475420652
+to: 3734987192
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!938bebec\022\tKG7KVI-01\032\004KVI1"\006D\027\223\213\353\354(\004"
+  want_response: true
+}
+id: 4161333281
+rx_time: 1725993811
+rx_snr: 5.75
+rx_rssi: -41
+hop_start: 3
+, 'fromId': '!938bebec', 'toId': None}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 2803275045, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!99a34093\x12\nRavenhurst\x1a\x04Rvnh"\x06\xee\r\x99\xa3@\x93(\t8\x03', 'user': {'id': '!99a34093', 'longName': 'Ravenhurst', 'shortName': 'Rvnh', 'macaddr': '7g2Zo0CT', 'hwModel': 'RAK4631', 'role': 'ROUTER_CLIENT', 'raw': id: "!99a34093"
+long_name: "Ravenhurst"
+short_name: "Rvnh"
+macaddr: "\356\r\231\243@\223"
+hw_model: RAK4631
+role: ROUTER_CLIENT
+}}, 'id': 1329812607, 'rxTime': 1725995392, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 5, 'raw': from: 2803275045
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!99a34093\022\nRavenhurst\032\004Rvnh"\006\356\r\231\243@\223(\t8\003"
+}
+id: 1329812607
+rx_time: 1725995392
+rx_snr: 6.5
+hop_limit: 3
+rx_rssi: -41
+hop_start: 5
+, 'fromId': '!99a34093', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!13227898\x12\x0fStar City Radio\x1a\x04STAR"\x06\xf8\x92\x13"x\x98(\t', 'user': {'id': '!13227898', 'longName': 'Star City Radio', 'shortName': 'STAR', 'macaddr': '+JITIniY', 'hwModel': 'RAK4631', 'raw': id: "!13227898"
+long_name: "Star City Radio"
+short_name: "STAR"
+macaddr: "\370\222\023"x\230"
+hw_model: RAK4631
+}}, 'id': 1711868393, 'rxTime': 1725996651, 'rxSnr': 6.25, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 321026200
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!13227898\022\017Star City Radio\032\004STAR"\006\370\222\023"x\230(\t"
+}
+id: 1711868393
+rx_time: 1725996651
+rx_snr: 6.25
+rx_rssi: -41
+hop_start: 3
+, 'fromId': '!13227898', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!13227898\x12\x0fStar City Radio\x1a\x04STAR"\x06\xf8\x92\x13"x\x98(\t', 'user': {'id': '!13227898', 'longName': 'Star City Radio', 'shortName': 'STAR', 'macaddr': '+JITIniY', 'hwModel': 'RAK4631', 'raw': id: "!13227898"
+long_name: "Star City Radio"
+short_name: "STAR"
+macaddr: "\370\222\023"x\230"
+hw_model: RAK4631
+}}, 'id': 1711868424, 'rxTime': 1726003854, 'rxSnr': 5.5, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 321026200
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!13227898\022\017Star City Radio\032\004STAR"\006\370\222\023"x\230(\t"
+}
+id: 1711868424
+rx_time: 1726003854
+rx_snr: 5.5
+rx_rssi: -40
+hop_start: 3
+, 'fromId': '!13227898', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!fa6dc46c\x12\x03Jay\x1a\x03Jay"\x06\xf4\x12\xfam\xc4l(\x0c', 'user': {'id': '!fa6dc46c', 'longName': 'Jay', 'shortName': 'Jay', 'macaddr': '9BL6bcRs', 'hwModel': 'LILYGO_TBEAM_S3_CORE', 'raw': id: "!fa6dc46c"
+long_name: "Jay"
+short_name: "Jay"
+macaddr: "\364\022\372m\304l"
+hw_model: LILYGO_TBEAM_S3_CORE
+}}, 'id': 824650802, 'rxTime': 1726004682, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!fa6dc46c\022\003Jay\032\003Jay"\006\364\022\372m\304l(\014"
+}
+id: 824650802
+rx_time: 1726004682
+rx_snr: 6.25
+hop_limit: 3
+rx_rssi: -41
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}
+
+----------------------------------------------------------------------------------------------------
+
+{'from': 814726000, 'to': 4294967295, 'decoded': {'portnum': 'NODEINFO_APP', 'payload': b'\n\t!308fbb70\x12\x0fNorth TVM Relay\x1a\x04\xf0\x9f\x93\xa1"\x06\xdf\xb2\xb4\x10\x15;(\t8\x02', 'user': {'id': '!308fbb70', 'longName': 'North TVM Relay', 'shortName': '📡', 'macaddr': '37K0EBU7', 'hwModel': 'RAK4631', 'role': 'ROUTER', 'raw': id: "!308fbb70"
+long_name: "North TVM Relay"
+short_name: "📡"
+macaddr: "\337\262\264\020\025;"
+hw_model: RAK4631
+role: ROUTER
+}}, 'id': 3226998114, 'rxTime': 1726006024, 'rxSnr': 6.25, 'hopLimit': 6, 'rxRssi': -39, 'hopStart': 7, 'raw': from: 814726000
+to: 4294967295
+decoded {
+  portnum: NODEINFO_APP
+  payload: "\n\t!308fbb70\022\017North TVM Relay\032\004\360\237\223\241"\006\337\262\264\020\025;(\t8\002"
+}
+id: 3226998114
+rx_time: 1726006024
+rx_snr: 6.25
+hop_limit: 6
+rx_rssi: -39
+hop_start: 7
+, 'fromId': '!308fbb70', 'toId': '^all'}

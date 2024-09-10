@@ -30,7 +30,10 @@ def get_telemetry_data():
             (SELECT longitude FROM TelemetryData WHERE longitude IS NOT NULL AND longitude != 0 AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS longitude,
             (SELECT altitude FROM TelemetryData WHERE altitude IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS altitude,
             (SELECT sats_in_view FROM TelemetryData WHERE sats_in_view IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS sats_in_view,
-            (SELECT snr FROM TelemetryData WHERE snr IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS snr
+            (SELECT snr FROM TelemetryData WHERE snr IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS snr,
+            (SELECT hardware_model FROM TelemetryData WHERE hardware_model IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS hardware_model,
+            (SELECT sender_long_name FROM TelemetryData WHERE sender_long_name IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS sender_long_name,
+            (SELECT role FROM TelemetryData WHERE role IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS role
         FROM TelemetryData td
         GROUP BY td.sender_node_id;
     '''
@@ -54,13 +57,22 @@ def get_telemetry_data():
             "longitude": row[10],
             "altitude": row[11],
             "sats_in_view": row[12],
-            "snr": row[13]
+            "snr": row[13],
+            "hardware_model": row[14],
+            "sender_long_name": row[15],
+            "role": row[16]
         })
 
-    # print(telemetry_data)
+    # drop any rows without latitude
+    telemetry_data = [row for row in telemetry_data if row['latitude'] is not None]
+
+    # Change any null values to '---'
+    for row in telemetry_data:
+        for key, value in row.items():
+            if value is None:
+                row[key] = '---'
 
     conn.close()
-    # print(f"Telemetry data retrieved: {telemetry_data}")
     return jsonify(telemetry_data)
 
 if __name__ == '__main__':

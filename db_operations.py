@@ -65,7 +65,11 @@ def initialize_database():
                 altitude REAL,
                 sats_in_view INTEGER,
                 neighbor_node_id TEXT,
-                snr REAL
+                snr REAL,
+                hardware_model TEXT,
+                mac_address TEXT,
+                sender_long_name TEXT,
+                role TEXT
             );''')
     c.execute('''CREATE TABLE IF NOT EXISTS waypoints (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -81,6 +85,16 @@ def initialize_database():
                 locked INTEGER DEFAULT 0,
                 message_string TEXT
             );''')
+    c.execute('''CREATE TABLE IF NOT EXISTS nameLookup (
+                node_id TEXT PRIMARY KEY NOT NULL UNIQUE,
+                short_name TEXT,
+                name TEXT
+            );''')
+    # c.execute('''ALTER TABLE TelemetryData ADD COLUMN sender_long_name TEXT;
+    #             ''')
+    # c.execute('''ALTER TABLE TelemetryData ADD COLUMN role TEXT;
+    #             ''')
+
     conn.commit()
 
     print("Database schema initialized.")
@@ -206,7 +220,7 @@ def get_sender_id_by_mail_id(mail_id):
 def insert_telemetry_data(sender_node_id, sender_short_name=None, to_node_id=None, temperature=None, humidity=None,
                           pressure=None, battery_level=None, voltage=None, uptime_seconds=None,
                           latitude=None, longitude=None, altitude=None, sats_in_view=None,
-                          neighbor_node_id=None, snr=None):
+                          neighbor_node_id=None, snr=None, hardware_model=None, mac_address=None, sender_long_name=None, role=None):
     conn = get_db_connection()
     try:
         with conn:
@@ -214,12 +228,12 @@ def insert_telemetry_data(sender_node_id, sender_short_name=None, to_node_id=Non
                 INSERT INTO TelemetryData (
                     sender_node_id, sender_short_name, to_node_id, temperature, humidity, pressure, 
                     battery_level, voltage, uptime_seconds, latitude, longitude, altitude, 
-                    sats_in_view, neighbor_node_id, snr
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    sats_in_view, neighbor_node_id, snr, hardware_model, mac_address, sender_long_name, role
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
                 sender_node_id, sender_short_name, to_node_id, temperature, humidity, pressure, 
                 battery_level, voltage, uptime_seconds, latitude, longitude, altitude, 
-                sats_in_view, neighbor_node_id, snr
+                sats_in_view, neighbor_node_id, snr, hardware_model, mac_address, sender_long_name, role
             ))
     except sqlite3.Error as e:
         logging.error(f"Error inserting telemetry data: {e}")
@@ -235,3 +249,39 @@ def add_waypoint(sender_node_id, name, description, atitude, longitude, locked, 
     c.execute("INSERT INTO waypoints (sender_node_id, name, description, latitude, longitude, locked, expiration, message_string) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
               (sender_node_id, name, description, icon, latitude, longitude, locked, expiration))
     conn.commit()
+
+def add_or_update_name_lookup(node_id, short_name, name=None):
+    conn = get_db_connection()
+    try:
+        with conn:
+            conn.execute('''
+                INSERT INTO TelemetryData (
+                    node_id, short_name, name
+                ) VALUES (?, ?, ?)
+            ''', (
+                node_id, short_name, name
+            ))
+    except sqlite3.Error as e:
+        logging.error(f"Error updating name: {e}")
+    finally:
+        # Close the connection only if it's not shared across threads
+        pass  # Remove conn.close() to avoid prematurely closing in a multi-threaded environment
+
+def get_name_by_node_id(node_id):
+    conn = get_db_connection()
+    c = conn.cursor()
+    
+    # Query to fetch the short_name and name based on node_id
+    c.execute('''
+        SELECT short_name, name FROM nameLookup WHERE node_id = ?
+    ''', (node_id,))
+    
+    result = c.fetchone()
+    
+    # conn.close()
+
+    if result:
+        short_name, name = result
+        return short_name, name
+    else:
+        return None, None  # Return None if no matching entry is found

@@ -30,13 +30,18 @@ def send_message(message, destination, interface):
         
         time.sleep(2)
 
-
 def get_node_info(interface, short_name):
     nodes = [{'num': node_id, 'shortName': node['user']['shortName'], 'longName': node['user']['longName']}
              for node_id, node in interface.nodes.items()
              if node['user']['shortName'].lower() == short_name]
     return nodes
 
+def get_node_names(interface, node_id):
+    node = interface.nodes.get(node_id)
+    if node and 'user' in node:
+        return node['user']['shortName'], node['user']['longName']
+    else:
+        return None, None  # Return None or an appropriate response if the node_id is not found
 
 def get_node_id_from_num(node_num, interface):
     for node_id, node in interface.nodes.items():

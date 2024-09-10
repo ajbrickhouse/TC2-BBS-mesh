@@ -43,18 +43,58 @@
         // Function to generate popup content
         function generatePopupContent(item) {
             return `
-                <strong>Node ID:</strong> ${item.sender_node_id}<br>
-                <strong>Short Name:</strong> ${item.sender_short_name}<br>
-                <strong>Timestamp:</strong> ${item.timestamp}<br>
-                <strong>Temperature:</strong> ${item.temperature} °C<br>
-                <strong>Humidity:</strong> ${item.humidity} %<br>
-                <strong>Pressure:</strong> ${item.pressure} hPa<br>
-                <strong>Battery Level:</strong> ${item.battery_level} %<br>
-                <strong>Voltage:</strong> ${item.voltage} V<br>
-                <strong>Uptime:</strong> ${item.uptime_seconds} s<br>
-                <strong>Altitude:</strong> ${item.altitude} m<br>
-                <strong>Sats in View:</strong> ${item.sats_in_view} <br>
-                <strong>SNR:</strong> ${item.snr} dB <br>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td colspan="3" style="text-align: center; padding: 10px;">
+                            <b>${item.sender_long_name} (${item.sender_short_name})</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; padding: 5px;"><b>${item.sender_node_id}</b></td>
+                        <td style="text-align: center; padding: 5px;"><b>${item.role}</b></td>
+                        <td style="text-align: center; padding: 5px;"><b>${item.hardware_model}</b></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Last Update:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.timestamp}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Temperature:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.temperature} °C</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Humidity:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.humidity} %</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Pressure:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.pressure} hPa</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Battery Level:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.battery_level} %</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Voltage:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.voltage} V</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Uptime:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.uptime_seconds} s</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Altitude:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.altitude} m</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Sats in View:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.sats_in_view}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>SNR:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.snr} dB</td>
+                    </tr>
+                </table>
             `;
         }
     
