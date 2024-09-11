@@ -37,7 +37,6 @@ def main():
     display_banner()
     logging.info(f"Testbench Mesh Logger is running on {system_config['interface_type']} interface...")
 
-
     def receive_packet(packet, interface):
         on_receive(conn, packet, interface)
 
@@ -46,12 +45,16 @@ def main():
     try:
         while True:
             time.sleep(1)
+            try:
+                interface.sendHeartbeat()  # Send heartbeat as usual
+            except BrokenPipeError:
+                logging.error("BrokenPipeError during heartbeat. Reconnecting...")
+                interface._reconnect()  # Reconnect on broken pipe
 
     except KeyboardInterrupt:
         conn.close()
         logging.info("Shutting down the server and DB...")
         interface.close()
-
 
 if __name__ == "__main__":
     main()

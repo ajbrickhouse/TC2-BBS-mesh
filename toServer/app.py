@@ -11,7 +11,7 @@ def index():
 # Route to provide telemetry data as JSON
 @app.route('/get-telemetry-data', methods=['GET'])
 def get_telemetry_data():
-    conn = sqlite3.connect('../bulletins.db')  # Replace with your actual database path
+    conn = sqlite3.connect('bulletins.db')  # Replace with your actual database path
     cursor = conn.cursor()
 
     # Query to get the most recent non-null values for each field per sender_node_id
@@ -73,7 +73,7 @@ def get_telemetry_data():
                 row[key] = '---'
 
     # Sort telemetry_data by timestamp (assuming timestamps are in a sortable format like ISO 8601)
-    telemetry_data = sorted(telemetry_data, key=lambda x: x['timestamp'], reverse=True)
+    telemetry_data = sorted(telemetry_data, key=lambda x: x['timestamp'], reverse=False)
 
     conn.close()
     return jsonify(telemetry_data)

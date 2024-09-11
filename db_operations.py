@@ -21,7 +21,7 @@ def initialize_database():
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS TelemetryData (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                timestamp DATETIME NOT NULL DEFAULT (datetime(CURRENT_TIMESTAMP, '-7 hours')),
+                timestamp DATETIME NOT NULL DEFAULT (datetime('now','localtime')),
                 sender_node_id TEXT NOT NULL UNIQUE,
                 to_node_id TEXT,
                 sender_long_name TEXT,
@@ -52,7 +52,7 @@ def initialize_database():
 def insert_telemetry_data(conn, sender_node_id, sender_short_name=None, to_node_id=None, temperature=None, humidity=None,
                           pressure=None, battery_level=None, voltage=None, uptime_seconds=None,
                           latitude=None, longitude=None, altitude=None, sats_in_view=None,
-                          neighbor_node_id=None, snr=None, hardware_model=None, mac_address=None, sender_long_name=None, role=None):
+                          neighbor_node_id=None, snr=None, hardware_model=None, mac_address=None, sender_long_name=None, role=None, set_timestamp=True):
     try:
         with conn:
             # create the initial row with the ID, then update what is not None
@@ -114,13 +114,16 @@ def insert_telemetry_data(conn, sender_node_id, sender_short_name=None, to_node_
                 conn.execute('''UPDATE TelemetryData SET role = ? WHERE sender_node_id = ?''', (role, sender_node_id))
                 logging.info(f"--- Updated role: {role}")
 
-            conn.execute('''UPDATE TelemetryData 
-                            SET timestamp = datetime(timestamp, '-7 hours') 
-                            WHERE strftime('%m', timestamp) NOT IN ('04', '05', '06', '07', '08', '09', '10');''')
+            if set_timestamp:
+                conn.execute('''UPDATE TelemetryData 
+                                SET timestamp = datetime('now','localtime') 
+                                WHERE strftime('%m', timestamp) NOT IN ('04', '05', '06', '07', '08', '09', '10')
+                                AND sender_node_id = ?;''', (sender_node_id,))
 
-            conn.execute('''UPDATE TelemetryData 
-                            SET timestamp = datetime(timestamp, '-6 hours') 
-                            WHERE strftime('%m', timestamp) IN ('04', '05', '06', '07', '08', '09', '10');''')
+                conn.execute('''UPDATE TelemetryData 
+                                SET timestamp = datetime('now','localtime')
+                                WHERE strftime('%m', timestamp) IN ('04', '05', '06', '07', '08', '09', '10')
+                                AND sender_node_id = ?;''', (sender_node_id,))
 
             logging.info(f"--------------------------------------------------------")
 
@@ -164,7 +167,8 @@ def process_and_insert_telemetry_data(conn, interface):
                 voltage=device_metrics.get('voltage'),
                 uptime_seconds=device_metrics.get('uptimeSeconds'),
                 snr=node.get('snr'),
-                role=user_data.get('role')  # May not exist
+                role=user_data.get('role'),
+                set_timestamp=False
             )
         # Re-enable logging
         logging.getLogger().setLevel(logging.INFO)
