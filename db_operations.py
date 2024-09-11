@@ -117,13 +117,7 @@ def insert_telemetry_data(conn, sender_node_id, sender_short_name=None, to_node_
             if set_timestamp:
                 conn.execute('''UPDATE TelemetryData 
                                 SET timestamp = datetime('now','localtime') 
-                                WHERE strftime('%m', timestamp) NOT IN ('04', '05', '06', '07', '08', '09', '10')
-                                AND sender_node_id = ?;''', (sender_node_id,))
-
-                conn.execute('''UPDATE TelemetryData 
-                                SET timestamp = datetime('now','localtime')
-                                WHERE strftime('%m', timestamp) IN ('04', '05', '06', '07', '08', '09', '10')
-                                AND sender_node_id = ?;''', (sender_node_id,))
+                                WHERE sender_node_id = ?;''', (sender_node_id,))
 
             logging.info(f"--------------------------------------------------------")
 
