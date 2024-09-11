@@ -108,25 +108,11 @@ def initialize_config(config_file: str = None) -> dict[str, Any]:
     hostname = config['interface'].get('hostname', None)
     port = config['interface'].get('port', None)
 
-    bbs_nodes = config.get('sync', 'bbs_nodes', fallback='').split(',')
-    if bbs_nodes == ['']:
-        bbs_nodes = []
-
-    print(f"Configured to sync with the following BBS nodes: {bbs_nodes}")
-
-    allowed_nodes = config.get('allow_list', 'allowed_nodes', fallback='').split(',')
-    if allowed_nodes == ['']:
-        allowed_nodes = []
-
-    print(f"Nodes with Urgent board permissions: {allowed_nodes}")
-
     return {
         'config': config,
         'interface_type': interface_type,
         'hostname': hostname,
         'port': port,
-        'bbs_nodes': bbs_nodes,
-        'allowed_nodes': allowed_nodes,
         'mqtt_topic': 'meshtastic.receive'
     }
 

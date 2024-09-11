@@ -55,6 +55,8 @@ def log_text_to_file(data, file_path='log.txt'):
 #         log_file.write(f"{str(data)}")  # Convert the data to a string and write it to the file
 
 def display_banner():
+    # clear the console
+    print("\033[H\033[J")
     banner = """
  ********** ********  ******** ********** ******   ******** ****     **   ******  **      **      ******    ****** 
 /////**/// /**/////  **////// /////**/// /*////** /**///// /**/**   /**  **////**/**     /**     **////**  **////**

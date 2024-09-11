@@ -22,17 +22,17 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // Initialize the map with a lower zoom level
-        var map = L.map('map').setView([0, 0], 2); // Global view with lower zoom
-    
+        // Initialize the map centered on Boise, Idaho with a zoom level of 12
+        var map = L.map('map').setView([43.660795, -116.42226], 12);
+
         // Set up the OSM tile layer with lower detail and limited zoom levels
         L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 17,  // Limit the maximum zoom to reduce detail
         }).addTo(map);
-    
+
         var markers = {};  // Dictionary to store markers by sender_node_id
-        var initialLoad = true;  // Flag to indicate if it's the first load
+        var initialLoad = false;  // Flag to indicate if it's the first load
     
         // Define a list of colors to cycle through for the markers
         var markerColors = ['red', 'green', 'blue', 'orange', 'purple', 'darkred', 'cadetblue'];

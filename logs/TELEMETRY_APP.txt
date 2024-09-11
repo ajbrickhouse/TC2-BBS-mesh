@@ -1,0 +1,18 @@
+{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'TELEMETRY_APP', 'payload': b'\r_\x11\xe1f\x12\x0f\x08e\x15\x81\x95\x83@%b\xea\x9a?(\xfc\x7f', 'telemetry': {'time': 1726026079, 'deviceMetrics': {'batteryLevel': 101, 'voltage': 4.112, 'airUtilTx': 1.2102778, 'uptimeSeconds': 16380}, 'raw': time: 1726026079
+device_metrics {
+  battery_level: 101
+  voltage: 4.112
+  air_util_tx: 1.2102778
+  uptime_seconds: 16380
+}
+}}, 'id': 1897517372, 'rxTime': 1726026079, 'hopLimit': 3, 'priority': 'BACKGROUND', 'raw': from: 3806431584
+to: 4294967295
+decoded {
+  portnum: TELEMETRY_APP
+  payload: "\r_\021\341f\022\017\010e\025\201\225\203@%b\352\232?(\374\177"
+}
+id: 1897517372
+rx_time: 1726026079
+hop_limit: 3
+priority: BACKGROUND
+, 'fromId': '!e2e18960', 'toId': '^all'}
