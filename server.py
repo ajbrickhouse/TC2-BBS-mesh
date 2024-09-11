@@ -38,7 +38,7 @@ def main():
     logging.info(f"Testbench Mesh Logger is running on {system_config['interface_type']} interface...")
 
     def receive_packet(packet, interface):
-        on_receive(conn, packet, interface)
+        on_receive(conn, system_config, packet, interface)
 
     pub.subscribe(receive_packet, system_config['mqtt_topic'])
 
@@ -49,7 +49,7 @@ def main():
                 interface.sendHeartbeat()  # Send heartbeat as usual
             except BrokenPipeError:
                 logging.error("BrokenPipeError during heartbeat. Reconnecting...")
-                interface._reconnect()  # Reconnect on broken pipe
+                interface.connect()  # Reconnect on broken pipe
 
     except KeyboardInterrupt:
         conn.close()

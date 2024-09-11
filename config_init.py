@@ -46,6 +46,12 @@ def init_cli_parser() -> argparse.Namespace:
         action="store",
         help="MQTT topic to subscribe",
         default='meshtastic.receive')
+    
+    parser.add_argument(
+        "--timezone", '-z', 
+        action="store",
+        help="Timezone for the system",
+        default='UTC')
     #
     # Add extra arguments here
     #...
@@ -77,6 +83,9 @@ def merge_config(system_config:dict[str, Any], args:argparse.Namespace) -> dict[
         
     if args.host is not None:
         system_config['host'] = args.host
+
+    if args.timezone is not None:
+        system_config['timezone'] = args.timezone
     
     return system_config
 
@@ -107,12 +116,14 @@ def initialize_config(config_file: str = None) -> dict[str, Any]:
     interface_type = config['interface']['type']
     hostname = config['interface'].get('hostname', None)
     port = config['interface'].get('port', None)
+    timezone = config['timezone'].get('timezone', 'UTC')
 
     return {
         'config': config,
         'interface_type': interface_type,
         'hostname': hostname,
         'port': port,
+        'timezone': timezone,
         'mqtt_topic': 'meshtastic.receive'
     }
 

@@ -49,7 +49,7 @@ def initialize_database():
     print("Database schema initialized.")
 
 
-def insert_telemetry_data(conn, sender_node_id, sender_short_name=None, to_node_id=None, temperature=None, humidity=None,
+def insert_telemetry_data(conn, sender_node_id, timestamp=None, sender_short_name=None, to_node_id=None, temperature=None, humidity=None,
                           pressure=None, battery_level=None, voltage=None, uptime_seconds=None,
                           latitude=None, longitude=None, altitude=None, sats_in_view=None,
                           neighbor_node_id=None, snr=None, hardware_model=None, mac_address=None, sender_long_name=None, role=None, set_timestamp=True):
@@ -113,8 +113,10 @@ def insert_telemetry_data(conn, sender_node_id, sender_short_name=None, to_node_
             if role:
                 conn.execute('''UPDATE TelemetryData SET role = ? WHERE sender_node_id = ?''', (role, sender_node_id))
                 logging.info(f"--- Updated role: {role}")
-
-            if set_timestamp:
+            if timestamp and set_timestamp:
+                conn.execute('''UPDATE TelemetryData SET timestamp = ? WHERE sender_node_id = ?''', (timestamp, sender_node_id))
+                logging.info(f"--- Updated timestamp: {timestamp}")
+            elif set_timestamp:
                 conn.execute('''UPDATE TelemetryData 
                                 SET timestamp = datetime('now','localtime') 
                                 WHERE sender_node_id = ?;''', (sender_node_id,))
@@ -166,8 +168,14 @@ def process_and_insert_telemetry_data(conn, interface):
             )
         # Re-enable logging
         logging.getLogger().setLevel(logging.INFO)
-
         logging.info("Telemetry data processed and inserted.")
+
+    except Exception as e:
+        logging.error(f"Error processing and inserting telemetry data: {e}")
+
     finally:
         logging.getLogger().setLevel(logging.INFO)
+        logging.info("Telemetry data processing complete.")
+
+
 
