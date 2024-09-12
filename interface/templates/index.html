@@ -135,7 +135,7 @@
                 <table style="width: 100%; border-collapse: collapse;">
                     <tr>
                         <td colspan="3" style="text-align: center; padding: 10px;">
-                            <b>${item.sender_long_name} (${item.sender_short_name})</b>
+                            <b><h3>${item.sender_long_name} (${item.sender_short_name})</h3></b>
                         </td>
                     </tr>
                     <tr>
@@ -145,7 +145,7 @@
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Last Update:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.timestamp}</td>
+                        <td colspan="2" style="text-align: center;">${item.last_seen}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Temperature:</strong></td>
@@ -182,6 +182,14 @@
                     <tr>
                         <td style="text-align: right;"><strong>SNR:</strong></td>
                         <td colspan="2" style="text-align: center;">${item.snr} dB</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Latitude:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.latitude}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><strong>Longitude:</strong></td>
+                        <td colspan="2" style="text-align: center;">${item.longitude}</td>
                     </tr>
                 </table>
             `;

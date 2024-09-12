@@ -1,0 +1,9 @@
+{
+    "editor.wordWrap": "on",
+    "python.createEnvironment.contentButton": "show",
+    "python.missingPackage.severity": "Information",
+    "css.format.spaceAroundSelectorSeparator": true,
+    "css.hover.documentation": false,
+    "scm.alwaysShowActions": true,
+    "scm.alwaysShowRepositories": true
+}

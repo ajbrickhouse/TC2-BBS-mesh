@@ -1,0 +1,95 @@
+{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555008894, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.114, 'channelUtilization': 3.0683334, 'airUtilTx': 0.44202778, 'uptimeSeconds': 1373}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555008942, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.113, 'channelUtilization': 4.9416666, 'airUtilTx': 0.46027777, 'uptimeSeconds': 1433}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555009265, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.113, 'channelUtilization': 2.025, 'airUtilTx': 0.52283335, 'uptimeSeconds': 1793}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555009360, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.112, 'channelUtilization': 9.815, 'airUtilTx': 0.57394445, 'uptimeSeconds': 1853}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555010305, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.112, 'channelUtilization': 4.9533334, 'airUtilTx': 0.77933335, 'uptimeSeconds': 2813}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555011502, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.111, 'channelUtilization': 3.8633332, 'airUtilTx': 0.78563887, 'uptimeSeconds': 4013}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555011553, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.111, 'airUtilTx': 0.78563887, 'uptimeSeconds': 4073}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555011637, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.111, 'channelUtilization': 2.1616669, 'airUtilTx': 0.79819447, 'uptimeSeconds': 4133}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'id': '!e2e18960', 'longName': 'SilentBob', 'shortName': 'sBob', 'macaddr': 'SCfi4Ylg', 'hwModel': 'LILYGO_TBEAM_S3_CORE'}
+{'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555012781, 'latitude': 43.59213, 'longitude': -116.24724}
+{'batteryLevel': 100, 'voltage': 4.11, 'airUtilTx': 0.7816944, 'uptimeSeconds': 5274}

@@ -19,39 +19,45 @@ def init_cli_parser() -> argparse.Namespace:
     parser.add_argument(
         "--config", "-c",
         action="store",
-        help="System configuration file",
+        help="System configuration file (None)",
         default=None)
     
     parser.add_argument(
         "--interface-type", "-i",
         action="store",
         choices=['serial', 'tcp'],
-        help="Node interface type",
+        help="Node interface type (None)",
         default=None)
     
     parser.add_argument(
         "--port", "-p",
         action="store",
-        help="Serial port",
+        help="Serial port (None)",
         default=None)
     
     parser.add_argument(
         "--host", 
         action="store",
-        help="TCP host address",
+        help="TCP host address (None)",
         default=None)
     
     parser.add_argument(
         "--mqtt-topic", '-t', 
         action="store",
-        help="MQTT topic to subscribe",
+        help="MQTT topic to subscribe (meshtastic.receive)",
         default='meshtastic.receive')
     
     parser.add_argument(
         "--timezone", '-z', 
         action="store",
-        help="Timezone for the system",
+        help="Timezone for the system (UTC)",
         default='UTC')
+    
+    parser.add_argument(
+        "--log-level", '-l', 
+        action="store",
+        help="Logging level for the system (INFO)| DEBUG, INFO, WARNING, ERROR, CRITICAL",
+        default='INFO')
     #
     # Add extra arguments here
     #...
@@ -86,6 +92,9 @@ def merge_config(system_config:dict[str, Any], args:argparse.Namespace) -> dict[
 
     if args.timezone is not None:
         system_config['timezone'] = args.timezone
+
+    if args.log_level is not None:
+        system_config['log_level'] = args.log_level
     
     return system_config
 
@@ -117,6 +126,7 @@ def initialize_config(config_file: str = None) -> dict[str, Any]:
     hostname = config['interface'].get('hostname', None)
     port = config['interface'].get('port', None)
     timezone = config['timezone'].get('timezone', 'UTC')
+    log_level = config['logging'].get('log_level', 'INFO')
 
     return {
         'config': config,
@@ -124,7 +134,8 @@ def initialize_config(config_file: str = None) -> dict[str, Any]:
         'hostname': hostname,
         'port': port,
         'timezone': timezone,
-        'mqtt_topic': 'meshtastic.receive'
+        'mqtt_topic': 'meshtastic.receive',
+        'log_level': log_level
     }
 
 

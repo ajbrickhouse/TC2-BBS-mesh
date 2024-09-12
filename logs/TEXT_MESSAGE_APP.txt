@@ -1,81 +1,86 @@
-
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1463451310, 'to': 4294967295, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b'You as well!', 'text': 'You as well!'}, 'id': 1937240468, 'rxTime': 1725997798, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 1463451310
-to: 4294967295
-decoded {
-  portnum: TEXT_MESSAGE_APP
-  payload: "You as well!"
-}
-id: 1937240468
-rx_time: 1725997798
-rx_snr: 6.25
-hop_limit: 1
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!573a7eae', 'toId': '^all'}
+{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b'Test', 'text': 'Test'}, 'id': 212630231, 'rxTime': 1726004291, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
+"}{'from': 4201497708, 'to': 3806431584, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b'log_text_to_file', 'text': 'log_text_to_file'}, 'id': 270981564, 'rxTime': 1555007571, 'rxSnr': 6.25, 'hopLimit': 3, 'wantAck': True, 'rxRssi': -30, 'hopStart': 3, 'raw': from: 4201497708
+to: 3806431584
 decoded {
   portnum: TEXT_MESSAGE_APP
-  payload: "Test"
+  payload: "log_text_to_file"
 }
-id: 212630231
-rx_time: 1726004291
+id: 270981564
+rx_time: 1555007571
 rx_snr: 6.25
 hop_limit: 3
-rx_rssi: -42
+want_ack: true
+rx_rssi: -30
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '!e2e18960'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 2053916580, 'to': 4294967295, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b'Heard', 'text': 'Heard'}, 'id': 2165718934, 'rxTime': 1726004340, 'rxSnr': 5.5, 'hopLimit': 5, 'rxRssi': -40, 'hopStart': 7, 'raw': from: 2053916580
-to: 4294967295
+"}{'from': 4201497708, 'to': 3806431584, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b'logger.setLevel(logging.CRITICAL + 1)', 'text': 'logger.setLevel(logging.CRITICAL + 1)'}, 'id': 270981565, 'rxTime': 1555009206, 'rxSnr': 6.75, 'hopLimit': 3, 'wantAck': True, 'rxRssi': -31, 'hopStart': 3, 'raw': from: 4201497708
+to: 3806431584
 decoded {
   portnum: TEXT_MESSAGE_APP
-  payload: "Heard"
+  payload: "logger.setLevel(logging.CRITICAL + 1)"
 }
-id: 2165718934
-rx_time: 1726004340
-rx_snr: 5.5
-hop_limit: 5
-rx_rssi: -40
-hop_start: 7
-, 'fromId': '!7a6c47a4', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b'\xf0\x9f\x92\xa3', 'text': '💣'}, 'id': 212630233, 'rxTime': 1726004404, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: TEXT_MESSAGE_APP
-  payload: "\360\237\222\243"
-}
-id: 212630233
-rx_time: 1726004404
-rx_snr: 6.5
+id: 270981565
+rx_time: 1555009206
+rx_snr: 6.75
 hop_limit: 3
-rx_rssi: -40
+want_ack: true
+rx_rssi: -31
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '!e2e18960'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b"You're about 10 miles away. Not bad. \xf0\x9f\x91\x8d", 'text': "You're about 10 miles away. Not bad. 👍"}, 'id': 212630234, 'rxTime': 1726004539, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
+"}{'from': 4201497708, 'to': 3806431584, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b'dt_object = datetime.utcfromtimestamp(timestamp)', 'text': 'dt_object = datetime.utcfromtimestamp(timestamp)'}, 'id': 270981644, 'rxTime': 1555011583, 'rxSnr': 6.0, 'hopLimit': 3, 'wantAck': True, 'rxRssi': -27, 'hopStart': 3, 'raw': from: 4201497708
+to: 3806431584
 decoded {
   portnum: TEXT_MESSAGE_APP
-  payload: "You're about 10 miles away. Not bad. \360\237\221\215"
+  payload: "dt_object = datetime.utcfromtimestamp(timestamp)"
 }
-id: 212630234
-rx_time: 1726004539
-rx_snr: 6.25
+id: 270981644
+rx_time: 1555011583
+rx_snr: 6
 hop_limit: 3
-rx_rssi: -41
+want_ack: true
+rx_rssi: -27
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '!e2e18960'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 3806431584, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b"user_data}\\n{position_data}\\n{device_metrics}', './logs/INTERFACE_DATA.txt')", 'text': "user_data}\\n{position_data}\\n{device_metrics}', './logs/INTERFACE_DATA.txt')"}, 'id': 270981648, 'rxTime': 1555011661, 'rxSnr': 5.75, 'hopLimit': 3, 'wantAck': True, 'rxRssi': -27, 'hopStart': 3, 'raw': from: 4201497708
+to: 3806431584
+decoded {
+  portnum: TEXT_MESSAGE_APP
+  payload: "user_data}\n{position_data}\n{device_metrics}', './logs/INTERFACE_DATA.txt')"
+}
+id: 270981648
+rx_time: 1555011661
+rx_snr: 5.75
+hop_limit: 3
+want_ack: true
+rx_rssi: -27
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '!e2e18960'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 3806431584, 'decoded': {'portnum': 'TEXT_MESSAGE_APP', 'payload': b"user_data}\\n{position_data}\\n{device_metrics}', './logs/INTERFACE_DATA.txt')", 'text': "user_data}\\n{position_data}\\n{device_metrics}', './logs/INTERFACE_DATA.txt')"}, 'id': 270981657, 'rxTime': 1555011915, 'rxSnr': 5.75, 'hopLimit': 3, 'wantAck': True, 'rxRssi': -26, 'hopStart': 3, 'raw': from: 4201497708
+to: 3806431584
+decoded {
+  portnum: TEXT_MESSAGE_APP
+  payload: "user_data}\n{position_data}\n{device_metrics}', './logs/INTERFACE_DATA.txt')"
+}
+id: 270981657
+rx_time: 1555011915
+rx_snr: 5.75
+hop_limit: 3
+want_ack: true
+rx_rssi: -26
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '!e2e18960'}

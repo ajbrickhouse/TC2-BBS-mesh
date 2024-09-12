@@ -1,10 +1,11 @@
 import sqlite3
+from datetime import datetime, timedelta
 from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 application = app  # For Elastic Beanstalk deployment
 
-db_path = './bulletins.db'  # Replace with your actual database path    
+db_path = '../nodeData.db'  # Replace with your actual database path    
 
 # Route to serve the HTML template
 @app.route('/')
@@ -45,7 +46,31 @@ def get_telemetry_data():
     data = cursor.fetchall()
 
     telemetry_data = []
+    current_time = datetime.now()
+
     for row in data:
+        # Convert the row[2] timestamp to a datetime object (assuming it's a string, format it accordingly)
+        timestamp = datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S')  # Adjust format as per your timestamp
+
+        # Calculate the difference
+        time_difference = current_time - timestamp
+        days = time_difference.days
+        hours = time_difference.seconds // 3600  # Convert remaining seconds to hours
+        minutes = (time_difference.seconds % 3600) // 60  # Convert remaining seconds to minutes
+        seconds = time_difference.seconds % 60
+
+        # Generate the last_seen string
+        if minutes == 0 and hours == 0 and days == 0:
+            last_seen = f"{seconds} seconds"
+        elif hours == 0 and days == 0:
+            last_seen = f"{minutes} min {seconds} sec"
+        elif days == 0:
+            last_seen = f"{hours} hours {minutes} min"
+        elif days < 2:
+            last_seen = f"{days} days {hours} hours"
+        else:
+            last_seen = f"{days} days"  # Remove hours for days >= 2
+
         telemetry_data.append({
             "sender_node_id": row[0],
             "sender_short_name": row[1],  # Check if this value exists in your DB
@@ -63,7 +88,8 @@ def get_telemetry_data():
             "snr": row[13],
             "hardware_model": row[14],
             "sender_long_name": row[15],
-            "role": row[16]
+            "role": row[16],
+            "last_seen": last_seen
         })
 
     # drop any rows without latitude
@@ -80,40 +106,6 @@ def get_telemetry_data():
 
     conn.close()
     return jsonify(telemetry_data)
-
-
-@app.route('/sync', methods=['POST'])
-def sync_db():
-    data = request.get_json()
-
-    # Ensure the received data is a list of dictionaries
-    if not isinstance(data, list):
-        return jsonify({"error": "Expected a list of entries"}), 400
-
-    conn = sqlite3.connect(db_path)  # Replace with your actual database path
-    cursor = conn.cursor()
-
-    # Loop through the received data and insert/update it in the database
-    for entry in data:
-        cursor.execute('''
-            INSERT OR REPLACE INTO TelemetryData (
-                sender_node_id, sender_short_name, timestamp, temperature, humidity, pressure,
-                battery_level, voltage, uptime_seconds, latitude, longitude, altitude,
-                sats_in_view, snr, hardware_model, sender_long_name, role
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (
-            entry['sender_node_id'], entry['sender_short_name'], entry['timestamp'], entry['temperature'], entry['humidity'],
-            entry['pressure'], entry['battery_level'], entry['voltage'], entry['uptime_seconds'], entry['latitude'],
-            entry['longitude'], entry['altitude'], entry['sats_in_view'], entry['snr'], entry['hardware_model'],
-            entry['sender_long_name'], entry['role']
-        ))
-
-    # Commit the changes and close the connection
-    conn.commit()
-    conn.close()
-
-    return jsonify({"message": "Data received and stored.", "status": "success"})
-
 
 
 if __name__ == '__main__':

@@ -45,14 +45,18 @@ def get_node_short_name(node_id, interface):
         return node_info['user']['shortName']
     return None
 
-def log_text_to_file(data, file_path='log.txt'):
-    with open(file_path, 'w') as log_file:
-        log_file.write(f"{str(data)}")  # Convert the data to a string and write it to the file
+def log_text_to_file(data, file_path='log.txt', mode='a', separator=True, clear_first=False):
+    try:
+        # if clear_first:
+        #     with open(file_path, 'w') as log_file:
+        #         log_file.write('')
 
-# def log_text_to_file(data, file_path='log.txt'):
-#     with open(file_path, 'a') as log_file:
-#         log_file.write('\n\n' + '-'*100 + '\n\n')  # Add separator line
-#         log_file.write(f"{str(data)}")  # Convert the data to a string and write it to the file
+        with open(file_path, mode) as log_file:
+            if separator:
+                log_file.write('{"' + '\n\n' + '-'*100 + '\n\n' + '"}')  # Add separator line
+            log_file.write(f"{str(data)}")  # Convert the data to a string and write it to the file
+    except Exception as e:
+        logging.error(f"Error writing to log file {file_path}: {e}")
 
 def display_banner():
     # clear the console

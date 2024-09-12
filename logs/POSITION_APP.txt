@@ -1,3206 +1,722 @@
-
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x8dW\x02\x1a\x15\x8ft\x9b\xba\x18\xba\x07%\xd9\x85\xe0fX\xcf\x01x\x05\x80\x01\xa8\xf7\x96\x0f\x98\x01\x06\xb8\x01 ', 'position': {'latitudeI': 436361101, 'longitudeI': -1164217201, 'altitude': 954, 'time': 1725990361, 'PDOP': 207, 'groundSpeed': 5, 'groundTrack': 31833000, 'satsInView': 6, 'precisionBits': 32, 'raw': latitude_i: 436361101
-longitude_i: -1164217201
-altitude: 954
-time: 1725990361
-PDOP: 207
-ground_speed: 5
-ground_track: 31833000
-sats_in_view: 6
-precision_bits: 32
-, 'latitude': 43.6361101, 'longitude': -116.4217201}}, 'id': 1167201248, 'rxTime': 1725990370, 'rxSnr': 6.25, 'rxRssi': -57, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\215W\002\032\025\217t\233\272\030\272\007%\331\205\340fX\317\001x\005\200\001\250\367\226\017\230\001\006\270\001 "
-}
-id: 1167201248
-rx_time: 1725990370
-rx_snr: 6.25
-rx_rssi: -57
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
+{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3259009680, 'rxTime': 1725990449, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3259009680
-rx_time: 1725990449
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2053916580, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\x9c\xba\x18\xcf\x05%\x91\x86\xe0f=3\x83\xe0fX\xf8\x06\xb0\x01\x01\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1164181504, 'altitude': 719, 'time': 1725990545, 'timestamp': 1725989683, 'PDOP': 888, 'seqNumber': 1, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1164181504
-altitude: 719
-time: 1725990545
-timestamp: 1725989683
-PDOP: 888
-seq_number: 1
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.4181504}}, 'id': 4148905810, 'rxTime': 1725990556, 'rxSnr': 7.0, 'hopLimit': 5, 'rxRssi': -57, 'hopStart': 7, 'raw': from: 2053916580
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\234\272\030\317\005%\221\206\340f=3\203\340fX\370\006\260\001\001\270\001\r"
-}
-id: 4148905810
-rx_time: 1725990556
-rx_snr: 7
-hop_limit: 5
-rx_rssi: -57
-hop_start: 7
-, 'fromId': '!7a6c47a4', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc2\x06%\xa8\x86\xe0fX\xb4\x04x\x04\x80\x01\x88\xd4\xbe\x10\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 834, 'time': 1725990568, 'PDOP': 564, 'groundSpeed': 4, 'groundTrack': 34581000, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 834
-time: 1725990568
-PDOP: 564
-ground_speed: 4
-ground_track: 34581000
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1935300114, 'rxTime': 1725990568, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -57, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\302\006%\250\206\340fX\264\004x\004\200\001\210\324\276\020\230\001\005\270\001\020"
-}
-id: 1935300114
-rx_time: 1725990568
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -57
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x97\xac\x0e\x1a\x15\xebg\x8b\xba\x18\xa8\x05%%\x87\xe0fX\x99\x01x\x01\x80\x01\xb8\x840\x98\x01\x08\xb8\x01 ', 'position': {'latitudeI': 437169303, 'longitudeI': -1165269013, 'altitude': 680, 'time': 1725990693, 'PDOP': 153, 'groundSpeed': 1, 'groundTrack': 787000, 'satsInView': 8, 'precisionBits': 32, 'raw': latitude_i: 437169303
-longitude_i: -1165269013
-altitude: 680
-time: 1725990693
-PDOP: 153
-ground_speed: 1
-ground_track: 787000
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xbc\x06%p2\xe3fX\xd3\x01x\x00\x80\x01\x00\x98\x01\x08\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 828, 'time': 1726165616, 'PDOP': 211, 'satsInView': 8, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 828
+time: 1726165616
+PDOP: 211
 sats_in_view: 8
-precision_bits: 32
-, 'latitude': 43.7169303, 'longitude': -116.5269013}}, 'id': 1711868369, 'rxTime': 1725990701, 'rxSnr': 6.0, 'rxRssi': -56, 'hopStart': 3, 'raw': from: 321026200
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 1427173122, 'rxTime': 1555007218, 'rxSnr': 5.5, 'hopLimit': 3, 'rxRssi': -31, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\227\254\016\032\025\353g\213\272\030\250\005%%\207\340fX\231\001x\001\200\001\270\2040\230\001\010\270\001 "
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\274\006%p2\343fX\323\001x\000\200\001\000\230\001\010\270\001\017"
 }
-id: 1711868369
-rx_time: 1725990701
-rx_snr: 6
-rx_rssi: -56
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3647544988, 'rxTime': 1725990750, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3647544988
-rx_time: 1725990750
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1857702531, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x83\r\xfc\x19\x15\x1f\x1e\xbd\xba\x18\xba\x06% Q\xbf\\X\x8d\x01\x98\x01\n\xb8\x01 ', 'position': {'latitudeI': 435948931, 'longitudeI': -1162011105, 'altitude': 826, 'time': 1556042016, 'PDOP': 141, 'satsInView': 10, 'precisionBits': 32, 'raw': latitude_i: 435948931
-longitude_i: -1162011105
-altitude: 826
-time: 1556042016
-PDOP: 141
-sats_in_view: 10
-precision_bits: 32
-, 'latitude': 43.5948931, 'longitude': -116.2011105}}, 'id': 321129146, 'rxTime': 1725990768, 'rxSnr': 6.25, 'rxRssi': -58, 'hopStart': 3, 'raw': from: 1857702531
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\203\r\374\031\025\037\036\275\272\030\272\006% Q\277\X\215\001\230\001\n\270\001 "
-}
-id: 321129146
-rx_time: 1725990768
-rx_snr: 6.25
-rx_rssi: -58
-hop_start: 3
-, 'fromId': '!6eba4a83', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 862590640, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xd8t\xfa\x19\x15\x88\xff\x83\xba\x18\xf4\x05%\xb9\xfd\x9ef\xb8\x01 ', 'position': {'latitudeI': 435844312, 'longitudeI': -1165754488, 'altitude': 756, 'time': 1721695673, 'precisionBits': 32, 'raw': latitude_i: 435844312
-longitude_i: -1165754488
-altitude: 756
-time: 1721695673
-precision_bits: 32
-, 'latitude': 43.5844312, 'longitude': -116.5754488}}, 'id': 507409272, 'rxTime': 1725990817, 'rxSnr': 6.0, 'rxRssi': -56, 'hopStart': 3, 'raw': from: 862590640
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\330t\372\031\025\210\377\203\272\030\364\005%\271\375\236f\270\001 "
-}
-id: 507409272
-rx_time: 1725990817
-rx_snr: 6
-rx_rssi: -56
-hop_start: 3
-, 'fromId': '!336a16b0', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc2\x06%\xd4\x87\xe0fX\xa5\x04\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 834, 'time': 1725990868, 'PDOP': 549, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 834
-time: 1725990868
-PDOP: 549
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1493853726, 'rxTime': 1725990867, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -56, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\302\006%\324\207\340fX\245\004\230\001\005\270\001\020"
-}
-id: 1493853726
-rx_time: 1725990867
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -56
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3757043364, 'rxTime': 1725991051, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3757043364
-rx_time: 1725991051
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbc\x06%\x00\x89\xe0fX\xd0\x04\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 828, 'time': 1725991168, 'PDOP': 592, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 828
-time: 1725991168
-PDOP: 592
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 778800682, 'rxTime': 1725991168, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -47, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\274\006%\000\211\340fX\320\004\230\001\004\270\001\020"
-}
-id: 778800682
-rx_time: 1725991168
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -47
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3494563499, 'rxTime': 1725991352, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3494563499
-rx_time: 1725991352
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbe\x06%,\x8a\xe0fX\xfb\x03x\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 830, 'time': 1725991468, 'PDOP': 507, 'groundSpeed': 1, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 830
-time: 1725991468
-PDOP: 507
-ground_speed: 1
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2601530933, 'rxTime': 1725991468, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\276\006%,\212\340fX\373\003x\001\230\001\005\270\001\020"
-}
-id: 2601530933
-rx_time: 1725991468
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 907102898, 'rxTime': 1725991653, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 907102898
-rx_time: 1725991653
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%X\x8b\xe0fX\xb4\x04\x80\x01\xa0\xcc\xc1\x0f\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1725991768, 'PDOP': 564, 'groundTrack': 32532000, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1725991768
-PDOP: 564
-ground_track: 32532000
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 3526871617, 'rxTime': 1725991768, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%X\213\340fX\264\004\200\001\240\314\301\017\230\001\004\270\001\020"
-}
-id: 3526871617
-rx_time: 1725991768
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 765373114, 'rxTime': 1725991954, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 765373114
-rx_time: 1725991954
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc6\x06%\x84\x8c\xe0fX\xc3\x03x\x01\x80\x01\xc8\xa7\xbe\x0e\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 838, 'time': 1725992068, 'PDOP': 451, 'groundSpeed': 1, 'groundTrack': 30381000, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 838
-time: 1725992068
-PDOP: 451
-ground_speed: 1
-ground_track: 30381000
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1892177485, 'rxTime': 1725992068, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\306\006%\204\214\340fX\303\003x\001\200\001\310\247\276\016\230\001\005\270\001\020"
-}
-id: 1892177485
-rx_time: 1725992068
-rx_snr: 6.75
-hop_limit: 3
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2498825923, 'rxTime': 1725992255, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2498825923
-rx_time: 1725992255
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xb8\x06%\xb0\x8d\xe0fX\xb4\x04x\x04\x80\x01\x88\xb9\xe5\x06\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 824, 'time': 1725992368, 'PDOP': 564, 'groundSpeed': 4, 'groundTrack': 14245000, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 824
-time: 1725992368
-PDOP: 564
-ground_speed: 4
-ground_track: 14245000
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2174550616, 'rxTime': 1725992368, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\270\006%\260\215\340fX\264\004x\004\200\001\210\271\345\006\230\001\004\270\001\020"
-}
-id: 2174550616
-rx_time: 1725992368
-rx_snr: 6.75
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3391739005, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b"\r'\xf3\xfc\x19\x151\xb4\xb8\xba\x18\xc6\x06%\xfd\x8d\xe0f\xb8\x01 ", 'position': {'latitudeI': 436007719, 'longitudeI': -1162300367, 'altitude': 838, 'time': 1725992445, 'precisionBits': 32, 'raw': latitude_i: 436007719
-longitude_i: -1162300367
-altitude: 838
-time: 1725992445
-precision_bits: 32
-, 'latitude': 43.6007719, 'longitude': -116.2300367}}, 'id': 1038725972, 'rxTime': 1725992470, 'rxSnr': -15.75, 'hopLimit': 1, 'rxRssi': -115, 'hopStart': 3, 'raw': from: 3391739005
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r'\363\374\031\0251\264\270\272\030\306\006%\375\215\340f\270\001 "
-}
-id: 1038725972
-rx_time: 1725992470
-rx_snr: -15.75
-hop_limit: 1
-rx_rssi: -115
-hop_start: 3
-, 'fromId': '!ca29d47d', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x19\x91\x0e\x1a\x15\xd7D\x8b\xba\x18\xd0\x06%0\x8e\xe0fX\x92\x01x\x01\x80\x01\xe0\x89\x1c\x98\x01\n\xb8\x01 ', 'position': {'latitudeI': 437162265, 'longitudeI': -1165277993, 'altitude': 848, 'time': 1725992496, 'PDOP': 146, 'groundSpeed': 1, 'groundTrack': 460000, 'satsInView': 10, 'precisionBits': 32, 'raw': latitude_i: 437162265
-longitude_i: -1165277993
-altitude: 848
-time: 1725992496
-PDOP: 146
-ground_speed: 1
-ground_track: 460000
-sats_in_view: 10
-precision_bits: 32
-, 'latitude': 43.7162265, 'longitude': -116.5277993}}, 'id': 1711868376, 'rxTime': 1725992502, 'rxSnr': 5.75, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 321026200
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\031\221\016\032\025\327D\213\272\030\320\006%0\216\340fX\222\001x\001\200\001\340\211\034\230\001\n\270\001 "
-}
-id: 1711868376
-rx_time: 1725992502
-rx_snr: 5.75
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2941630155, 'rxTime': 1725992556, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2941630155
-rx_time: 1725992556
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc7\x06%\xdc\x8e\xe0fX\xc2\x04x\x02\x80\x01\x88\xb4\x9f\x10\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 839, 'time': 1725992668, 'PDOP': 578, 'groundSpeed': 2, 'groundTrack': 34069000, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 839
-time: 1725992668
-PDOP: 578
-ground_speed: 2
-ground_track: 34069000
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 374076003, 'rxTime': 1725992668, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\307\006%\334\216\340fX\302\004x\002\200\001\210\264\237\020\230\001\004\270\001\020"
-}
-id: 374076003
-rx_time: 1725992668
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1762393810, 'rxTime': 1725992857, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1762393810
-rx_time: 1725992857
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1475308250, 'rxTime': 1725993158, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1475308250
-rx_time: 1725993158
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1463451310, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\xa4\xba\x18\xab\x06%\xfe\x90\xe0fXvx\x00\x80\x01\x00\x98\x01\n\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1163657216, 'altitude': 811, 'time': 1725993214, 'PDOP': 118, 'satsInView': 10, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1163657216
-altitude: 811
-time: 1725993214
-PDOP: 118
-sats_in_view: 10
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.3657216}}, 'id': 2851887944, 'rxTime': 1725993224, 'rxSnr': 6.5, 'hopLimit': 1, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 1463451310
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\244\272\030\253\006%\376\220\340fXvx\000\200\001\000\230\001\n\270\001\r"
-}
-id: 2851887944
-rx_time: 1725993224
-rx_snr: 6.5
-hop_limit: 1
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!573a7eae', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc7\x06%4\x91\xe0fX\xb6\x02\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 839, 'time': 1725993268, 'PDOP': 310, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 839
-time: 1725993268
-PDOP: 310
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1601653370, 'rxTime': 1725993268, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\307\006%4\221\340fX\266\002\230\001\005\270\001\020"
-}
-id: 1601653370
-rx_time: 1725993268
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rHv\x02\x1a\x159Z\x9b\xba\x18\xd4\x06%?\x91\xe0fX\xf2\x02x\x11\x80\x01\x88\xd8\x99\x0e\x98\x01\x05\xb8\x01 ', 'position': {'latitudeI': 436368968, 'longitudeI': -1164223943, 'altitude': 852, 'time': 1725993279, 'PDOP': 370, 'groundSpeed': 17, 'groundTrack': 29781000, 'satsInView': 5, 'precisionBits': 32, 'raw': latitude_i: 436368968
-longitude_i: -1164223943
-altitude: 852
-time: 1725993279
-PDOP: 370
-ground_speed: 17
-ground_track: 29781000
-sats_in_view: 5
-precision_bits: 32
-, 'latitude': 43.6368968, 'longitude': -116.4223943}}, 'id': 3072301080, 'rxTime': 1725993284, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\rHv\002\032\0259Z\233\272\030\324\006%?\221\340fX\362\002x\021\200\001\210\330\231\016\230\001\005\270\001 "
-}
-id: 3072301080
-rx_time: 1725993284
-rx_snr: 6.25
-hop_limit: 1
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 262807265, 'rxTime': 1725993459, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 262807265
-rx_time: 1725993459
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbc\x06%\x8d\x93\xe0fX\xa9\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 828, 'time': 1725993869, 'PDOP': 169, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 828
-time: 1725993869
-PDOP: 169
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2607913616, 'rxTime': 1725993868, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\274\006%\215\223\340fX\251\001\230\001\005\270\001\020"
-}
-id: 2607913616
-rx_time: 1725993868
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 870487788, 'rxTime': 1725994061, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 870487788
-rx_time: 1725994061
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2053916580, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\x9c\xba\x18\xb5\x05%\xa5\x94\xe0f=5\x91\xe0fX\xc2\x01\xb0\x01\x01\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1164181504, 'altitude': 693, 'time': 1725994149, 'timestamp': 1725993269, 'PDOP': 194, 'seqNumber': 1, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1164181504
-altitude: 693
-time: 1725994149
-timestamp: 1725993269
-PDOP: 194
-seq_number: 1
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.4181504}}, 'id': 1900649308, 'rxTime': 1725994160, 'rxSnr': 6.75, 'hopLimit': 4, 'rxRssi': -40, 'hopStart': 7, 'raw': from: 2053916580
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\234\272\030\265\005%\245\224\340f=5\221\340fX\302\001\260\001\001\270\001\r"
-}
-id: 1900649308
-rx_time: 1725994160
-rx_snr: 6.75
-hop_limit: 4
-rx_rssi: -40
-hop_start: 7
-, 'fromId': '!7a6c47a4', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc7\x06%\xb9\x94\xe0fX\x9b\x01x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 839, 'time': 1725994169, 'PDOP': 155, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 839
-time: 1725994169
-PDOP: 155
-ground_speed: 1
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 3259611803, 'rxTime': 1725994169, 'rxSnr': 7.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\307\006%\271\224\340fX\233\001x\001\230\001\006\270\001\020"
-}
-id: 3259611803
-rx_time: 1725994169
-rx_snr: 7.5
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xc4h\x02\x1a\x15Ik\x9b\xba\x18\xa4\x06%\xc7\x94\xe0fX\xd3\x01x\x01\x80\x01\x88\xd8\x99\x0e\x98\x01\x05\xb8\x01 ', 'position': {'latitudeI': 436365508, 'longitudeI': -1164219575, 'altitude': 804, 'time': 1725994183, 'PDOP': 211, 'groundSpeed': 1, 'groundTrack': 29781000, 'satsInView': 5, 'precisionBits': 32, 'raw': latitude_i: 436365508
-longitude_i: -1164219575
-altitude: 804
-time: 1725994183
-PDOP: 211
-ground_speed: 1
-ground_track: 29781000
-sats_in_view: 5
-precision_bits: 32
-, 'latitude': 43.6365508, 'longitude': -116.4219575}}, 'id': 498342953, 'rxTime': 1725994190, 'rxSnr': 6.25, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\304h\002\032\025Ik\233\272\030\244\006%\307\224\340fX\323\001x\001\200\001\210\330\231\016\230\001\005\270\001 "
-}
-id: 498342953
-rx_time: 1725994190
-rx_snr: 6.25
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3542938355, 'rxTime': 1725994362, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3542938355
-rx_time: 1725994362
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc2\x06%\xe5\x95\xe0fX\xee\x02x\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 834, 'time': 1725994469, 'PDOP': 366, 'groundSpeed': 1, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 834
-time: 1725994469
-PDOP: 366
-ground_speed: 1
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 633809574, 'rxTime': 1725994468, 'rxSnr': 5.75, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\302\006%\345\225\340fX\356\002x\001\230\001\005\270\001\020"
-}
-id: 633809574
-rx_time: 1725994468
-rx_snr: 5.75
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2957633274, 'rxTime': 1725994663, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2957633274
-rx_time: 1725994663
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3572044546, 'rxTime': 1725994964, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3572044546
-rx_time: 1725994964
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbd\x06%=\x98\xe0fX\xd2\x02x\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 829, 'time': 1725995069, 'PDOP': 338, 'groundSpeed': 1, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 829
-time: 1725995069
-PDOP: 338
-ground_speed: 1
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 224236221, 'rxTime': 1725995068, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\275\006%=\230\340fX\322\002x\001\230\001\005\270\001\020"
-}
-id: 224236221
-rx_time: 1725995068
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xe3j\x02\x1a\x15\xf7x\x9b\xba\x18\xb2\x06%K\x98\xe0fX\xb3\x02x\x05\x80\x01\x88\xd8\x99\x0e\x98\x01\x04\xb8\x01 ', 'position': {'latitudeI': 436366051, 'longitudeI': -1164216073, 'altitude': 818, 'time': 1725995083, 'PDOP': 307, 'groundSpeed': 5, 'groundTrack': 29781000, 'satsInView': 4, 'precisionBits': 32, 'raw': latitude_i: 436366051
-longitude_i: -1164216073
-altitude: 818
-time: 1725995083
-PDOP: 307
-ground_speed: 5
-ground_track: 29781000
-sats_in_view: 4
-precision_bits: 32
-, 'latitude': 43.6366051, 'longitude': -116.4216073}}, 'id': 2081003577, 'rxTime': 1725995091, 'rxSnr': 6.5, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\343j\002\032\025\367x\233\272\030\262\006%K\230\340fX\263\002x\005\200\001\210\330\231\016\230\001\004\270\001 "
-}
-id: 2081003577
-rx_time: 1725995091
-rx_snr: 6.5
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2359640841, 'rxTime': 1725995265, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2359640841
-rx_time: 1725995265
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3264869137, 'rxTime': 1725995566, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3264869137
-rx_time: 1725995566
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc5\x06%\x95\x9a\xe0fX\xef\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 837, 'time': 1725995669, 'PDOP': 239, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 837
-time: 1725995669
-PDOP: 239
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 457130708, 'rxTime': 1725995668, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\305\006%\225\232\340fX\357\001\230\001\005\270\001\020"
-}
-id: 457130708
-rx_time: 1725995668
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 945441560, 'rxTime': 1725995867, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 945441560
-rx_time: 1725995867
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc3\x06%\xc1\x9b\xe0fX\xd3\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 835, 'time': 1725995969, 'PDOP': 211, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 835
-time: 1725995969
-PDOP: 211
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 904714975, 'rxTime': 1725995968, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\303\006%\301\233\340fX\323\001\230\001\005\270\001\020"
-}
-id: 904714975
-rx_time: 1725995968
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1063449375, 'rxTime': 1725996168, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1063449375
-rx_time: 1725996168
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc0\x06%\xed\x9c\xe0fX\xb7\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 832, 'time': 1725996269, 'PDOP': 183, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 832
-time: 1725996269
-PDOP: 183
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 3885138666, 'rxTime': 1725996268, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\300\006%\355\234\340fX\267\001\230\001\006\270\001\020"
-}
-id: 3885138666
-rx_time: 1725996268
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xcb\x06%E\x9f\xe0fX\xb7\x01x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 843, 'time': 1725996869, 'PDOP': 183, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 843
-time: 1725996869
-PDOP: 183
-ground_speed: 1
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 4254981890, 'rxTime': 1725996869, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\313\006%E\237\340fX\267\001x\001\230\001\006\270\001\020"
-}
-id: 4254981890
-rx_time: 1725996869
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 128995129, 'rxTime': 1725997372, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 128995129
-rx_time: 1725997372
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc6\x06%\x9d\xa1\xe0fX\xc5\x01x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 838, 'time': 1725997469, 'PDOP': 197, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 838
-time: 1725997469
-PDOP: 197
-ground_speed: 1
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1155788569, 'rxTime': 1725997469, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\306\006%\235\241\340fX\305\001x\001\230\001\006\270\001\020"
-}
-id: 1155788569
-rx_time: 1725997469
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2605137725, 'rxTime': 1725997673, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2605137725
-rx_time: 1725997673
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbf\x06%\xc9\xa2\xe0fX\xfd\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 831, 'time': 1725997769, 'PDOP': 253, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 831
-time: 1725997769
-PDOP: 253
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1913788197, 'rxTime': 1725997769, 'rxSnr': 7.0, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\277\006%\311\242\340fX\375\001\230\001\005\270\001\020"
-}
-id: 1913788197
-rx_time: 1725997769
-rx_snr: 7
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 746122053, 'rxTime': 1725997974, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 746122053
-rx_time: 1725997974
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbd\x06%\xf6\xa3\xe0fX\xef\x01x\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 829, 'time': 1725998070, 'PDOP': 239, 'groundSpeed': 1, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 829
-time: 1725998070
-PDOP: 239
-ground_speed: 1
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 3918280496, 'rxTime': 1725998069, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\275\006%\366\243\340fX\357\001x\001\230\001\005\270\001\020"
-}
-id: 3918280496
-rx_time: 1725998069
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2803573581, 'rxTime': 1725998276, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2803573581
-rx_time: 1725998276
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc0\x06%"\xa5\xe0fX\xe1\x01x\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 832, 'time': 1725998370, 'PDOP': 225, 'groundSpeed': 1, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 832
-time: 1725998370
-PDOP: 225
-ground_speed: 1
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 3840640827, 'rxTime': 1725998369, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\300\006%"\245\340fX\341\001x\001\230\001\005\270\001\020"
-}
-id: 3840640827
-rx_time: 1725998369
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 4033589077, 'rxTime': 1725998577, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 4033589077
-rx_time: 1725998577
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1463451310, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\xa4\xba\x18\xa3\x06%\xa5\xa5\xe0fXvx\x00\x80\x01\x00\x98\x01\x0b\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1163657216, 'altitude': 803, 'time': 1725998501, 'PDOP': 118, 'satsInView': 11, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1163657216
-altitude: 803
-time: 1725998501
-PDOP: 118
-sats_in_view: 11
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.3657216}}, 'id': 940344153, 'rxTime': 1725998626, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 1463451310
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\244\272\030\243\006%\245\245\340fXvx\000\200\001\000\230\001\013\270\001\r"
-}
-id: 940344153
-rx_time: 1725998626
-rx_snr: 6.25
-hop_limit: 1
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!573a7eae', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xba\x06%N\xa6\xe0fX\xe1\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 826, 'time': 1725998670, 'PDOP': 225, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 826
-time: 1725998670
-PDOP: 225
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1265292103, 'rxTime': 1725998669, 'rxSnr': 7.25, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\272\006%N\246\340fX\341\001\230\001\005\270\001\020"
-}
-id: 1265292103
-rx_time: 1725998669
-rx_snr: 7.25
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xca_\x02\x1a\x15zi\x9b\xba\x18\x93\x06%^\xa6\xe0fX\xaa\x02x\x02\x80\x01\xa0\xe3\xf5\t\x98\x01\x05\xb8\x01 ', 'position': {'latitudeI': 436363210, 'longitudeI': -1164220038, 'altitude': 787, 'time': 1725998686, 'PDOP': 298, 'groundSpeed': 2, 'groundTrack': 20804000, 'satsInView': 5, 'precisionBits': 32, 'raw': latitude_i: 436363210
-longitude_i: -1164220038
-altitude: 787
-time: 1725998686
-PDOP: 298
-ground_speed: 2
-ground_track: 20804000
-sats_in_view: 5
-precision_bits: 32
-, 'latitude': 43.636321, 'longitude': -116.4220038}}, 'id': 3665892472, 'rxTime': 1725998694, 'rxSnr': 6.0, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\312_\002\032\025zi\233\272\030\223\006%^\246\340fX\252\002x\002\200\001\240\343\365\t\230\001\005\270\001 "
-}
-id: 3665892472
-rx_time: 1725998694
-rx_snr: 6
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3633870684, 'rxTime': 1725998878, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3633870684
-rx_time: 1725998878
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc9\x06%z\xa7\xe0fX\xe1\x01\x80\x01\x98\xbe\xaa\x06\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 841, 'time': 1725998970, 'PDOP': 225, 'groundTrack': 13279000, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 841
-time: 1725998970
-PDOP: 225
-ground_track: 13279000
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1084839762, 'rxTime': 1725998969, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\311\006%z\247\340fX\341\001\200\001\230\276\252\006\230\001\005\270\001\020"
-}
-id: 1084839762
-rx_time: 1725998969
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x83f\x0e\x1a\x15\xfcI\x8b\xba\x18\x9b\x07%\xad\xa7\xe0fX\x9d\x01\x80\x01\xe0\xc5\x85\x01\x98\x01\n\xb8\x01 ', 'position': {'latitudeI': 437151363, 'longitudeI': -1165276676, 'altitude': 923, 'time': 1725999021, 'PDOP': 157, 'groundTrack': 2188000, 'satsInView': 10, 'precisionBits': 32, 'raw': latitude_i: 437151363
-longitude_i: -1165276676
-altitude: 923
-time: 1725999021
-PDOP: 157
-ground_track: 2188000
-sats_in_view: 10
-precision_bits: 32
-, 'latitude': 43.7151363, 'longitude': -116.5276676}}, 'id': 1711868403, 'rxTime': 1725999027, 'rxSnr': 5.5, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 321026200
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\203f\016\032\025\374I\213\272\030\233\007%\255\247\340fX\235\001\200\001\340\305\205\001\230\001\n\270\001 "
-}
-id: 1711868403
-rx_time: 1725999027
+id: 1427173122
+rx_time: 1555007218
 rx_snr: 5.5
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2086291572, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\xd5\xfc\x19\x15\xa0\xb5\xb8\xba\x18\xb4\x06%\x12\xa8\xe0f\xb8\x01 ', 'position': {'latitudeI': 436000000, 'longitudeI': -1162300000, 'altitude': 820, 'time': 1725999122, 'precisionBits': 32, 'raw': latitude_i: 436000000
-longitude_i: -1162300000
-altitude: 820
-time: 1725999122
-precision_bits: 32
-, 'latitude': 43.6, 'longitude': -116.23}}, 'id': 1189262984, 'rxTime': 1725999151, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 5, 'raw': from: 2086291572
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\325\374\031\025\240\265\270\272\030\264\006%\022\250\340f\270\001 "
-}
-id: 1189262984
-rx_time: 1725999151
-rx_snr: 6
 hop_limit: 3
-rx_rssi: -41
-hop_start: 5
-, 'fromId': '!7c5a4874', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1452769123, 'rxTime': 1725999179, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1452769123
-rx_time: 1725999179
-hop_limit: 3
-priority: BACKGROUND
+rx_rssi: -31
 hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc0\x06%\xa6\xa8\xe0fX\xa8\x02x\x01\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 832, 'time': 1725999270, 'PDOP': 296, 'groundSpeed': 1, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 832
-time: 1725999270
-PDOP: 296
-ground_speed: 1
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 326473565, 'rxTime': 1725999269, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\300\006%\246\250\340fX\250\002x\001\230\001\004\270\001\020"
-}
-id: 326473565
-rx_time: 1725999269
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 380596266, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'%\xa2\xa8\xe0f\x98\x01\x01\xb8\x01\x10', 'position': {'time': 1725999266, 'satsInView': 1, 'precisionBits': 16, 'raw': time: 1725999266
-sats_in_view: 1
-precision_bits: 16
-}}, 'id': 3137931095, 'rxTime': 1725999273, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 4, 'raw': from: 380596266
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "%\242\250\340f\230\001\001\270\001\020"
-}
-id: 3137931095
-rx_time: 1725999273
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -40
-hop_start: 4
-, 'fromId': None, 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2737689451, 'rxTime': 1725999480, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2737689451
-rx_time: 1725999480
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2086350888, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xac\x88\x0b\x1a\x15Q\xdf\x91\xba\x18\xf3\x05%l\xa9\xe0f\x98\x01\x07\xb8\x01 ', 'position': {'latitudeI': 436963500, 'longitudeI': -1164845231, 'altitude': 755, 'time': 1725999468, 'satsInView': 7, 'precisionBits': 32, 'raw': latitude_i: 436963500
-longitude_i: -1164845231
-altitude: 755
-time: 1725999468
-sats_in_view: 7
-precision_bits: 32
-, 'latitude': 43.69635, 'longitude': -116.4845231}}, 'id': 620018686, 'rxTime': 1725999489, 'rxSnr': -17.5, 'rxRssi': -115, 'hopStart': 3, 'raw': from: 2086350888
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\254\210\013\032\025Q\337\221\272\030\363\005%l\251\340f\230\001\007\270\001 "
-}
-id: 620018686
-rx_time: 1725999489
-rx_snr: -17.5
-rx_rssi: -115
-hop_start: 3
-, 'fromId': '!7c5b3028', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1463451310, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\xa4\xba\x18\xad\x06%)\xa9\xe0fX\x99\x01x\x00\x80\x01\x00\x98\x01\n\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1163657216, 'altitude': 813, 'time': 1725999401, 'PDOP': 153, 'satsInView': 10, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1163657216
-altitude: 813
-time: 1725999401
-PDOP: 153
-sats_in_view: 10
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.3657216}}, 'id': 1189191514, 'rxTime': 1725999526, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 1463451310
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\244\272\030\255\006%)\251\340fX\231\001x\000\200\001\000\230\001\n\270\001\r"
-}
-id: 1189191514
-rx_time: 1725999526
-rx_snr: 6.25
-hop_limit: 1
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!573a7eae', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xcc\x06%\xd2\xa9\xe0fX\xe1\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 844, 'time': 1725999570, 'PDOP': 225, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 844
-time: 1725999570
-PDOP: 225
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 260856681, 'rxTime': 1725999569, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\314\006%\322\251\340fX\341\001\230\001\005\270\001\020"
-}
-id: 260856681
-rx_time: 1725999569
-rx_snr: 6.75
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rKn\x02\x1a\x15\x0es\x9b\xba\x18\xa6\x06%\xe2\xa9\xe0fX\xd5\x10x\x1a\x80\x01\xd8\xfa\x81\x06\x98\x01\x07\xb8\x01 ', 'position': {'latitudeI': 436366923, 'longitudeI': -1164217586, 'altitude': 806, 'time': 1725999586, 'PDOP': 2133, 'groundSpeed': 26, 'groundTrack': 12615000, 'satsInView': 7, 'precisionBits': 32, 'raw': latitude_i: 436366923
-longitude_i: -1164217586
-altitude: 806
-time: 1725999586
-PDOP: 2133
-ground_speed: 26
-ground_track: 12615000
-sats_in_view: 7
-precision_bits: 32
-, 'latitude': 43.6366923, 'longitude': -116.4217586}}, 'id': 2229068936, 'rxTime': 1725999597, 'rxSnr': 6.5, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\rKn\002\032\025\016s\233\272\030\246\006%\342\251\340fX\325\020x\032\200\001\330\372\201\006\230\001\007\270\001 "
-}
-id: 2229068936
-rx_time: 1725999597
-rx_snr: 6.5
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1933036402, 'rxTime': 1725999781, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1933036402
-rx_time: 1725999781
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbf\x06%\xfe\xaa\xe0fX\xe1\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 831, 'time': 1725999870, 'PDOP': 225, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 831
-time: 1725999870
-PDOP: 225
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 297259892, 'rxTime': 1725999869, 'rxSnr': 7.0, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\277\006%\376\252\340fX\341\001\230\001\005\270\001\020"
-}
-id: 297259892
-rx_time: 1725999869
-rx_snr: 7
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3500905339, 'rxTime': 1726000082, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3500905339
-rx_time: 1726000082
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x18\x8e\x0e\x1a\x15-X\x8b\xba\x18\xd3\x06%\xef\xab\xe0fX\x81\x01x\x01\x80\x01\xa8\xe5\xc6\x01\x98\x01\x0c\xb8\x01 ', 'position': {'latitudeI': 437161496, 'longitudeI': -1165273043, 'altitude': 851, 'time': 1726000111, 'PDOP': 129, 'groundSpeed': 1, 'groundTrack': 3257000, 'satsInView': 12, 'precisionBits': 32, 'raw': latitude_i: 437161496
-longitude_i: -1165273043
-altitude: 851
-time: 1726000111
-PDOP: 129
-ground_speed: 1
-ground_track: 3257000
-sats_in_view: 12
-precision_bits: 32
-, 'latitude': 43.7161496, 'longitude': -116.5273043}}, 'id': 1711868408, 'rxTime': 1726000118, 'rxSnr': 5.75, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 321026200
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\030\216\016\032\025-X\213\272\030\323\006%\357\253\340fX\201\001x\001\200\001\250\345\306\001\230\001\014\270\001 "
-}
-id: 1711868408
-rx_time: 1726000118
-rx_snr: 5.75
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%*\xac\xe0fX\xef\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726000170, 'PDOP': 239, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726000170
-PDOP: 239
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 33491840, 'rxTime': 1726000169, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%*\254\340fX\357\001\230\001\005\270\001\020"
-}
-id: 33491840
-rx_time: 1726000169
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3734987192, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xb0q\xfc\x19\x15\xfdU\xa7\xba\x18\xbc\x06%\xf0\xac\xe0fX\xb4\x01xa\x80\x01\xc0\xfc\xee\x0c\x98\x01\t\xb8\x01 ', 'position': {'latitudeI': 435974576, 'longitudeI': -1163438595, 'altitude': 828, 'time': 1726000368, 'PDOP': 180, 'groundSpeed': 97, 'groundTrack': 26984000, 'satsInView': 9, 'precisionBits': 32, 'raw': latitude_i: 435974576
-longitude_i: -1163438595
-altitude: 828
-time: 1726000368
-PDOP: 180
-ground_speed: 97
-ground_track: 26984000
-sats_in_view: 9
-precision_bits: 32
-, 'latitude': 43.5974576, 'longitude': -116.3438595}}, 'id': 1198901042, 'rxTime': 1726000375, 'rxSnr': 6.5, 'hopLimit': 2, 'rxRssi': -40, 'hopStart': 5, 'raw': from: 3734987192
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\260q\374\031\025\375U\247\272\030\274\006%\360\254\340fX\264\001xa\200\001\300\374\356\014\230\001\t\270\001 "
-}
-id: 1198901042
-rx_time: 1726000375
-rx_snr: 6.5
-hop_limit: 2
-rx_rssi: -40
-hop_start: 5
-, 'fromId': '!de9f61b8', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 508943235, 'rxTime': 1726000383, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 508943235
-rx_time: 1726000383
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2053916580, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\x9c\xba\x18\xb9\x06%G\xad\xe0f=\xe0\xa9\xe0fX\xe3\x01\xb0\x01\x01\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1164181504, 'altitude': 825, 'time': 1726000455, 'timestamp': 1725999584, 'PDOP': 227, 'seqNumber': 1, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1164181504
-altitude: 825
-time: 1726000455
-timestamp: 1725999584
-PDOP: 227
-seq_number: 1
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.4181504}}, 'id': 3719142248, 'rxTime': 1726000465, 'rxSnr': 5.75, 'hopLimit': 4, 'rxRssi': -40, 'hopStart': 7, 'raw': from: 2053916580
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\234\272\030\271\006%G\255\340f=\340\251\340fX\343\001\260\001\001\270\001\r"
-}
-id: 3719142248
-rx_time: 1726000465
-rx_snr: 5.75
-hop_limit: 4
-rx_rssi: -40
-hop_start: 7
-, 'fromId': '!7a6c47a4', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%V\xad\xe0fX\xef\x01x\x03\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726000470, 'PDOP': 239, 'groundSpeed': 3, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726000470
-PDOP: 239
-ground_speed: 3
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 14856076, 'rxTime': 1726000469, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -39, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%V\255\340fX\357\001x\003\230\001\005\270\001\020"
-}
-id: 14856076
-rx_time: 1726000469
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -39
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1129899156, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfd\x19\x15\x00\x00\xbb\xba\x18\x9d\x06\xb8\x01\x0f', 'position': {'latitudeI': 436011008, 'longitudeI': -1162149888, 'altitude': 797, 'precisionBits': 15, 'raw': latitude_i: 436011008
-longitude_i: -1162149888
-altitude: 797
-precision_bits: 15
-, 'latitude': 43.6011008, 'longitude': -116.2149888}}, 'id': 2958893402, 'rxTime': 1726000475, 'rxSnr': 6.25, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 1129899156
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\375\031\025\000\000\273\272\030\235\006\270\001\017"
-}
-id: 2958893402
-rx_time: 1726000475
-rx_snr: 6.25
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!4358e494', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xafp\x02\x1a\x15\xc4o\x9b\xba\x18\xad\x06%f\xad\xe0fX\xcf\x01x\x01\x80\x01\xd8\xfa\x81\x06\x98\x01\x08\xb8\x01 ', 'position': {'latitudeI': 436367535, 'longitudeI': -1164218428, 'altitude': 813, 'time': 1726000486, 'PDOP': 207, 'groundSpeed': 1, 'groundTrack': 12615000, 'satsInView': 8, 'precisionBits': 32, 'raw': latitude_i: 436367535
-longitude_i: -1164218428
-altitude: 813
-time: 1726000486
-PDOP: 207
-ground_speed: 1
-ground_track: 12615000
-sats_in_view: 8
-precision_bits: 32
-, 'latitude': 43.6367535, 'longitude': -116.4218428}}, 'id': 2712979607, 'rxTime': 1726000494, 'rxSnr': 6.25, 'rxRssi': -39, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\257p\002\032\025\304o\233\272\030\255\006%f\255\340fX\317\001x\001\200\001\330\372\201\006\230\001\010\270\001 "
-}
-id: 2712979607
-rx_time: 1726000494
-rx_snr: 6.25
-rx_rssi: -39
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3734987192, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r5\xef\xfb\x19\x15\x18\xa2\x97\xba\x18\xbc\x06%\x10\xae\xe0fX\xb4\x01x`\x80\x01\xb0\x83\xa6\r\x98\x01\t\xb8\x01 ', 'position': {'latitudeI': 435941173, 'longitudeI': -1164467688, 'altitude': 828, 'time': 1726000656, 'PDOP': 180, 'groundSpeed': 96, 'groundTrack': 27886000, 'satsInView': 9, 'precisionBits': 32, 'raw': latitude_i: 435941173
-longitude_i: -1164467688
-altitude: 828
-time: 1726000656
-PDOP: 180
-ground_speed: 96
-ground_track: 27886000
-sats_in_view: 9
-precision_bits: 32
-, 'latitude': 43.5941173, 'longitude': -116.4467688}}, 'id': 1198901051, 'rxTime': 1726000669, 'rxSnr': 6.0, 'hopLimit': 1, 'rxRssi': -40, 'hopStart': 5, 'raw': from: 3734987192
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r5\357\373\031\025\030\242\227\272\030\274\006%\020\256\340fX\264\001x`\200\001\260\203\246\r\230\001\t\270\001 "
-}
-id: 1198901051
-rx_time: 1726000669
-rx_snr: 6
-hop_limit: 1
-rx_rssi: -40
-hop_start: 5
-, 'fromId': '!de9f61b8', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 235714444, 'rxTime': 1726000684, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 235714444
-rx_time: 1726000684
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc0\x06%\x82\xae\xe0fX\xa8\x02\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 832, 'time': 1726000770, 'PDOP': 296, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 832
-time: 1726000770
-PDOP: 296
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2945228696, 'rxTime': 1726000769, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\300\006%\202\256\340fX\250\002\230\001\004\270\001\020"
-}
-id: 2945228696
-rx_time: 1726000769
-rx_snr: 6.75
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3579796, 'rxTime': 1726000985, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3579796
-rx_time: 1726000985
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3734987192, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rn\xfe\xfc\x19\x15\xb4\xa0\x84\xba\x18\x86\x06%\x90\xaf\xe0fX\xd2\x01x1\x80\x01\x90\x8c\xec\r\x98\x01\t\xb8\x01 ', 'position': {'latitudeI': 436010606, 'longitudeI': -1165713228, 'altitude': 774, 'time': 1726001040, 'PDOP': 210, 'groundSpeed': 49, 'groundTrack': 29034000, 'satsInView': 9, 'precisionBits': 32, 'raw': latitude_i: 436010606
-longitude_i: -1165713228
-altitude: 774
-time: 1726001040
-PDOP: 210
-ground_speed: 49
-ground_track: 29034000
-sats_in_view: 9
-precision_bits: 32
-, 'latitude': 43.6010606, 'longitude': -116.5713228}}, 'id': 1198901061, 'rxTime': 1726001046, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 5, 'raw': from: 3734987192
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\rn\376\374\031\025\264\240\204\272\030\206\006%\220\257\340fX\322\001x1\200\001\220\214\354\r\230\001\t\270\001 "
-}
-id: 1198901061
-rx_time: 1726001046
-rx_snr: 6.75
-hop_limit: 3
-rx_rssi: -40
-hop_start: 5
-, 'fromId': '!de9f61b8', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc1\x06%\xae\xaf\xe0fX\xfd\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 833, 'time': 1726001070, 'PDOP': 253, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 833
-time: 1726001070
-PDOP: 253
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 4204754852, 'rxTime': 1726001070, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\301\006%\256\257\340fX\375\001\230\001\005\270\001\020"
-}
-id: 4204754852
-rx_time: 1726001070
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rC\x80\x0e\x1a\x15\x19V\x8b\xba\x18\xcf\x06%1\xb0\xe0fX\xa3\x01x\x03\x80\x01\xd8\xaa\xf2\x05\x98\x01\x0c\xb8\x01 ', 'position': {'latitudeI': 437157955, 'longitudeI': -1165273575, 'altitude': 847, 'time': 1726001201, 'PDOP': 163, 'groundSpeed': 3, 'groundTrack': 12359000, 'satsInView': 12, 'precisionBits': 32, 'raw': latitude_i: 437157955
-longitude_i: -1165273575
-altitude: 847
-time: 1726001201
-PDOP: 163
-ground_speed: 3
-ground_track: 12359000
-sats_in_view: 12
-precision_bits: 32
-, 'latitude': 43.7157955, 'longitude': -116.5273575}}, 'id': 1711868414, 'rxTime': 1726001207, 'rxSnr': -11.0, 'hopLimit': 1, 'rxRssi': -116, 'hopStart': 3, 'raw': from: 321026200
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\rC\200\016\032\025\031V\213\272\030\317\006%1\260\340fX\243\001x\003\200\001\330\252\362\005\230\001\014\270\001 "
-}
-id: 1711868414
-rx_time: 1726001207
-rx_snr: -11
-hop_limit: 1
-rx_rssi: -116
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2707428252, 'rxTime': 1726001286, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2707428252
-rx_time: 1726001286
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4064648656, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r*_\xea\x19\x15\x96\x9f\x9e\xba\x18\xc0\x06%\x89\xb0\xe0fX\xef\x01\x98\x01\x06\xb8\x01 ', 'position': {'latitudeI': 434790186, 'longitudeI': -1164009578, 'altitude': 832, 'time': 1726001289, 'PDOP': 239, 'satsInView': 6, 'precisionBits': 32, 'raw': latitude_i: 434790186
-longitude_i: -1164009578
-altitude: 832
-time: 1726001289
-PDOP: 239
-sats_in_view: 6
-precision_bits: 32
-, 'latitude': 43.4790186, 'longitude': -116.4009578}}, 'id': 396870395, 'rxTime': 1726001292, 'rxSnr': 6.5, 'hopLimit': 2, 'rxRssi': -41, 'hopStart': 5, 'raw': from: 4064648656
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r*_\352\031\025\226\237\236\272\030\300\006%\211\260\340fX\357\001\230\001\006\270\001 "
-}
-id: 396870395
-rx_time: 1726001292
-rx_snr: 6.5
-hop_limit: 2
-rx_rssi: -41
-hop_start: 5
-, 'fromId': None, 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%\xda\xb0\xe0fX\x8b\x02\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726001370, 'PDOP': 267, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726001370
-PDOP: 267
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 587755440, 'rxTime': 1726001369, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%\332\260\340fX\213\002\230\001\004\270\001\020"
-}
-id: 587755440
-rx_time: 1726001369
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1129899156, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfd\x19\x15\x00\x00\xbb\xba\x18\x9d\x06\xb8\x01\x0f', 'position': {'latitudeI': 436011008, 'longitudeI': -1162149888, 'altitude': 797, 'precisionBits': 15, 'raw': latitude_i: 436011008
-longitude_i: -1162149888
-altitude: 797
-precision_bits: 15
-, 'latitude': 43.6011008, 'longitude': -116.2149888}}, 'id': 3016147292, 'rxTime': 1726001377, 'rxSnr': 6.5, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 1129899156
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\375\031\025\000\000\273\272\030\235\006\270\001\017"
-}
-id: 3016147292
-rx_time: 1726001377
-rx_snr: 6.5
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!4358e494', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x9bl\x02\x1a\x15\xb5o\x9b\xba\x18\x8f\x06%\xeb\xb0\xe0fX\xf2\x02\x80\x01\xc0\x88\xfa\x07\x98\x01\t\xb8\x01 ', 'position': {'latitudeI': 436366491, 'longitudeI': -1164218443, 'altitude': 783, 'time': 1726001387, 'PDOP': 370, 'groundTrack': 16680000, 'satsInView': 9, 'precisionBits': 32, 'raw': latitude_i: 436366491
-longitude_i: -1164218443
-altitude: 783
-time: 1726001387
-PDOP: 370
-ground_track: 16680000
-sats_in_view: 9
-precision_bits: 32
-, 'latitude': 43.6366491, 'longitude': -116.4218443}}, 'id': 860463269, 'rxTime': 1726001395, 'rxSnr': 6.25, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\233l\002\032\025\265o\233\272\030\217\006%\353\260\340fX\362\002\200\001\300\210\372\007\230\001\t\270\001 "
-}
-id: 860463269
-rx_time: 1726001395
-rx_snr: 6.25
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3734987192, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xf2T\x04\x1a\x15\rP\x84\xba\x18\x86\x06%\x10\xb1\xe0fX\xd2\x01x*\x80\x01\xc8\x9f\x8e\x11\x98\x01\t\xb8\x01 ', 'position': {'latitudeI': 436491506, 'longitudeI': -1165733875, 'altitude': 774, 'time': 1726001424, 'PDOP': 210, 'groundSpeed': 42, 'groundTrack': 35885000, 'satsInView': 9, 'precisionBits': 32, 'raw': latitude_i: 436491506
-longitude_i: -1165733875
-altitude: 774
-time: 1726001424
-PDOP: 210
-ground_speed: 42
-ground_track: 35885000
-sats_in_view: 9
-precision_bits: 32
-, 'latitude': 43.6491506, 'longitude': -116.5733875}}, 'id': 1198901074, 'rxTime': 1726001429, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 5, 'raw': from: 3734987192
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\362T\004\032\025\rP\204\272\030\206\006%\020\261\340fX\322\001x*\200\001\310\237\216\021\230\001\t\270\001 "
-}
-id: 1198901074
-rx_time: 1726001429
-rx_snr: 6.75
-hop_limit: 3
-rx_rssi: -40
-hop_start: 5
-, 'fromId': '!de9f61b8', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 4076613540, 'rxTime': 1726001587, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 4076613540
-rx_time: 1726001587
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbe\x06%\x06\xb2\xe0fX\xe6\tx\x02\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 830, 'time': 1726001670, 'PDOP': 1254, 'groundSpeed': 2, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 830
-time: 1726001670
-PDOP: 1254
-ground_speed: 2
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1597605819, 'rxTime': 1726001669, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\276\006%\006\262\340fX\346\tx\002\230\001\005\270\001\020"
-}
-id: 1597605819
-rx_time: 1726001669
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1640556459, 'rxTime': 1726001888, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1640556459
-rx_time: 1726001888
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc6\x06%2\xb3\xe0fX\x8b\x02x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 838, 'time': 1726001970, 'PDOP': 267, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 838
-time: 1726001970
-PDOP: 267
-ground_speed: 1
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 300634055, 'rxTime': 1726001969, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\306\006%2\263\340fX\213\002x\001\230\001\006\270\001\020"
-}
-id: 300634055
-rx_time: 1726001969
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1644788659, 'rxTime': 1726002189, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1644788659
-rx_time: 1726002189
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 1463451310, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\xa4\xba\x18\x9d\x06%\xb6\xb3\xe0fXfx\x00\x80\x01\x00\x98\x01\x0c\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1163657216, 'altitude': 797, 'time': 1726002102, 'PDOP': 102, 'satsInView': 12, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1163657216
-altitude: 797
-time: 1726002102
-PDOP: 102
-sats_in_view: 12
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.3657216}}, 'id': 1267884895, 'rxTime': 1726002228, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 1463451310
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\244\272\030\235\006%\266\263\340fXfx\000\200\001\000\230\001\014\270\001\r"
-}
-id: 1267884895
-rx_time: 1726002228
-rx_snr: 6.25
-hop_limit: 1
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!573a7eae', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x90\x9d\x0e\x1a\x15\xcfY\x8b\xba\x18\xf2\x06%2\xb4\xe0fX\x8f\x01x\x01\x80\x01\xd8\xaa\xf2\x05\x98\x01\x0b\xb8\x01 ', 'position': {'latitudeI': 437165456, 'longitudeI': -1165272625, 'altitude': 882, 'time': 1726002226, 'PDOP': 143, 'groundSpeed': 1, 'groundTrack': 12359000, 'satsInView': 11, 'precisionBits': 32, 'raw': latitude_i: 437165456
-longitude_i: -1165272625
-altitude: 882
-time: 1726002226
-PDOP: 143
-ground_speed: 1
-ground_track: 12359000
-sats_in_view: 11
-precision_bits: 32
-, 'latitude': 43.7165456, 'longitude': -116.5272625}}, 'id': 1711868418, 'rxTime': 1726002231, 'rxSnr': 7.25, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 321026200
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\220\235\016\032\025\317Y\213\272\030\362\006%2\264\340fX\217\001x\001\200\001\330\252\362\005\230\001\013\270\001 "
-}
-id: 1711868418
-rx_time: 1726002231
-rx_snr: 7.25
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2053916580, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\x04\x1a\x15\x00\x00\x9c\xba\x18\x94\x06%P\xb4\xe0f=\xe2\xb0\xe0fX\x9a\x02\xb0\x01\x01\xb8\x01\r', 'position': {'latitudeI': 436469760, 'longitudeI': -1164181504, 'altitude': 788, 'time': 1726002256, 'timestamp': 1726001378, 'PDOP': 282, 'seqNumber': 1, 'precisionBits': 13, 'raw': latitude_i: 436469760
-longitude_i: -1164181504
-altitude: 788
-time: 1726002256
-timestamp: 1726001378
-PDOP: 282
-seq_number: 1
-precision_bits: 13
-, 'latitude': 43.646976, 'longitude': -116.4181504}}, 'id': 2952589164, 'rxTime': 1726002267, 'rxSnr': -15.25, 'hopLimit': 5, 'rxRssi': -114, 'hopStart': 7, 'raw': from: 2053916580
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\000\004\032\025\000\000\234\272\030\224\006%P\264\340f=\342\260\340fX\232\002\260\001\001\270\001\r"
-}
-id: 2952589164
-rx_time: 1726002267
-rx_snr: -15.25
-hop_limit: 5
-rx_rssi: -114
-hop_start: 7
-, 'fromId': '!7a6c47a4', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xbe\x06%^\xb4\xe0fX\x8b\x02\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 830, 'time': 1726002270, 'PDOP': 267, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 830
-time: 1726002270
-PDOP: 267
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 929883091, 'rxTime': 1726002269, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\276\006%^\264\340fX\213\002\230\001\006\270\001\020"
-}
-id: 929883091
-rx_time: 1726002269
-rx_snr: 6
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b"\r\xaap\x02\x1a\x15'n\x9b\xba\x18\x9e\x06%p\xb4\xe0fX\xf2\x01x\x02\x80\x01\xa8\x8c=\x98\x01\x07\xb8\x01 ", 'position': {'latitudeI': 436367530, 'longitudeI': -1164218841, 'altitude': 798, 'time': 1726002288, 'PDOP': 242, 'groundSpeed': 2, 'groundTrack': 1001000, 'satsInView': 7, 'precisionBits': 32, 'raw': latitude_i: 436367530
-longitude_i: -1164218841
-altitude: 798
-time: 1726002288
-PDOP: 242
-ground_speed: 2
-ground_track: 1001000
-sats_in_view: 7
-precision_bits: 32
-, 'latitude': 43.636753, 'longitude': -116.4218841}}, 'id': 3427126454, 'rxTime': 1726002295, 'rxSnr': 6.25, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\252p\002\032\025'n\233\272\030\236\006%p\264\340fX\362\001x\002\200\001\250\214=\230\001\007\270\001 "
-}
-id: 3427126454
-rx_time: 1726002295
-rx_snr: 6.25
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xe3\x06%\xef\xb4\xe0fX\x9a\x02x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 867, 'time': 1726002415, 'PDOP': 282, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 867
-time: 1726002415
-PDOP: 282
-ground_speed: 1
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3155609560, 'rxTime': 1726002415, 'rxSnr': 7.25, 'hopLimit': 3, 'rxRssi': -39, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\343\006%\357\264\340fX\232\002x\001\230\001\006\270\001\020"
-}
-id: 3155609560
-rx_time: 1726002415
-rx_snr: 7.25
-hop_limit: 3
-rx_rssi: -39
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1569228731, 'rxTime': 1726002490, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1569228731
-rx_time: 1726002490
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc3\x06%\x0f\xb6\xe0fX\x9a\x02x\x02\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 835, 'time': 1726002703, 'PDOP': 282, 'groundSpeed': 2, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 835
-time: 1726002703
-PDOP: 282
-ground_speed: 2
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1746122723, 'rxTime': 1726002703, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\303\006%\017\266\340fX\232\002x\002\230\001\006\270\001\020"
-}
-id: 1746122723
-rx_time: 1726002703
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -42
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 4203103170, 'rxTime': 1726002791, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 4203103170
-rx_time: 1726002791
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%=\xb7\xe0fX\xd0\x04x\x01\x80\x01\xf0\xb1\xcf\x0f\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726003005, 'PDOP': 592, 'groundSpeed': 1, 'groundTrack': 32758000, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726003005
-PDOP: 592
-ground_speed: 1
-ground_track: 32758000
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2183397359, 'rxTime': 1726003005, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%=\267\340fX\320\004x\001\200\001\360\261\317\017\230\001\004\270\001\020"
-}
-id: 2183397359
-rx_time: 1726003005
-rx_snr: 6.25
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3199400903, 'rxTime': 1726003092, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3199400903
-rx_time: 1726003092
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xadc\x02\x1a\x15\x8fw\x9b\xba\x18\x82\x06%\xf5\xb7\xe0fX\xf8\x01x\x05\x80\x01\xa8\x8c=\x98\x01\x05\xb8\x01 ', 'position': {'latitudeI': 436364205, 'longitudeI': -1164216433, 'altitude': 770, 'time': 1726003189, 'PDOP': 248, 'groundSpeed': 5, 'groundTrack': 1001000, 'satsInView': 5, 'precisionBits': 32, 'raw': latitude_i: 436364205
-longitude_i: -1164216433
-altitude: 770
-time: 1726003189
-PDOP: 248
-ground_speed: 5
-ground_track: 1001000
-sats_in_view: 5
-precision_bits: 32
-, 'latitude': 43.6364205, 'longitude': -116.4216433}}, 'id': 465894598, 'rxTime': 1726003196, 'rxSnr': 6.5, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\255c\002\032\025\217w\233\272\030\202\006%\365\267\340fX\370\001x\005\200\001\250\214=\230\001\005\270\001 "
-}
-id: 465894598
-rx_time: 1726003196
-rx_snr: 6.5
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%g\xb8\xe0fX\xd0\x04x\x19\x80\x01\xc0\xdd\xb4\x07\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726003303, 'PDOP': 592, 'groundSpeed': 25, 'groundTrack': 15544000, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726003303
-PDOP: 592
-ground_speed: 25
-ground_track: 15544000
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2994041851, 'rxTime': 1726003303, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%g\270\340fX\320\004x\031\200\001\300\335\264\007\230\001\004\270\001\020"
-}
-id: 2994041851
-rx_time: 1726003303
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2499195851, 'rxTime': 1726003393, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2499195851
-rx_time: 1726003393
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%\x96\xb9\xe0fX\xd0\x04x\x19\x80\x01\xc0\xdd\xb4\x07\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726003606, 'PDOP': 592, 'groundSpeed': 25, 'groundTrack': 15544000, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726003606
-PDOP: 592
-ground_speed: 25
-ground_track: 15544000
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2068931590, 'rxTime': 1726003605, 'rxSnr': 7.0, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%\226\271\340fX\320\004x\031\200\001\300\335\264\007\230\001\004\270\001\020"
-}
-id: 2068931590
-rx_time: 1726003605
-rx_snr: 7
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2489013202, 'rxTime': 1726003694, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 2489013202
-rx_time: 1726003694
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc1\x06%\xc2\xba\xe0fX\xfd\x01x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 833, 'time': 1726003906, 'PDOP': 253, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 833
-time: 1726003906
-PDOP: 253
-ground_speed: 1
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1773214737, 'rxTime': 1726003905, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\301\006%\302\272\340fX\375\001x\001\230\001\006\270\001\020"
-}
-id: 1773214737
-rx_time: 1726003905
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3764090841, 'rxTime': 1726003995, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3764090841
-rx_time: 1726003995
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 862527612, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rCY\xea\x19\x15ed\x9e\xba\x18\xb9\x06\xb8\x01 ', 'position': {'latitudeI': 434788675, 'longitudeI': -1164024731, 'altitude': 825, 'precisionBits': 32, 'raw': latitude_i: 434788675
-longitude_i: -1164024731
-altitude: 825
-precision_bits: 32
-, 'latitude': 43.4788675, 'longitude': -116.4024731}}, 'id': 5052186, 'rxTime': 1726004024, 'rxSnr': 6.0, 'hopLimit': 1, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 862527612
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\rCY\352\031\025ed\236\272\030\271\006\270\001 "
-}
-id: 5052186
-rx_time: 1726004024
-rx_snr: 6
-hop_limit: 1
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!3369207c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xe8\x9f\x0e\x1a\x15\x81R\x8b\xba\x18\xdb\x05%:\xbb\xe0fX\x8f\x01x\x01\x80\x01\x80\xc8\xd9\x04\x98\x01\x0b\xb8\x01 ', 'position': {'latitudeI': 437166056, 'longitudeI': -1165274495, 'altitude': 731, 'time': 1726004026, 'PDOP': 143, 'groundSpeed': 1, 'groundTrack': 9856000, 'satsInView': 11, 'precisionBits': 32, 'raw': latitude_i: 437166056
-longitude_i: -1165274495
-altitude: 731
-time: 1726004026
-PDOP: 143
-ground_speed: 1
-ground_track: 9856000
-sats_in_view: 11
-precision_bits: 32
-, 'latitude': 43.7166056, 'longitude': -116.5274495}}, 'id': 1711868425, 'rxTime': 1726004031, 'rxSnr': 6.0, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 321026200
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\350\237\016\032\025\201R\213\272\030\333\005%:\273\340fX\217\001x\001\200\001\200\310\331\004\230\001\013\270\001 "
-}
-id: 1711868425
-rx_time: 1726004031
-rx_snr: 6
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc8\x06%\xee\xbb\xe0fX\xfd\x01x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 840, 'time': 1726004206, 'PDOP': 253, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb7\xba\x18\xc8\x06%R\x8a\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162412032, 'altitude': 840, 'time': 1555008082, 'locationSource': 'LOC_MANUAL', 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162412032
 altitude: 840
-time: 1726004206
-PDOP: 253
-ground_speed: 1
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 2526306332, 'rxTime': 1726004206, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
+time: 1555008082
+location_source: LOC_MANUAL
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2412032}}, 'id': 2350344164, 'rxTime': 1555008082, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\310\006%\356\273\340fX\375\001x\001\230\001\006\270\001\020"
+  payload: "\r\000\000\373\031\025\000\000\267\272\030\310\006%R\212\257\(\001x\000\200\001\000\270\001\017"
 }
-id: 2526306332
-rx_time: 1726004206
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3349833696, 'rxTime': 1726004296, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3349833696
-rx_time: 1726004296
+id: 2350344164
+rx_time: 1555008082
 hop_limit: 3
 priority: BACKGROUND
 hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc2\x06%\x1a\xbd\xe0fX\xfd\x01x\x01\x80\x01\xe8\xc9\xd2\x07\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 834, 'time': 1726004506, 'PDOP': 253, 'groundSpeed': 1, 'groundTrack': 16033000, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 834
-time: 1726004506
-PDOP: 253
-ground_speed: 1
-ground_track: 16033000
-sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 23852074, 'rxTime': 1726004506, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xbe\x06%\xf45\xe3fX\x8b\x02x\x00\x80\x01\x00\x98\x01\x08\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 830, 'time': 1726166516, 'PDOP': 267, 'satsInView': 8, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 830
+time: 1726166516
+PDOP: 267
+sats_in_view: 8
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 453363492, 'rxTime': 1555008117, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -34, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\302\006%\032\275\340fX\375\001x\001\200\001\350\311\322\007\230\001\006\270\001\020"
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\276\006%\3645\343fX\213\002x\000\200\001\000\230\001\010\270\001\017"
 }
-id: 23852074
-rx_time: 1726004506
+id: 453363492
+rx_time: 1555008117
 rx_snr: 6
 hop_limit: 3
-rx_rssi: -40
+rx_rssi: -34
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2653453288, 'rxTime': 1726004597, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xbd\x06%X6\xe3fX\x8b\x02x\x02\x80\x01\x80}\x98\x01\x08\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 829, 'time': 1726166616, 'PDOP': 267, 'groundSpeed': 2, 'groundTrack': 16000, 'satsInView': 8, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 829
+time: 1726166616
+PDOP: 267
+ground_speed: 2
+ground_track: 16000
+sats_in_view: 8
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 1838303017, 'rxTime': 1555008217, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -36, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\275\006%X6\343fX\213\002x\002\200\001\200}\230\001\010\270\001\017"
 }
-id: 2653453288
-rx_time: 1726004597
+id: 1838303017
+rx_time: 1555008217
+rx_snr: 6.5
+hop_limit: 3
+rx_rssi: -36
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc5\x06%\x897\xe3fX\xa8\x02x\x00\x80\x01\x00\x98\x01\x06\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 837, 'time': 1726166921, 'PDOP': 296, 'satsInView': 6, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 837
+time: 1726166921
+PDOP: 296
+sats_in_view: 6
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 542967605, 'rxTime': 1555008522, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -34, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\305\006%\2117\343fX\250\002x\000\200\001\000\230\001\006\270\001\017"
+}
+id: 542967605
+rx_time: 1555008522
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -34
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb7\xba\x18\xc8\x06%\xaa\x8c\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162412032, 'altitude': 840, 'time': 1555008682, 'locationSource': 'LOC_MANUAL', 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162412032
+altitude: 840
+time: 1555008682
+location_source: LOC_MANUAL
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2412032}}, 'id': 3289850874, 'rxTime': 1555008682, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\267\272\030\310\006%\252\214\257\(\001x\000\200\001\000\270\001\017"
+}
+id: 3289850874
+rx_time: 1555008682
 hop_limit: 3
 priority: BACKGROUND
 hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc2\x06%F\xbe\xe0fX\xfd\x01x\x01\x98\x01\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 834, 'time': 1726004806, 'PDOP': 253, 'groundSpeed': 1, 'satsInView': 6, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 834
-time: 1726004806
-PDOP: 253
-ground_speed: 1
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xcd\x06%\xb58\xe3fX\xcf\x05x\x00\x80\x01\x00\x98\x01\x06\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 845, 'time': 1726167221, 'PDOP': 719, 'satsInView': 6, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 845
+time: 1726167221
+PDOP: 719
 sats_in_view: 6
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 3738570807, 'rxTime': 1726004805, 'rxSnr': 5.75, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 843727680, 'rxTime': 1555008822, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -32, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\302\006%F\276\340fX\375\001x\001\230\001\006\270\001\020"
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\315\006%\2658\343fX\317\005x\000\200\001\000\230\001\006\270\001\017"
 }
-id: 3738570807
-rx_time: 1726004805
-rx_snr: 5.75
+id: 843727680
+rx_time: 1555008822
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -32
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb7\xba\x18\xc2\x06%\xd58\xe3fX\xdd\x05x\x02\x80\x01\x98\xdc\x97\t\x98\x01\x06\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162412032, 'altitude': 834, 'time': 1726167253, 'PDOP': 733, 'groundSpeed': 2, 'groundTrack': 19263000, 'satsInView': 6, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162412032
+altitude: 834
+time: 1726167253
+PDOP: 733
+ground_speed: 2
+ground_track: 19263000
+sats_in_view: 6
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2412032}}, 'id': 3331930946, 'rxTime': 1555008854, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -34, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\267\272\030\302\006%\3258\343fX\335\005x\002\200\001\230\334\227\t\230\001\006\270\001\017"
+}
+id: 3331930946
+rx_time: 1555008854
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -34
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xbf\x06%I9\xe3fX\xf9\x05x\x00\x80\x01\x00\x98\x01\x06\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 831, 'time': 1726167369, 'PDOP': 761, 'satsInView': 6, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 831
+time: 1726167369
+PDOP: 761
+sats_in_view: 6
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 2834426695, 'rxTime': 1555008970, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -30, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\277\006%I9\343fX\371\005x\000\200\001\000\230\001\006\270\001\017"
+}
+id: 2834426695
+rx_time: 1555008970
+rx_snr: 6.25
+hop_limit: 3
+rx_rssi: -30
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xba\x06%w:\xe3fX\x87\x06x\x00\x80\x01\xe8\xc2\xfb\x08\x98\x01\x06\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 826, 'time': 1726167671, 'PDOP': 775, 'groundTrack': 18801000, 'satsInView': 6, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 826
+time: 1726167671
+PDOP: 775
+ground_track: 18801000
+sats_in_view: 6
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 1929764690, 'rxTime': 1555009272, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -31, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\272\006%w:\343fX\207\006x\000\200\001\350\302\373\010\230\001\006\270\001\017"
+}
+id: 1929764690
+rx_time: 1555009272
+rx_snr: 6.25
+hop_limit: 3
+rx_rssi: -31
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%\x02\x8f\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'wantResponse': True, 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555009282, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555009282
+location_source: LOC_MANUAL
+precision_bits: 32
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 3861900305, 'rxTime': 1555009282, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%\002\217\257\(\001x\000\200\001\000\270\001 "
+  want_response: true
+}
+id: 3861900305
+rx_time: 1555009282
+hop_limit: 3
+priority: BACKGROUND
+hop_start: 3
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 3806431584, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\x84:\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'requestId': 3861900305, 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726167684, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726167684
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 1501182803, 'rxTime': 1555009286, 'rxSnr': 6.0, 'hopLimit': 2, 'rxRssi': -31, 'hopStart': 2, 'raw': from: 4201497708
+to: 3806431584
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\204:\343fx\000\200\001\000\270\001\017"
+  request_id: 3861900305
+}
+id: 1501182803
+rx_time: 1555009286
+rx_snr: 6
+hop_limit: 2
+rx_rssi: -31
+hop_start: 2
+, 'fromId': '!fa6dc46c', 'toId': '!e2e18960'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc0\x06%\xa3;\xe3fX\x95\x06x\x00\x80\x01\x00\x98\x01\x06\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 832, 'time': 1726167971, 'PDOP': 789, 'satsInView': 6, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 832
+time: 1726167971
+PDOP: 789
+sats_in_view: 6
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 1401826143, 'rxTime': 1555009572, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -30, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\300\006%\243;\343fX\225\006x\000\200\001\000\230\001\006\270\001\017"
+}
+id: 1401826143
+rx_time: 1555009572
+rx_snr: 6.5
+hop_limit: 3
+rx_rssi: -30
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\xcf<\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726168271, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726168271
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 3751521130, 'rxTime': 1555009872, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -30, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\317<\343fx\000\200\001\000\270\001\017"
+}
+id: 3751521130
+rx_time: 1555009872
+rx_snr: 6.5
+hop_limit: 3
+rx_rssi: -30
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%Z\x91\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555009882, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555009882
+location_source: LOC_MANUAL
+precision_bits: 32
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 4069370919, 'rxTime': 1555009882, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%Z\221\257\(\001x\000\200\001\000\270\001 "
+}
+id: 4069370919
+rx_time: 1555009882
+hop_limit: 3
+priority: BACKGROUND
+hop_start: 3
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\xfb=\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726168571, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726168571
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 1853987701, 'rxTime': 1555010172, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -32, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\373=\343fx\000\200\001\000\270\001\017"
+}
+id: 1853987701
+rx_time: 1555010172
+rx_snr: 6.25
+hop_limit: 3
+rx_rssi: -32
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b"\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%'?\xe3fx\x00\x80\x01\xa8\x01\xb8\x01\x0f", 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726168871, 'groundTrack': 168, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726168871
+ground_track: 168
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 189714306, 'rxTime': 1555010472, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -36, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%'?\343fx\000\200\001\250\001\270\001\017"
+}
+id: 189714306
+rx_time: 1555010472
+rx_snr: 6.75
+hop_limit: 3
+rx_rssi: -36
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%\xb3\x93\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555010483, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555010483
+location_source: LOC_MANUAL
+precision_bits: 32
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 3659365437, 'rxTime': 1555010483, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%\263\223\257\(\001x\000\200\001\000\270\001 "
+}
+id: 3659365437
+rx_time: 1555010483
+hop_limit: 3
+priority: BACKGROUND
+hop_start: 3
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%S@\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726169171, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726169171
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 1809460109, 'rxTime': 1555010772, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%S@\343fx\000\200\001\000\270\001\017"
+}
+id: 1809460109
+rx_time: 1555010772
+rx_snr: 6.25
+hop_limit: 3
+rx_rssi: -41
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xbc\x06%\x7fA\xe3fX\xcf\x05x\x02\x80\x01\x00\x98\x01\x05\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 828, 'time': 1726169471, 'PDOP': 719, 'groundSpeed': 2, 'satsInView': 5, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 828
+time: 1726169471
+PDOP: 719
+ground_speed: 2
+sats_in_view: 5
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 3403422616, 'rxTime': 1555011072, 'rxSnr': 6.75, 'hopLimit': 3, 'rxRssi': -42, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\274\006%\177A\343fX\317\005x\002\200\001\000\230\001\005\270\001\017"
+}
+id: 3403422616
+rx_time: 1555011072
+rx_snr: 6.75
 hop_limit: 3
 rx_rssi: -42
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2466715631, 'rxTime': 1726004898, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%\x0b\x96\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555011083, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555011083
+location_source: LOC_MANUAL
+precision_bits: 32
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 3629909075, 'rxTime': 1555011083, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%\013\226\257\(\001x\000\200\001\000\270\001 "
 }
-id: 2466715631
-rx_time: 1726004898
+id: 3629909075
+rx_time: 1555011083
 hop_limit: 3
 priority: BACKGROUND
 hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xd2\x06%r\xbf\xe0fX\xfd\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 850, 'time': 1726005106, 'PDOP': 253, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 850
-time: 1726005106
-PDOP: 253
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1236577346, 'rxTime': 1726005106, 'rxSnr': 5.75, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\xabB\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726169771, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726169771
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 3330335652, 'rxTime': 1555011372, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -27, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\322\006%r\277\340fX\375\001\230\001\005\270\001\020"
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\253B\343fx\000\200\001\000\270\001\017"
 }
-id: 1236577346
-rx_time: 1726005106
-rx_snr: 5.75
-hop_limit: 3
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 285083638, 'rxTime': 1726005199, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 285083638
-rx_time: 1726005199
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 862590640, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\xd8t\xfa\x19\x15\x88\xff\x83\xba\x18\xf4\x05%\x046\x9ff\xb8\x01 ', 'position': {'latitudeI': 435844312, 'longitudeI': -1165754488, 'altitude': 756, 'time': 1721710084, 'precisionBits': 32, 'raw': latitude_i: 435844312
-longitude_i: -1165754488
-altitude: 756
-time: 1721710084
-precision_bits: 32
-, 'latitude': 43.5844312, 'longitude': -116.5754488}}, 'id': 507409307, 'rxTime': 1726005230, 'rxSnr': -16.5, 'rxRssi': -114, 'hopStart': 3, 'raw': from: 862590640
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\330t\372\031\025\210\377\203\272\030\364\005%\0046\237f\270\001 "
-}
-id: 507409307
-rx_time: 1726005230
-rx_snr: -16.5
-rx_rssi: -114
-hop_start: 3
-, 'fromId': '!336a16b0', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3663979680, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x12\xa8\xed\x19\x15\x1c\x1a\x9c\xba\x18\xb8\x06%8\xc0\xe0fX\xfd\x03\x80\x01\x90\xf2\xc4\x0f\x98\x01\x03\xb8\x01 ', 'position': {'latitudeI': 435005458, 'longitudeI': -1164174820, 'altitude': 824, 'time': 1726005304, 'PDOP': 509, 'groundTrack': 32586000, 'satsInView': 3, 'precisionBits': 32, 'raw': latitude_i: 435005458
-longitude_i: -1164174820
-altitude: 824
-time: 1726005304
-PDOP: 509
-ground_track: 32586000
-sats_in_view: 3
-precision_bits: 32
-, 'latitude': 43.5005458, 'longitude': -116.417482}}, 'id': 1632174582, 'rxTime': 1726005342, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 3663979680
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\022\250\355\031\025\034\032\234\272\030\270\006%8\300\340fX\375\003\200\001\220\362\304\017\230\001\003\270\001 "
-}
-id: 1632174582
-rx_time: 1726005342
+id: 3330335652
+rx_time: 1555011372
 rx_snr: 6.25
-hop_limit: 1
-rx_rssi: -41
-hop_start: 3
-, 'fromId': None, 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%\x9f\xc0\xe0fX\xfd\x01\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726005407, 'PDOP': 253, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726005407
-PDOP: 253
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 743475278, 'rxTime': 1726005406, 'rxSnr': 7.0, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%\237\300\340fX\375\001\230\001\005\270\001\020"
-}
-id: 743475278
-rx_time: 1726005406
-rx_snr: 7
 hop_limit: 3
-rx_rssi: -40
+rx_rssi: -27
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2447713278, 'rxTime': 1726005500, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\xd7C\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726170071, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726170071
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 651536302, 'rxTime': 1555011672, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -28, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\327C\343fx\000\200\001\000\270\001\017"
 }
-id: 2447713278
-rx_time: 1726005500
+id: 651536302
+rx_time: 1555011672
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -28
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%c\x98\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555011683, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555011683
+location_source: LOC_MANUAL
+precision_bits: 32
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 1737688171, 'rxTime': 1555011683, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%c\230\257\(\001x\000\200\001\000\270\001 "
+}
+id: 1737688171
+rx_time: 1555011683
 hop_limit: 3
 priority: BACKGROUND
 hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 2441625328, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x1fg\xff\x19\x15I\xe4\xbd\xba\x18\xda\x06%=\xc1\xe0f\xb8\x01 ', 'position': {'latitudeI': 436168479, 'longitudeI': -1161960375, 'altitude': 858, 'time': 1726005565, 'precisionBits': 32, 'raw': latitude_i: 436168479
-longitude_i: -1161960375
-altitude: 858
-time: 1726005565
-precision_bits: 32
-, 'latitude': 43.6168479, 'longitude': -116.1960375}}, 'id': 180189273, 'rxTime': 1726005576, 'rxSnr': 7.5, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 2441625328
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\x03E\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726170371, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726170371
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 28271545, 'rxTime': 1555011972, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -27, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\037g\377\031\025I\344\275\272\030\332\006%=\301\340f\270\001 "
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\003E\343fx\000\200\001\000\270\001\017"
 }
-id: 180189273
-rx_time: 1726005576
-rx_snr: 7.5
-rx_rssi: -40
+id: 28271545
+rx_time: 1555011972
+rx_snr: 6.25
+hop_limit: 3
+rx_rssi: -27
 hop_start: 3
-, 'fromId': '!91883ef0', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 862527612, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rCY\xea\x19\x15ed\x9e\xba\x18\xb9\x06\xb8\x01 ', 'wantResponse': True, 'position': {'latitudeI': 434788675, 'longitudeI': -1164024731, 'altitude': 825, 'precisionBits': 32, 'raw': latitude_i: 434788675
-longitude_i: -1164024731
-altitude: 825
-precision_bits: 32
-, 'latitude': 43.4788675, 'longitude': -116.4024731}}, 'id': 3963206500, 'rxTime': 1726005705, 'rxSnr': 7.5, 'hopLimit': 1, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 862527612
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%/F\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726170671, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726170671
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 54879173, 'rxTime': 1555012272, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -51, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\rCY\352\031\025ed\236\272\030\271\006\270\001 "
-  want_response: true
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%/F\343fx\000\200\001\000\270\001\017"
 }
-id: 3963206500
-rx_time: 1726005705
-rx_snr: 7.5
-hop_limit: 1
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!3369207c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc3\x06%\xcb\xc1\xe0fX\xfd\x01\x80\x01\x88\xfa\xf9\x06\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 835, 'time': 1726005707, 'PDOP': 253, 'groundTrack': 14581000, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 835
-time: 1726005707
-PDOP: 253
-ground_track: 14581000
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 884195419, 'rxTime': 1726005706, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -39, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\303\006%\313\301\340fX\375\001\200\001\210\372\371\006\230\001\005\270\001\020"
-}
-id: 884195419
-rx_time: 1726005706
+id: 54879173
+rx_time: 1555012272
 rx_snr: 6.5
 hop_limit: 3
-rx_rssi: -39
+rx_rssi: -51
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2987445255, 'rxTime': 1726005801, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%\xbb\x9a\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555012283, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555012283
+location_source: LOC_MANUAL
+precision_bits: 32
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 2447627394, 'rxTime': 1555012283, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%\273\232\257\(\001x\000\200\001\000\270\001 "
 }
-id: 2987445255
-rx_time: 1726005801
+id: 2447627394
+rx_time: 1555012283
 hop_limit: 3
 priority: BACKGROUND
 hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 321026200, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rm\x8e\x0e\x1a\x15\x16N\x8b\xba\x18\x97\x07%C\xc2\xe0fX\x8e\x01\x80\x01\xb0\xa3\xda\x06\x98\x01\n\xb8\x01 ', 'position': {'latitudeI': 437161581, 'longitudeI': -1165275626, 'altitude': 919, 'time': 1726005827, 'PDOP': 142, 'groundTrack': 14062000, 'satsInView': 10, 'precisionBits': 32, 'raw': latitude_i: 437161581
-longitude_i: -1165275626
-altitude: 919
-time: 1726005827
-PDOP: 142
-ground_track: 14062000
-sats_in_view: 10
-precision_bits: 32
-, 'latitude': 43.7161581, 'longitude': -116.5275626}}, 'id': 1711868432, 'rxTime': 1726005838, 'rxSnr': 6.25, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 321026200
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%[G\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726170971, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726170971
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 196440015, 'rxTime': 1555012572, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -51, 'hopStart': 3, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\rm\216\016\032\025\026N\213\272\030\227\007%C\302\340fX\216\001\200\001\260\243\332\006\230\001\n\270\001 "
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%[G\343fx\000\200\001\000\270\001\017"
 }
-id: 1711868432
-rx_time: 1726005838
+id: 196440015
+rx_time: 1555012572
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -51
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\x87H\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726171271, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726171271
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 2500487130, 'rxTime': 1555012872, 'rxSnr': 6.25, 'hopLimit': 3, 'rxRssi': -52, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\207H\343fx\000\200\001\000\270\001\017"
+}
+id: 2500487130
+rx_time: 1555012872
 rx_snr: 6.25
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!13227898', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2475420652, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r,l\x02\x1a\x15Su\x9b\xba\x18\xa6\x06%\x83\xc2\xe0fX\x97\x02x\x06\x80\x01\x80\xea\xa4\x04\x98\x01\x05\xb8\x01 ', 'position': {'latitudeI': 436366380, 'longitudeI': -1164217005, 'altitude': 806, 'time': 1726005891, 'PDOP': 279, 'groundSpeed': 6, 'groundTrack': 8992000, 'satsInView': 5, 'precisionBits': 32, 'raw': latitude_i: 436366380
-longitude_i: -1164217005
-altitude: 806
-time: 1726005891
-PDOP: 279
-ground_speed: 6
-ground_track: 8992000
-sats_in_view: 5
-precision_bits: 32
-, 'latitude': 43.636638, 'longitude': -116.4217005}}, 'id': 222601464, 'rxTime': 1726005898, 'rxSnr': 6.75, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 2475420652
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r,l\002\032\025Su\233\272\030\246\006%\203\302\340fX\227\002x\006\200\001\200\352\244\004\230\001\005\270\001 "
-}
-id: 222601464
-rx_time: 1726005898
-rx_snr: 6.75
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!938bebec', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc3\x06%\xf7\xc2\xe0fX\xfd\x01\x80\x01\x88\xfa\xf9\x06\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 835, 'time': 1726006007, 'PDOP': 253, 'groundTrack': 14581000, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 835
-time: 1726006007
-PDOP: 253
-ground_track: 14581000
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1307230311, 'rxTime': 1726006006, 'rxSnr': 5.75, 'hopLimit': 3, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\303\006%\367\302\340fX\375\001\200\001\210\372\371\006\230\001\005\270\001\020"
-}
-id: 1307230311
-rx_time: 1726006006
-rx_snr: 5.75
 hop_limit: 3
-rx_rssi: -41
+rx_rssi: -52
 hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 2640982031, 'rxTime': 1726006102, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%\x13\x9d\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555012883, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555012883
+location_source: LOC_MANUAL
+precision_bits: 32
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 2347040919, 'rxTime': 1555012883, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%\023\235\257\(\001x\000\200\001\000\270\001 "
 }
-id: 2640982031
-rx_time: 1726006102
+id: 2347040919
+rx_time: 1555012883
 hop_limit: 3
 priority: BACKGROUND
 hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
+, 'fromId': '!e2e18960', 'toId': '^all'}{"
 
 ----------------------------------------------------------------------------------------------------
 
-{'from': 862527612, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rCY\xea\x19\x15ed\x9e\xba\x18\xb9\x06\xb8\x01 ', 'wantResponse': True, 'position': {'latitudeI': 434788675, 'longitudeI': -1164024731, 'altitude': 825, 'precisionBits': 32, 'raw': latitude_i: 434788675
-longitude_i: -1164024731
-altitude: 825
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\xb3I\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726171571, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726171571
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 2179075045, 'rxTime': 1555013172, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -52, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\263I\343fx\000\200\001\000\270\001\017"
+}
+id: 2179075045
+rx_time: 1555013172
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -52
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x00\xfb\x19\x15\x00\x00\xb5\xba\x18\xc2\x06%\xdfJ\xe3fx\x00\x80\x01\x00\xb8\x01\x0f', 'position': {'latitudeI': 435879936, 'longitudeI': -1162543104, 'altitude': 834, 'time': 1726171871, 'precisionBits': 15, 'raw': latitude_i: 435879936
+longitude_i: -1162543104
+altitude: 834
+time: 1726171871
+precision_bits: 15
+, 'latitude': 43.5879936, 'longitude': -116.2543104}}, 'id': 438708208, 'rxTime': 1555013472, 'rxSnr': 6.0, 'hopLimit': 3, 'rxRssi': -52, 'hopStart': 3, 'raw': from: 4201497708
+to: 4294967295
+decoded {
+  portnum: POSITION_APP
+  payload: "\r\000\000\373\031\025\000\000\265\272\030\302\006%\337J\343fx\000\200\001\000\270\001\017"
+}
+id: 438708208
+rx_time: 1555013472
+rx_snr: 6
+hop_limit: 3
+rx_rssi: -52
+hop_start: 3
+, 'fromId': '!fa6dc46c', 'toId': '^all'}{"
+
+----------------------------------------------------------------------------------------------------
+
+"}{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x94\xa1\xfb\x19\x150\x14\xb6\xba\x18\xc8\x06%k\x9f\xaf\\(\x01x\x00\x80\x01\x00\xb8\x01 ', 'position': {'latitudeI': 435921300, 'longitudeI': -1162472400, 'altitude': 840, 'time': 1555013483, 'locationSource': 'LOC_MANUAL', 'precisionBits': 32, 'raw': latitude_i: 435921300
+longitude_i: -1162472400
+altitude: 840
+time: 1555013483
+location_source: LOC_MANUAL
 precision_bits: 32
-, 'latitude': 43.4788675, 'longitude': -116.4024731}}, 'id': 3366955788, 'rxTime': 1726006262, 'rxSnr': 6.25, 'hopLimit': 1, 'rxRssi': -41, 'hopStart': 3, 'raw': from: 862527612
+, 'latitude': 43.59213, 'longitude': -116.24724}}, 'id': 385472685, 'rxTime': 1555013483, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
 to: 4294967295
 decoded {
   portnum: POSITION_APP
-  payload: "\rCY\352\031\025ed\236\272\030\271\006\270\001 "
-  want_response: true
+  payload: "\r\224\241\373\031\0250\024\266\272\030\310\006%k\237\257\(\001x\000\200\001\000\270\001 "
 }
-id: 3366955788
-rx_time: 1726006262
-rx_snr: 6.25
-hop_limit: 1
-rx_rssi: -41
-hop_start: 3
-, 'fromId': '!3369207c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xb8\x06%#\xc4\xe0fX\xfb\x03x\x06\x80\x01\xa8\xdd\xf2\x0f\x98\x01\x04\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 824, 'time': 1726006307, 'PDOP': 507, 'groundSpeed': 6, 'groundTrack': 33337000, 'satsInView': 4, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 824
-time: 1726006307
-PDOP: 507
-ground_speed: 6
-ground_track: 33337000
-sats_in_view: 4
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 3158903923, 'rxTime': 1726006306, 'rxSnr': 6.5, 'hopLimit': 3, 'rxRssi': -39, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\270\006%#\304\340fX\373\003x\006\200\001\250\335\362\017\230\001\004\270\001\020"
-}
-id: 3158903923
-rx_time: 1726006306
-rx_snr: 6.5
-hop_limit: 3
-rx_rssi: -39
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162444800
-altitude: 835
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 1558856727, 'rxTime': 1726006403, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 1558856727
-rx_time: 1726006403
-hop_limit: 3
-priority: BACKGROUND
-hop_start: 3
-, 'fromId': '!e2e18960', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 2803275045, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\rHx\x01\x1a\x15\xdb\xf5\x99\xba\x18\x8b\x06%\x80\xc4\xe0f\xb8\x01 ', 'position': {'latitudeI': 436303944, 'longitudeI': -1164315173, 'altitude': 779, 'time': 1726006400, 'precisionBits': 32, 'raw': latitude_i: 436303944
-longitude_i: -1164315173
-altitude: 779
-time: 1726006400
-precision_bits: 32
-, 'latitude': 43.6303944, 'longitude': -116.4315173}}, 'id': 1329812791, 'rxTime': 1726006408, 'rxSnr': 5.75, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 5, 'raw': from: 2803275045
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\rHx\001\032\025\333\365\231\272\030\213\006%\200\304\340f\270\001 "
-}
-id: 1329812791
-rx_time: 1726006408
-rx_snr: 5.75
-hop_limit: 3
-rx_rssi: -40
-hop_start: 5
-, 'fromId': '!99a34093', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb5\xba\x18\xc4\x06%O\xc5\xe0fX\x8b\x02\x98\x01\x05\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162510336, 'altitude': 836, 'time': 1726006607, 'PDOP': 267, 'satsInView': 5, 'precisionBits': 16, 'raw': latitude_i: 435912704
-longitude_i: -1162510336
-altitude: 836
-time: 1726006607
-PDOP: 267
-sats_in_view: 5
-precision_bits: 16
-, 'latitude': 43.5912704, 'longitude': -116.2510336}}, 'id': 1078840447, 'rxTime': 1726006607, 'rxSnr': 7.5, 'hopLimit': 3, 'rxRssi': -40, 'hopStart': 3, 'raw': from: 4201497708
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\265\272\030\304\006%O\305\340fX\213\002\230\001\005\270\001\020"
-}
-id: 1078840447
-rx_time: 1726006607
-rx_snr: 7.5
-hop_limit: 3
-rx_rssi: -40
-hop_start: 3
-, 'fromId': '!fa6dc46c', 'toId': '^all'}
-
-----------------------------------------------------------------------------------------------------
-
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'POSITION_APP', 'payload': b'\r\x00\x80\xfb\x19\x15\x00\x80\xb6\xba\x18\xc3\x06\xb8\x01\x10', 'position': {'latitudeI': 435912704, 'longitudeI': -1162444800, 'altitude': 835, 'precisionBits': 16, 'latitude': 43.5912704, 'longitude': -116.24448}}, 'id': 3986949152, 'rxTime': 1726006704, 'hopLimit': 3, 'priority': 'BACKGROUND', 'hopStart': 3, 'raw': from: 3806431584
-to: 4294967295
-decoded {
-  portnum: POSITION_APP
-  payload: "\r\000\200\373\031\025\000\200\266\272\030\303\006\270\001\020"
-}
-id: 3986949152
-rx_time: 1726006704
+id: 385472685
+rx_time: 1555013483
 hop_limit: 3
 priority: BACKGROUND
 hop_start: 3
