@@ -3,7 +3,7 @@ import meshtastic
 import meshtastic.tcp_interface
 from pubsub import pub
 from message_processing import on_receive
-from db_operations import initialize_database, process_and_insert_telemetry_data, get_db_connection
+from db_operations import initialize_database, process_and_insert_telemetry_data, get_db_connection, sync_data_to_server
 import logging
 from config_init import initialize_config, get_interface, init_cli_parser, merge_config
 from utils import display_banner
@@ -56,6 +56,7 @@ def main():
             time.sleep(1)
 
     except KeyboardInterrupt:
+        sync_data_to_server(conn, 'https://testbench.cc/meshmap2/sync')
         conn.close()
         logging.info("Shutting down the server and DB...")
         interface.close()

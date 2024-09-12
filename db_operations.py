@@ -6,6 +6,8 @@ import uuid
 from datetime import datetime
 import json
 from utils import log_text_to_file
+import requests
+import json
 
 from meshtastic import BROADCAST_NUM
 
@@ -177,5 +179,64 @@ def process_and_insert_telemetry_data(conn, interface):
         logging.getLogger().setLevel(logging.INFO)
         logging.info("Telemetry data processing complete.")
 
+def sync_data_to_server(conn, offline_db_path, server_url):
+    # Connect to the offline database
+    cursor = conn.cursor()
 
+    # Fetch all data from the TelemetryData table
+    cursor.execute("SELECT * FROM TelemetryData")
+    rows = cursor.fetchall()
 
+    # Define the column names to match the Flask route expected format
+    columns = ['sender_node_id', 'sender_short_name', 'timestamp', 'temperature', 'humidity', 'pressure', 
+               'battery_level', 'voltage', 'uptime_seconds', 'latitude', 'longitude', 'altitude', 
+               'sats_in_view', 'snr', 'hardware_model', 'sender_long_name', 'role']
+
+    # Prepare data as a list of dictionaries
+    data = [dict(zip(columns, row)) for row in rows]
+
+    # Send the data to the server using a POST request
+    response = requests.post(f'{server_url}', json=data, headers={'Content-Type': 'application/json'})
+
+    # Handle the server response
+    if response.status_code == 200:
+        logging.info("Data synced successfully: %s", response.json())
+    else:
+        logging.error("Failed to sync data: %d %s", response.status_code, response.text)
+
+    # Close the offline database connection
+    conn.close()
+
+def sync_data_to_server(conn, server_url):
+    try:
+        # Connect to the offline database
+        cursor = conn.cursor()
+
+        # Fetch all data from the TelemetryData table
+        cursor.execute("SELECT * FROM TelemetryData")
+        rows = cursor.fetchall()
+
+        # Dynamically get the column names from the database cursor description
+        column_names = [description[0] for description in cursor.description]
+
+        # Prepare data as a list of dictionaries
+        data = [dict(zip(column_names, row)) for row in rows]
+
+        # Debug logging to verify data structure
+        logging.info(f"Database synced with {server_url}")
+
+        # Send the data to the server using a POST request
+        response = requests.post(server_url, json=data, headers={'Content-Type': 'application/json'})
+
+        # Handle the server response
+        if response.status_code == 200:
+            logging.info("Data synced successfully: %s", response.json())
+        else:
+            logging.info("Failed to sync data: %d %s", response.status_code, response.text)
+
+    except Exception as e:
+        logging.info("An error occurred during data sync: %s", str(e))
+
+    finally:
+        # Close the offline database connection
+        conn.close()

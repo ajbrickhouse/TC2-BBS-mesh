@@ -1,19 +1,17 @@
-{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'TELEMETRY_APP', 'payload': b'\r\xdbg\xe2f\x12\x14\x08S\x15\xf2\xd2}@\x1d\xb5\x81n?%\x8c%?>(\xa5\x02', 'telemetry': {'time': 1726113755, 'deviceMetrics': {'batteryLevel': 83, 'voltage': 3.966, 'channelUtilization': 0.9316667, 'airUtilTx': 0.18666667, 'uptimeSeconds': 293}, 'raw': time: 1726113755
-device_metrics {
-  battery_level: 83
-  voltage: 3.966
-  channel_utilization: 0.9316667
-  air_util_tx: 0.18666667
-  uptime_seconds: 293
+{'from': 4201497708, 'to': 4294967295, 'decoded': {'portnum': 'TELEMETRY_APP', 'payload': b'\r\x9ex\xe2f\x1a\x0f\r\xecQ\xc0A\x15\x00U\x07B\x1d\x8c\xb5cD', 'telemetry': {'time': 1726118046, 'environmentMetrics': {'temperature': 24.04, 'relativeHumidity': 33.833008, 'barometricPressure': 910.8367}, 'raw': time: 1726118046
+environment_metrics {
+  temperature: 24.04
+  relative_humidity: 33.8330078
+  barometric_pressure: 910.83667
 }
-}}, 'id': 280357416, 'rxTime': 1726113755, 'hopLimit': 5, 'priority': 'BACKGROUND', 'hopStart': 5, 'raw': from: 4201497708
+}}, 'id': 1261657799, 'rxTime': 1726118047, 'hopLimit': 5, 'priority': 'BACKGROUND', 'hopStart': 5, 'raw': from: 4201497708
 to: 4294967295
 decoded {
   portnum: TELEMETRY_APP
-  payload: "\r\333g\342f\022\024\010S\025\362\322}@\035\265\201n?%\214%?>(\245\002"
+  payload: "\r\236x\342f\032\017\r\354Q\300A\025\000U\007B\035\214\265cD"
 }
-id: 280357416
-rx_time: 1726113755
+id: 1261657799
+rx_time: 1726118047
 hop_limit: 5
 priority: BACKGROUND
 hop_start: 5
