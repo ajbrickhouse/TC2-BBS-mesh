@@ -37,6 +37,8 @@ def main():
 
     # Prime the database with data contained in the interface
     process_and_insert_telemetry_data(conn, interface)
+    # sync with the online server
+    sync_data_to_server(conn, 'https://testbench.cc/meshmap2/sync')
 
     display_banner()
     logging.info(f"Testbench Mesh Logger is running on {system_config['interface_type']} interface...")
@@ -46,7 +48,8 @@ def main():
 
     def onConnection(interface, topic=pub.AUTO_TOPIC): # called when we (re)connect to the radio
         # defaults to broadcast, specify a destination ID if you wish
-        interface.sendText("hello mesh")
+        # interface.sendText("hello mesh")
+        pass
 
     pub.subscribe(receive_packet, system_config['mqtt_topic'])
     pub.subscribe(onConnection, "meshtastic.connection.established")
