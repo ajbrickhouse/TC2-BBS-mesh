@@ -4,3 +4,9 @@ venv/
 .venv
 .idea
 fortunes.txt
+*.txt
+.db
+logs/*.txt
+logs/NODEINFO_APP.txt
+logs/POSITION_APP.txt
+logs/TELEMETRY_APP.txt
