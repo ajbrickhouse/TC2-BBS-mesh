@@ -77,3 +77,10 @@ def display_banner():
 Meshtastic Version
 """
     print(banner)
+
+def format_real_number(value, precision=2):
+    if value is None:
+        return None
+
+    real_value = float(value)
+    return f"{real_value:.{precision}f}"

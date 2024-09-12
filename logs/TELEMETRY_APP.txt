@@ -1,17 +1,12 @@
-{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'TELEMETRY_APP', 'payload': b'\rHy\xe1f\x1a\x0f\r\xa4p\xc1A\x15\x00^\xd4A\x1d\x14\x16cD', 'telemetry': {'time': 1726052680, 'environmentMetrics': {'temperature': 24.18, 'relativeHumidity': 26.545898, 'barometricPressure': 908.345}, 'raw': time: 1726052680
-environment_metrics {
-  temperature: 24.18
-  relative_humidity: 26.5458984
-  barometric_pressure: 908.345
-}
-}}, 'id': 1851114029, 'rxTime': 1726052680, 'hopLimit': 3, 'priority': 'BACKGROUND', 'raw': from: 3806431584
+{'from': 3806431584, 'to': 4294967295, 'decoded': {'portnum': 'TELEMETRY_APP', 'payload': b'\rI`\xe2f2\x19\x08\xd6G\x15\xda@w@\x1dh\xfe\x18@ \xf7\x02(\xcc\x020O8\x05@\x0b', 'telemetry': {'time': 1726111817, 'raw': time: 1726111817
+}}, 'id': 2404188133, 'rxTime': 1726111817, 'hopLimit': 3, 'priority': 'BACKGROUND', 'raw': from: 3806431584
 to: 4294967295
 decoded {
   portnum: TELEMETRY_APP
-  payload: "\rHy\341f\032\017\r\244p\301A\025\000^\324A\035\024\026cD"
+  payload: "\rI`\342f2\031\010\326G\025\332@w@\035h\376\030@ \367\002(\314\0020O8\005@\013"
 }
-id: 1851114029
-rx_time: 1726052680
+id: 2404188133
+rx_time: 1726111817
 hop_limit: 3
 priority: BACKGROUND
 , 'fromId': '!e2e18960', 'toId': '^all'}

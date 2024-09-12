@@ -1,4 +1,4 @@
-from utils import get_node_short_name, get_node_id_from_num, send_message, log_text_to_file, get_node_info, get_node_names
+from utils import get_node_short_name, get_node_id_from_num, send_message, log_text_to_file, get_node_info, get_node_names, format_real_number
 from db_operations import insert_telemetry_data
 import logging
 import time
@@ -30,10 +30,10 @@ def on_receive(conn, system_config, packet, interface):
         if portnum == 'TEXT_MESSAGE_APP':
             try:
                 message = decoded_packet.get('text')
-                snr = packet.get('rxSnr')
+                snr = format_real_number(packet.get('rxSnr'))
                 
                 logging.info(f"{sender_long_name} ({sender_short_name}) sent a message to {to_long_name} ({to_short_name})")
-                logging.info(f"--- Message: {message}")
+                logging.info(f"--- Message: \n\n{message}\n")
                 logging.info(f"--------------------------------------------------------")
 
                 insert_telemetry_data(conn, sender_node_id=sender_node_id, timestamp=rx_time, to_node_id=to_node_id, sender_short_name=sender_short_name, sender_long_name=sender_long_name, snr=snr)
@@ -46,12 +46,12 @@ def on_receive(conn, system_config, packet, interface):
             try:
                 log_text_to_file(packet, './logs/TELEMETRY_APP.txt')
                 telemetry_data = decoded_packet.get('telemetry', {})
-                temperature = telemetry_data.get('environmentMetrics', {}).get('temperature')
-                humidity = telemetry_data.get('environmentMetrics', {}).get('relativeHumidity')
-                pressure = telemetry_data.get('environmentMetrics', {}).get('barometricPressure')
-                battery = telemetry_data.get('deviceMetrics', {}).get('batteryLevel')
-                voltage = telemetry_data.get('deviceMetrics', {}).get('voltage')
-                uptime = telemetry_data.get('deviceMetrics', {}).get('uptimeSeconds')
+                temperature = format_real_number(telemetry_data.get('environmentMetrics', {}).get('temperature'))
+                humidity = format_real_number(telemetry_data.get('environmentMetrics', {}).get('relativeHumidity'))
+                pressure = format_real_number(telemetry_data.get('environmentMetrics', {}).get('barometricPressure'))
+                battery = format_real_number(telemetry_data.get('deviceMetrics', {}).get('batteryLevel'))
+                voltage = format_real_number(telemetry_data.get('deviceMetrics', {}).get('voltage'))
+                uptime = format_real_number(telemetry_data.get('deviceMetrics', {}).get('uptimeSeconds'))
 
                 insert_telemetry_data(conn, sender_node_id=sender_node_id, timestamp=rx_time, to_node_id=to_node_id, sender_short_name=sender_short_name, sender_long_name=sender_long_name,
                                          temperature=temperature, humidity=humidity, pressure=pressure, battery_level=battery, voltage=voltage, uptime_seconds=uptime)
@@ -65,7 +65,7 @@ def on_receive(conn, system_config, packet, interface):
                 location_data = decoded_packet.get('position', {})
                 latitude = location_data.get('latitude')
                 longitude = location_data.get('longitude')
-                altitude = location_data.get('altitude')
+                altitude = format_real_number(location_data.get('altitude'))
 
                 insert_telemetry_data(conn, sender_node_id=sender_node_id, timestamp=rx_time, to_node_id=to_node_id, sender_short_name=sender_short_name, sender_long_name=sender_long_name, 
                                         latitude=latitude, longitude=longitude, altitude=altitude)

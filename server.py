@@ -7,6 +7,10 @@ from db_operations import initialize_database, process_and_insert_telemetry_data
 import logging
 from config_init import initialize_config, get_interface, init_cli_parser, merge_config
 from utils import display_banner
+from pubsub import pub
+from signal import signal, SIGPIPE, SIG_DFL
+
+signal(SIGPIPE,SIG_DFL) 
 
 # General logging
 logging.basicConfig(
@@ -40,16 +44,16 @@ def main():
     def receive_packet(packet, interface):
         on_receive(conn, system_config, packet, interface)
 
+    def onConnection(interface, topic=pub.AUTO_TOPIC): # called when we (re)connect to the radio
+        # defaults to broadcast, specify a destination ID if you wish
+        interface.sendText("hello mesh")
+
     pub.subscribe(receive_packet, system_config['mqtt_topic'])
+    pub.subscribe(onConnection, "meshtastic.connection.established")
 
     try:
         while True:
             time.sleep(1)
-            try:
-                interface.sendHeartbeat()  # Send heartbeat as usual
-            except BrokenPipeError:
-                logging.error("BrokenPipeError during heartbeat. Reconnecting...")
-                interface.connect()  # Reconnect on broken pipe
 
     except KeyboardInterrupt:
         conn.close()
