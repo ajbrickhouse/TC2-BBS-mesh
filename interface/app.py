@@ -5,12 +5,17 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 application = app  # For Elastic Beanstalk deployment
 
-db_path = '../nodeData.db'  # Replace with your actual database path    
+db_path = './nodeData.db'  # Replace with your actual database path    
 
 # Route to serve the HTML template
 @app.route('/')
 def index():
     return render_template('index.html')  # Ensure index.html is in the 'templates' folder
+
+# Route to serve the HTML template
+@app.route('/sidebar')
+def sidebar():
+    return render_template('sidebar.html')  # Ensure index.html is in the 'templates' folder
 
 # Route to provide telemetry data as JSON
 @app.route('/get-telemetry-data', methods=['GET'])
@@ -107,6 +112,37 @@ def get_telemetry_data():
     conn.close()
     return jsonify(telemetry_data)
 
+@app.route('/sync', methods=['POST'])
+def sync_db():
+    data = request.get_json()
+
+    # Ensure the received data is a list of dictionaries
+    if not isinstance(data, list):
+        return jsonify({"error": "Expected a list of entries"}), 400
+
+    conn = sqlite3.connect(db_path)  # Replace with your actual database path
+    cursor = conn.cursor()
+
+    # Loop through the received data and insert/update it in the database
+    for entry in data:
+        cursor.execute('''
+            INSERT OR REPLACE INTO TelemetryData (
+                sender_node_id, sender_short_name, timestamp, temperature, humidity, pressure,
+                battery_level, voltage, uptime_seconds, latitude, longitude, altitude,
+                sats_in_view, snr, hardware_model, sender_long_name, role
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (
+            entry['sender_node_id'], entry['sender_short_name'], entry['timestamp'], entry['temperature'], entry['humidity'],
+            entry['pressure'], entry['battery_level'], entry['voltage'], entry['uptime_seconds'], entry['latitude'],
+            entry['longitude'], entry['altitude'], entry['sats_in_view'], entry['snr'], entry['hardware_model'],
+            entry['sender_long_name'], entry['role']
+        ))
+
+    # Commit the changes and close the connection
+    conn.commit()
+    conn.close()
+
+    return jsonify({"message": "Data received and stored.", "status": "success"})
 
 if __name__ == '__main__':
     app.run(debug=True)
