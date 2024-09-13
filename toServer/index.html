@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telemetry Data Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -13,69 +14,10 @@
         }
 
         #sidebar {
-            width: 350px;
+            width: 380px;
             background-color: #f4f4f4;
-            padding: 10px;
             overflow-y: auto;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            transition: width 0.3s ease;
-        }
-        #toggle-button {
-            position: fixed;
-            top: 85px;
-            left: 380px;  /* Adjust the left position to offset it from the sidebar */
-            background-color: #007bff;
-            color: white;
-            padding: 8px 12px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            z-index: 1000;  /* Ensure it is above the map */
-            transition: left 0.3s ease;
-        }
-
-        #toggle-button.collapsed {
-            left: 10px;  /* Position when the sidebar is collapsed */
-        }
-
-        #sidebar.collapsed {
-            width: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        #sidebar h2 {
-            text-align: center;
-        }
-
-        #sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #sidebar ul li {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px;
-            cursor: pointer;
-            background-color: #ddd;
-            margin-bottom: 5px;
-            border-radius: 5px;
-            text-align: left;
-        }
-
-        #sidebar ul li:hover {
-            background-color: #ccc;
-        }
-
-        .long-name {
-            flex-grow: 1;
-            text-align: left;
-        }
-
-        .short-name {
-            text-align: right;
-            white-space: nowrap;
         }
 
         #map {
@@ -88,19 +30,31 @@
             background-color: transparent;
             border: none;
         }
+
+        /* Custom styles for the new Bootstrap sidebar */
+        .list-group-item {
+            cursor: pointer;
+        }
+
+        .list-group-item:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
-    <div id="sidebar">
-        <h2>Node List</h2>
-        <ul id="node-list"></ul>
+    <div id="sidebar" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary">
+        <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom">
+            <span class="fs-5 fw-semibold">Boise Meshtastic Node List</span>
+        </a>
+        <div class="list-group list-group-flush border-bottom scrollarea" style="height: 400px;" id="node-list">
+            <!-- List items dynamically generated from telemetry data -->
+        </div>
     </div>
-
-    <button id="toggle-button">Hide Menu</button>
 
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Initialize the map centered on Boise, Idaho with a zoom level of 12
         var map = L.map('map').setView([43.660795, -116.42226], 12);
@@ -114,28 +68,12 @@
         var markers = {};  // Dictionary to store markers by sender_node_id
         var initialLoad = false;  // Flag to indicate if it's the first load
 
-        // Toggle button for collapsing the sidebar
-        var sidebar = document.getElementById('sidebar');
-        var toggleButton = document.getElementById('toggle-button');
-
-        toggleButton.addEventListener('click', function() {
-            sidebar.classList.toggle('collapsed');
-            toggleButton.classList.toggle('collapsed');
-
-            if (sidebar.classList.contains('collapsed')) {
-                toggleButton.textContent = 'Show Menu';
-            } else {
-                toggleButton.textContent = 'Hide Menu';
-            }
-        });
-
-        // Function to generate popup content
         function generatePopupContent(item) {
             return `
                 <table style="width: 100%; border-collapse: collapse;">
                     <tr>
                         <td colspan="3" style="text-align: center; padding: 10px;">
-                            <b>${item.sender_long_name} (${item.sender_short_name})</b>
+                            <b><h3>${item.sender_long_name} (${item.sender_short_name})</h3></b>
                         </td>
                     </tr>
                     <tr>
@@ -145,43 +83,43 @@
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Last Update:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.timestamp}</td>
+                        <td colspan="2" style="text-align: center;">${item.last_seen}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Temperature:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.temperature} °C</td>
+                        <td colspan="2" style="text-align: center;">${item.temperature || 'N/A'} °C</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Humidity:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.humidity} %</td>
+                        <td colspan="2" style="text-align: center;">${item.humidity || 'N/A'} %</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Pressure:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.pressure} hPa</td>
+                        <td colspan="2" style="text-align: center;">${item.pressure || 'N/A'} hPa</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Battery Level:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.battery_level} %</td>
+                        <td colspan="2" style="text-align: center;">${item.battery_level || 'N/A'} %</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Voltage:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.voltage} V</td>
+                        <td colspan="2" style="text-align: center;">${item.voltage || 'N/A'} V</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Uptime:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.uptime_seconds} s</td>
+                        <td colspan="2" style="text-align: center;">${item.uptime_seconds || 'N/A'} s</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Altitude:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.altitude} m</td>
+                        <td colspan="2" style="text-align: center;">${item.altitude || 'N/A'} m</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Sats in View:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.sats_in_view}</td>
+                        <td colspan="2" style="text-align: center;">${item.sats_in_view || 'N/A'}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>SNR:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.snr} dB</td>
+                        <td colspan="2" style="text-align: center;">${item.snr || 'N/A'} dB</td>
                     </tr>
                 </table>
             `;
@@ -193,21 +131,20 @@
 
             data.forEach((item) => {
                 if (item.latitude && item.longitude) {
-                    const listItem = document.createElement('li');
+                    const listItem = document.createElement('a');
+                    listItem.className = 'list-group-item list-group-item-action py-3 lh-sm';
                     
-                    // Create spans for long and short names
-                    const longNameSpan = document.createElement('span');
-                    longNameSpan.textContent = item.sender_long_name;
-                    longNameSpan.className = 'long-name';
-
-                    const shortNameSpan = document.createElement('span');
-                    shortNameSpan.textContent = item.sender_short_name;
-                    shortNameSpan.className = 'short-name';
-
-                    // Append spans to the list item
-                    listItem.appendChild(longNameSpan);
-                    listItem.appendChild(shortNameSpan);
-
+                    const nodeContent = `
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <strong class="mb-1">${item.sender_long_name}</strong>
+                            <small>${item.sender_short_name}</small>
+                        </div>
+                        <div class="col-10 mb-1 small">
+                            ${item.temperature ? `Temp: ${item.temperature} °C` : ''} 
+                            ${item.humidity ? ` | Humidity: ${item.humidity} %` : ''}
+                        </div>
+                    `;
+                    listItem.innerHTML = nodeContent;
                     listItem.dataset.nodeId = item.sender_node_id;  // Store node ID as data attribute
 
                     // Add click event to center map on the node
@@ -224,16 +161,23 @@
             });
         }
 
-        // Function to fetch and update telemetry data
         function fetchTelemetryData() {
-            fetch('/get-telemetry-data') // Backend endpoint for fetching data
+            fetch('/meshmap2/get-telemetry-data') // Backend endpoint for fetching data
                 .then(response => response.json())
-                .then(data => {
+                .then(data => {  // Correctly accessing the response object
                     var bounds = [];
-                    generateNodeList(data);  // Update the node list in the sidebar
+                    const closeNodes = data.close_nodes;  // Access close_nodes from the response
+                    const farNodes = data.far_nodes;      // Access far_nodes from the response
 
-                    // Loop through the telemetry data
-                    data.forEach((item, index) => {
+                    // Sort closeNodes and farNodes by timestamp, not last_seen
+                    closeNodes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                    farNodes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                    var allNodes = closeNodes.concat(farNodes);  // Combine the two lists into one
+                    
+                    generateNodeList(allNodes);  // Update the node list in the sidebar
+
+                    // Loop through the telemetry data and update markers on the map
+                    allNodes.forEach((item, index) => {
                         if (item.latitude && item.longitude) {
                             bounds.push([item.latitude, item.longitude]);
 
@@ -282,8 +226,7 @@
                 })
                 .catch(error => console.error('Error fetching telemetry data:', error));
         }
-
-        setInterval(fetchTelemetryData, 10000);
+        setInterval(fetchTelemetryData, 120000);
         fetchTelemetryData();
     </script>
 </body>

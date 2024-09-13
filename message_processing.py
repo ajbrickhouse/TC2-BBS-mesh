@@ -40,7 +40,7 @@ def on_receive(conn, logger, system_config, packet, interface):
         # Handle TELEMETRY_APP
         elif portnum == 'TELEMETRY_APP':
             try:
-                log_text_to_file(packet, './logs/TELEMETRY_APP.txt')
+                # log_text_to_file(packet, './logs/TELEMETRY_APP.txt')
                 telemetry_data = decoded_packet.get('telemetry', {})
                 temperature = format_real_number(telemetry_data.get('environmentMetrics', {}).get('temperature'))
                 humidity = format_real_number(telemetry_data.get('environmentMetrics', {}).get('relativeHumidity'))
@@ -58,7 +58,7 @@ def on_receive(conn, logger, system_config, packet, interface):
         # # Handle POSITION_APP
         elif portnum == 'POSITION_APP':
             try:
-                log_text_to_file(packet, './logs/POSITION_APP.txt')
+                # log_text_to_file(packet, './logs/POSITION_APP.txt')
                 location_data = decoded_packet.get('position', {})
                 latitude = location_data.get('latitude')
                 longitude = location_data.get('longitude')
@@ -86,7 +86,7 @@ def on_receive(conn, logger, system_config, packet, interface):
         # Handle ROUTING_APP
         elif portnum == 'ROUTING_APP':
             try:
-                pass
+                log_text_to_file(packet, './logs/ROUTING_APP.txt')
             except Exception as e:
                 logger.info(f"Error processing ROUTING_APP: {e}")
 

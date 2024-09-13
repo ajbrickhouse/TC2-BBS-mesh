@@ -7,7 +7,7 @@ from datetime import datetime
 import json
 import requests
 import json
-from utils import log_text_to_file
+from utils import log_text_to_file, haversine_distance
 
 
 from meshtastic import BROADCAST_NUM
@@ -29,8 +29,8 @@ def initialize_database():
                 to_node_id TEXT,
                 sender_long_name TEXT,
                 sender_short_name TEXT,
-                latitude REAL UNIQUE,
-                longitude REAL UNIQUE,
+                latitude REAL,
+                longitude REAL,
                 temperature REAL,
                 humidity REAL,
                 pressure REAL,
@@ -43,7 +43,8 @@ def initialize_database():
                 role TEXT,
                 hardware_model TEXT,
                 mac_address TEXT,
-                neighbor_node_id TEXT
+                neighbor_node_id TEXT,
+                miles_to_base REAL
             );
             ''')
 
@@ -55,7 +56,7 @@ def initialize_database():
 def insert_telemetry_data(conn, logger, sender_node_id, timestamp=None, sender_short_name=None, to_node_id=None, temperature=None, humidity=None,
                           pressure=None, battery_level=None, voltage=None, uptime_seconds=None,
                           latitude=None, longitude=None, altitude=None, sats_in_view=None,
-                          neighbor_node_id=None, snr=None, hardware_model=None, mac_address=None, sender_long_name=None, role=None, set_timestamp=True):
+                          neighbor_node_id=None, snr=None, hardware_model=None, mac_address=None, sender_long_name=None, role=None, dst_to_bs=None, set_timestamp=True):
     try:
         # Ensure the connection is open
         if conn is None or conn.cursor() is None:
@@ -94,12 +95,16 @@ def insert_telemetry_data(conn, logger, sender_node_id, timestamp=None, sender_s
             if uptime_seconds:
                 conn.execute('''UPDATE TelemetryData SET uptime_seconds = ? WHERE sender_node_id = ?''', (uptime_seconds, sender_node_id))
                 logger.debug(f"--- Updated uptime_seconds: {uptime_seconds}")
-            if latitude:
+            if latitude and longitude:
                 conn.execute('''UPDATE TelemetryData SET latitude = ? WHERE sender_node_id = ?''', (latitude, sender_node_id))
                 logger.debug(f"--- Updated latitude: {latitude}")
-            if longitude:
                 conn.execute('''UPDATE TelemetryData SET longitude = ? WHERE sender_node_id = ?''', (longitude, sender_node_id))
                 logger.debug(f"--- Updated longitude: {longitude}")
+                # calculate distance to base station
+                # These are for boise, ID. Maybe change to a variable later
+                distance = haversine_distance(43.6008608,-116.2750972, latitude, longitude)
+                conn.execute('''UPDATE TelemetryData SET miles_to_base = ? WHERE sender_node_id = ?''', (distance, sender_node_id))
+                logger.debug(f"--- Updated miles_to_base: {distance}")
             if altitude:
                 conn.execute('''UPDATE TelemetryData SET altitude = ? WHERE sender_node_id = ?''', (altitude, sender_node_id))
                 logger.debug(f"--- Updated altitude: {altitude}")

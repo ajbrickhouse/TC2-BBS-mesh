@@ -5,7 +5,7 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 application = app  # For Elastic Beanstalk deployment
 
-db_path = './nodeData.db'  # Replace with your actual database path    
+db_path = '../nodeData.db'  # Replace with your actual database path    
 
 # Route to serve the HTML template
 @app.route('/')
@@ -42,7 +42,8 @@ def get_telemetry_data():
             (SELECT snr FROM TelemetryData WHERE snr IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS snr,
             (SELECT hardware_model FROM TelemetryData WHERE hardware_model IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS hardware_model,
             (SELECT sender_long_name FROM TelemetryData WHERE sender_long_name IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS sender_long_name,
-            (SELECT role FROM TelemetryData WHERE role IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS role
+            (SELECT role FROM TelemetryData WHERE role IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS role,
+            (SELECT miles_to_base FROM TelemetryData WHERE miles_to_base IS NOT NULL AND sender_node_id = td.sender_node_id ORDER BY id DESC LIMIT 1) AS miles_to_base
         FROM TelemetryData td
         GROUP BY td.sender_node_id;
     '''
@@ -56,6 +57,7 @@ def get_telemetry_data():
     for row in data:
         # Convert the row[2] timestamp to a datetime object (assuming it's a string, format it accordingly)
         timestamp = datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S')  # Adjust format as per your timestamp
+        
 
         # Calculate the difference
         time_difference = current_time - timestamp
@@ -76,6 +78,25 @@ def get_telemetry_data():
         else:
             last_seen = f"{days} days"  # Remove hours for days >= 2
 
+        # Process 'uptime_seconds'
+        uptime_seconds = int(row[8]) if row[8] is not None else 0
+        uptime_timedelta = timedelta(seconds=uptime_seconds)
+        uptime_days = uptime_timedelta.days
+        uptime_hours, remainder = divmod(uptime_timedelta.seconds, 3600)
+        uptime_minutes, uptime_seconds = divmod(remainder, 60)
+
+        # Generate the 'uptime' string
+        if uptime_minutes == 0 and uptime_hours == 0 and uptime_days == 0:
+            uptime = f"{uptime_seconds} seconds"
+        elif uptime_hours == 0 and uptime_days == 0:
+            uptime = f"{uptime_minutes} min {uptime_seconds} sec"
+        elif uptime_days == 0:
+            uptime = f"{uptime_hours} hours {uptime_minutes} min"
+        elif uptime_days < 2:
+            uptime = f"{uptime_days} day {uptime_hours} hours"
+        else:
+            uptime = f"{uptime_days} days"
+
         telemetry_data.append({
             "sender_node_id": row[0],
             "sender_short_name": row[1],  # Check if this value exists in your DB
@@ -94,7 +115,9 @@ def get_telemetry_data():
             "hardware_model": row[14],
             "sender_long_name": row[15],
             "role": row[16],
-            "last_seen": last_seen
+            "miles_to_base": row[17],
+            "last_seen": last_seen,
+            "uptime_string": uptime
         })
 
     # drop any rows without latitude
@@ -106,11 +129,16 @@ def get_telemetry_data():
             if value is None:
                 row[key] = '---'
 
-    # Sort telemetry_data by timestamp (assuming timestamps are in a sortable format like ISO 8601)
-    telemetry_data = sorted(telemetry_data, key=lambda x: x['timestamp'], reverse=True)
+    # Create two lists, one for nodes within 100 miles of Boise, and everything else
+    close_nodes = [node for node in telemetry_data if node['miles_to_base'] < 100]
+    far_nodes = [node for node in telemetry_data if node['miles_to_base'] >= 100]
+
+    # Sort both lists based on miles_to_base
+    close_nodes = sorted(close_nodes, key=lambda x: x['miles_to_base'])
+    far_nodes = sorted(far_nodes, key=lambda x: x['miles_to_base'])
 
     conn.close()
-    return jsonify(telemetry_data)
+    return jsonify({"close_nodes": close_nodes, "far_nodes": far_nodes})
 
 @app.route('/sync', methods=['POST'])
 def sync_db():
@@ -143,6 +171,24 @@ def sync_db():
     conn.close()
 
     return jsonify({"message": "Data received and stored.", "status": "success"})
+
+@app.route('/update-database-schema', methods=['POST'])
+def update_database_schema():
+    try:
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+
+        cursor.execute('''
+            ALTER TABLE TelemetryData
+            ADD COLUMN miles_to_base TEXT;
+        ''')
+
+        conn.commit()
+        conn.close()
+
+        return jsonify({"message": "Database schema updated successfully.", "status": "success"})
+    except Exception as e:
+        return jsonify({"message": f"Error updating database schema: {str(e)}", "status": "error"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

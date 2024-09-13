@@ -77,17 +77,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="text-align: center; padding: 5px;"><b>${item.sender_node_id}</b></td>
-                        <td style="text-align: center; padding: 5px;"><b>${item.role}</b></td>
-                        <td style="text-align: center; padding: 5px;"><b>${item.hardware_model}</b></td>
+                        <td style="text-align: center; padding: 5px;"><b>${item.sender_node_id || '---'}</b></td>
+                        <td style="text-align: center; padding: 5px;"><b>${item.role || ''}</b></td>
+                        <td style="text-align: center; padding: 5px;"><b>${item.hardware_model || '---'}</b></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Last Update:</strong></td>
                         <td colspan="2" style="text-align: center;">${item.last_seen}</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: right;"><strong>Timestamp:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.timestamp}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Temperature:</strong></td>
@@ -111,7 +107,7 @@
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Uptime:</strong></td>
-                        <td colspan="2" style="text-align: center;">${item.uptime_seconds || 'N/A'} s</td>
+                        <td colspan="2" style="text-align: center;">${item.uptime_string || 'N/A'}</td>
                     </tr>
                     <tr>
                         <td style="text-align: right;"><strong>Altitude:</strong></td>
@@ -140,12 +136,13 @@
                     
                     const nodeContent = `
                         <div class="d-flex w-100 align-items-center justify-content-between">
-                            <strong class="mb-1">${item.sender_long_name}</strong>
-                            <small>${item.sender_short_name}</small>
+                            <strong class="mb-1">${item.sender_long_name} (${item.sender_short_name})</strong>
+                            <small>${(item.miles_to_base || 0.00).toFixed(1)} miles</small>
                         </div>
-                        <div class="col-10 mb-1 small">
-                            ${item.temperature ? `Temp: ${item.temperature} °C` : ''} 
-                            ${item.humidity ? ` | Humidity: ${item.humidity} %` : ''}
+                        <div class="small d-flex w-100 align-items-center justify-content-between">
+                            ${item.temperature ? `${item.temperature} °C` : ''} 
+                            ${item.humidity ? ` | ${item.humidity} %` : ''}
+                            <small>${item.last_seen}</small>
                         </div>
                     `;
                     listItem.innerHTML = nodeContent;
@@ -165,16 +162,23 @@
             });
         }
 
-        // Function to fetch and update telemetry data
         function fetchTelemetryData() {
             fetch('/get-telemetry-data') // Backend endpoint for fetching data
                 .then(response => response.json())
-                .then(data => {
+                .then(data => {  // Correctly accessing the response object
                     var bounds = [];
-                    generateNodeList(data);  // Update the node list in the sidebar
+                    const closeNodes = data.close_nodes;  // Access close_nodes from the response
+                    const farNodes = data.far_nodes;      // Access far_nodes from the response
 
-                    // Loop through the telemetry data
-                    data.forEach((item, index) => {
+                    // Sort closeNodes and farNodes by timestamp, not last_seen
+                    closeNodes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                    farNodes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                    var allNodes = closeNodes.concat(farNodes);  // Combine the two lists into one
+                    
+                    generateNodeList(allNodes);  // Update the node list in the sidebar
+
+                    // Loop through the telemetry data and update markers on the map
+                    allNodes.forEach((item, index) => {
                         if (item.latitude && item.longitude) {
                             bounds.push([item.latitude, item.longitude]);
 
@@ -223,7 +227,6 @@
                 })
                 .catch(error => console.error('Error fetching telemetry data:', error));
         }
-
         setInterval(fetchTelemetryData, 10000);
         fetchTelemetryData();
     </script>
