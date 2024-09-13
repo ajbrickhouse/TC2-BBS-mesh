@@ -12,13 +12,8 @@ db_path = '../nodeData.db'  # Replace with your actual database path
 def index():
     return render_template('index.html')  # Ensure index.html is in the 'templates' folder
 
-# Route to serve the HTML template
-@app.route('/sidebar')
-def sidebar():
-    return render_template('sidebar.html')  # Ensure index.html is in the 'templates' folder
-
 # Route to provide telemetry data as JSON
-@app.route('/get-telemetry-data', methods=['GET'])
+@app.route('/meshmap/get-telemetry-data', methods=['GET'])
 def get_telemetry_data():
     conn = sqlite3.connect(db_path)  # Replace with your actual database path
     cursor = conn.cursor()
@@ -140,7 +135,7 @@ def get_telemetry_data():
     conn.close()
     return jsonify({"close_nodes": close_nodes, "far_nodes": far_nodes})
 
-@app.route('/sync', methods=['POST'])
+@app.route('/meshmap/sync', methods=['POST'])
 def sync_db():
     data = request.get_json()
 
@@ -172,23 +167,23 @@ def sync_db():
 
     return jsonify({"message": "Data received and stored.", "status": "success"})
 
-@app.route('/update-database-schema', methods=['POST'])
-def update_database_schema():
-    try:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
+# @app.route('/meshmap/update-database-schema', methods=['POST'])
+# def update_database_schema():
+#     try:
+#         conn = sqlite3.connect(db_path)
+#         cursor = conn.cursor()
 
-        cursor.execute('''
-            ALTER TABLE TelemetryData
-            ADD COLUMN miles_to_base TEXT;
-        ''')
+#         cursor.execute('''
+#             ALTER TABLE TelemetryData
+#             ADD COLUMN miles_to_base TEXT;
+#         ''')
 
-        conn.commit()
-        conn.close()
+#         conn.commit()
+#         conn.close()
 
-        return jsonify({"message": "Database schema updated successfully.", "status": "success"})
-    except Exception as e:
-        return jsonify({"message": f"Error updating database schema: {str(e)}", "status": "error"}), 500
+#         return jsonify({"message": "Database schema updated successfully.", "status": "success"})
+#     except Exception as e:
+#         return jsonify({"message": f"Error updating database schema: {str(e)}", "status": "error"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
